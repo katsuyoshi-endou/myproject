@@ -24,7 +24,7 @@
 		<b>255</b>
 	</color>
 	<font_name>メイリオ</font_name>
-	<font_size>9</font_size>
+	<font_size>8</font_size>
 	<settings>
 		<database>PostgreSQL</database>
 		<capital>false</capital>
@@ -138,7 +138,7 @@
 			</connections>
 			<display>false</display>
 			<creation_date>2015-04-14 18:31:00</creation_date>
-			<updated_date>2015-09-18 22:58:45</updated_date>
+			<updated_date>2016-11-15 22:59:17</updated_date>
 			<model_property>
 				<name>プロジェクト名</name>
 				<value></value>
@@ -2677,7 +2677,7 @@
 			<height>142</height>
 			<width>213</width>
 				<font_name>メイリオ</font_name>
-				<font_size>9</font_size>
+				<font_size>8</font_size>
 			<x>312</x>
 			<y>12</y>
 			<color>
@@ -2874,7 +2874,7 @@
 			<height>166</height>
 			<width>194</width>
 				<font_name>メイリオ</font_name>
-				<font_size>9</font_size>
+				<font_size>8</font_size>
 			<x>312</x>
 			<y>396</y>
 			<color>
@@ -3071,7 +3071,7 @@
 			<height>166</height>
 			<width>213</width>
 				<font_name>メイリオ</font_name>
-				<font_size>9</font_size>
+				<font_size>8</font_size>
 			<x>312</x>
 			<y>204</y>
 			<color>
@@ -3268,7 +3268,7 @@
 			<height>166</height>
 			<width>213</width>
 				<font_name>メイリオ</font_name>
-				<font_size>9</font_size>
+				<font_size>8</font_size>
 			<x>312</x>
 			<y>600</y>
 			<color>
@@ -3465,7 +3465,7 @@
 			<height>574</height>
 			<width>200</width>
 				<font_name>メイリオ</font_name>
-				<font_size>9</font_size>
+				<font_size>8</font_size>
 			<x>876</x>
 			<y>12</y>
 			<color>
@@ -4850,7 +4850,7 @@
 			<height>382</height>
 			<width>242</width>
 				<font_name>メイリオ</font_name>
-				<font_size>9</font_size>
+				<font_size>8</font_size>
 			<x>876</x>
 			<y>1116</y>
 			<color>
@@ -5344,7 +5344,7 @@
 			<height>90</height>
 			<width>221</width>
 				<font_name>メイリオ</font_name>
-				<font_size>9</font_size>
+				<font_size>8</font_size>
 			<x>1164</x>
 			<y>12</y>
 			<color>
@@ -5673,7 +5673,7 @@
 			<height>238</height>
 			<width>200</width>
 				<font_name>メイリオ</font_name>
-				<font_size>9</font_size>
+				<font_size>8</font_size>
 			<x>24</x>
 			<y>12</y>
 			<color>
@@ -6149,7 +6149,7 @@
 			<height>1438</height>
 			<width>238</width>
 				<font_name>メイリオ</font_name>
-				<font_size>9</font_size>
+				<font_size>8</font_size>
 			<x>588</x>
 			<y>12</y>
 			<color>
@@ -9877,7 +9877,7 @@
 			<height>97</height>
 			<width>145</width>
 				<font_name>メイリオ</font_name>
-				<font_size>9</font_size>
+				<font_size>8</font_size>
 			<x>1164</x>
 			<y>312</y>
 			<color>
