@@ -1,0 +1,30 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>リシテアCareer</title>
+<style type="text/css"> 
+#startApp {
+	text-align: center;
+	font-size: 24px;
+}
+</style>
+<script type="text/javascript">
+function startApp() {
+	var aw = screen.availWidth;
+	var ah = screen.availHeight;
+	aw = (aw > 1280) ? 1280 : aw;
+	ah = (ah >  984) ?  984 : ah;
+	var style="scrollbars=yes, resizable=yes, width=" + aw + ", height=" + ah + ", top=0, left=0, menubar=no, location=no";
+	var w = window.open( "./login.jsp", "_blank", style );
+	w.focus();
+}
+</script>
+</head>
+
+<body>
+	<div id="startApp">
+		<a href="javascript:startApp()">ログイン画面へ</a>
+	</div>
+</body>
+
+</html>

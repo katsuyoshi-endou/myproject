@@ -1,0 +1,3661 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html onContextmenu="return false;">
+<head>
+
+
+
+	<title>リシテア/人財戦略</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Expires" content="Sat, 01 Jan 2000 00:00:00 GMT">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+
+	<!-- Vendor libraries bundled by webpack -->
+	<script type="text/javascript" src="./assets/bundle/vendor.bundle.js"></script>
+
+	<!-- Custom components bundled by webpack -->
+	<script src="./assets/bundle/components.bundle.js"></script>
+	<link rel="stylesheet" href="./assets/bundle/components.bundle.css" />
+
+	<!-- Bootstrap -->
+	<script type="text/javascript" src="./assets/vendor/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="./assets/vendor/bootstrap-3.3.7/css/bootstrap.min.css" media="screen">
+
+	<!-- FontAwesome -->
+	<link rel="stylesheet" href="./assets/vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+
+	<!-- Chart.js -->
+	<script type="text/javascript" src="./assets/vendor/Chart.bundle.min.js"></script>
+
+	<!-- jRange -->
+	<script type="text/javascript" src="./assets/vendor/jrange/jquery.range-min.js"></script>
+  <link rel="stylesheet" href="./assets/vendor/jrange/jquery.range.css">
+  	<!-- tempでここに配置 -->
+	<script type="text/javascript" src="./view/jquery.ui.datepicker-ja.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="./view/jquery-ui.min.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="./view/jquery-ui.min.css" type="text/css" media="screen" />
+
+	<!-- Lysithea -->
+	<link rel="stylesheet" href="./assets/vendor/lysithea/css/lysithea.css" media="screen, projection" />
+
+
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="./assets/bundle/style.bundle.css" />
+	
+
+	<!-- JavaScript -->
+	<!-- <script type="text/javascript" src="./dyres/labelmap.js"></script> -->
+	<script type="text/javascript" src="./assets/vendor/lysithea/js/common.js"></script>
+	<script type="text/javascript" src="./assets/vendor/lysithea/js/jQ-common.js"></script>
+
+
+
+
+<link rel="stylesheet" href="./view/sheet/careersheet.css" type="text/css" media="screen" />
+<style type="text/css">
+</style>
+</head>
+<body id="lyca" data-vmid="VmSHVSHT">
+<div id="gApp">
+
+
+
+
+    <div id="gHeader">
+        <div class="appbar">
+          <div class="holder">
+            <div class="appbar-L">
+              <nav class="appLogo">
+                <a class="appName backToHome" href="#">
+                  <span class="title">LYSITHEA</span>
+                </a>
+              </nav>
+              <button class="btn btn-transp backToHome" type="button">
+                <i class="fa fa-home"></i>
+                <span>ホーム</span>
+              </button>
+            </div>
+            <div class="appbar-C">
+              
+              <div class="func-title"></div>
+              
+            </div>
+            <div class="appbar-R">
+              
+              
+              <div class="btn-group">
+                <button type="button" class="btn btn-transp dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fa fa-user"></i><span>業務アカウントZ</span><i class="fa fa-caret-down"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right">
+                  <li><span>ZZZZZZ</span></li>
+                  <li role="separator" class="divider"></li>
+                  <li>
+                    <a href="#" id="logout">
+                      <i class="fa fa-sign-out"></i>
+                      <span>ログアウト</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <div id="gBody">
+      
+      <form name="F001" method="post" action="/sheet/servlet/CommonServlet" target="_self" onsubmit="return false;">
+      <input type="hidden" name="_FW_TRANSIT_KINOU_ID" value="VHD010" />
+      <input type="hidden" name="_FW_TRANSIT_ACTION" value="" />
+      
+      
+      
+      <div id="navbar">
+        <div class="navbar-body btns"></div>
+      </div>
+      
+      <div id="gOperation"><div class="desk"><div class="container-fluid">
+      
+      
+      
+      <div class="pnl"><div class="pnl-body">
+      
+        
+        <div style="float:right;"><span class="hiddenSheetId">810023-MAJOR-2016T-jksk</span></div>
+        <!-- 
+          SheetId     : 810023-MAJOR-2016T-jksk
+          CompanyCd   : MAJOR
+          OperationCd : 2016T-jksk / 2016年度　自己申告
+          FormGrpCd   : grp-jksk / 自己申告シート
+          FormCtgCd   : ctg-JUNIOR
+          FormCd      : frm-jksk-J03 / 自己申告(3等級)
+          OwnGuid     : 810023
+          LayoutCd    : lay-jksk-v1
+          LabelSetCd  : lbl-jksk-v1
+          ParamSetCd  : prm-jksk-v1
+          FillSetCd   : fil-jksk-v1
+          MaskCd      : msk-jksk-v1
+          FlowCd      : flw-jksk
+          FlowPtn     : flwptn-normal
+          SeqNo       : 00
+          StatusCd    : 00-New / 本人記入中(本人)
+          ActorCd     : act-jinji
+          MainActorCd : act-owner
+          HoldGuid    : 810023
+        -->
+      
+      
+        
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        <div class="hyokasheet-header">
+          
+          
+      
+      
+      
+      
+      
+      
+      
+      
+        <div class="navbarBtns">
+      
+          <div class="leftArea">
+            
+            
+              
+              
+              
+              
+              
+              
+              
+              
+            
+            
+            
+            <button type="button" id="transCSMLTI" class="btn btn-back">戻る</button>
+            
+            
+            
+            
+          </div><!-- /leftArea -->
+          <div class="rightArea">
+            <div id="us-template-rendering-hbtn"></div>
+<!--       
+            立場切替ボタン
+             -->
+              <!-- <div class="btn-group showSwitchActor">
+                <button type="button" class="btn dropdown-toggle " data-toggle="dropdown" aria-expanded="false">立場切替<span class="caret"></span></button>
+                <ul class="dropdown-menu dropdown-menu-right">
+                  
+                    <li><a href="#" class="do-switchActor" data-actorcd="act-jinji">人事</a></li>
+                  
+                </ul>
+              </div> -->
+            
+      
+            
+            <div class="btns csActionBtns" style="display:inline-block;margin:0;padding:0;">
+              
+                
+              
+                
+                  <button type="button" id="btn_FORWARD" class="btn btn-secondary" data-actioncd="FORWARD">提出</button>
+                
+              
+            </div><!-- /btns -->
+            
+            
+            
+          </div><!-- /rightArea -->
+      
+      
+        </div>
+      
+          
+          
+          
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        <table class="titleArea">
+          <tr>
+            <td class="cellLeft">
+              <ul>
+                <li class="sheet-title-operation">2019年度　自己申告</li>
+                <li class="sheet-title-form">通常職</li>
+              </ul>
+      
+              
+              <div class="refSheetLinks">
+              
+              
+              </div>
+      
+            </td>
+            <td class="cellRight">
+              
+              <div id="us-template-rendering-attr" class="readonly"></div>
+              
+            </td>
+          </tr>
+        </table>
+      
+      
+          
+          
+          
+      
+      
+      
+      
+      
+      
+        <div class="csmd-status-summary">
+        
+          <div class="sheet-status">
+            <table class="sheet-status-layout">
+              <tr>
+                
+                <td style="width:23%;">
+                  <table class="sheet-status-col" data-operationCd="2016T-jksk" data-formGrpCd="grp-jksk">
+                    <tr>
+                      <th class="sheet-status-th">
+                          未申請
+                      </th>
+                    </tr>
+                    
+                    
+                      <tr data-statusCd="00-New">
+                        <td><i class="fa"></i>未申請</td>
+                      </tr>
+                      <!-- <tr data-statusCd="">
+                          <td><i class="fa"></i>申請中</td>
+                        </tr>
+                        <tr data-statusCd="">
+                            <td><i class="fa"></i>承認完了</td>
+                          </tr>
+                          <tr data-statusCd="">
+                              <td><i class="fa"></i>ステータス名検討中</td>
+                            </tr>                        -->
+                
+                  </table>
+                </td>
+
+                <td style="width:23%;">
+                    <table class="sheet-status-col" data-operationCd="2016T-jksk" data-formGrpCd="grp-jksk">
+                      <tr>
+                        <th class="sheet-status-th">
+                            申請中
+                        </th>
+                      </tr>
+                        <tr data-statusCd="99-End">
+                          <td><i class="fa"></i>申請中</td>
+                        </tr>
+                      
+                    </table>
+                  </td>
+                  <td style="width:23%;">
+                    <table class="sheet-status-col" data-operationCd="2016T-jksk" data-formGrpCd="grp-jksk">
+                      <tr>
+                        <th class="sheet-status-th">
+                            承認完了
+                        </th>
+                        <tr data-statusCd="99-End">
+                          <td><i class="fa"></i>承認完了</td>
+                        </tr>
+                    </table>
+                  </td>
+                  <td style="width:23%;">
+                  <table class="sheet-status-col" data-operationCd="2016T-jksk" data-formGrpCd="grp-jksk">
+                    <tr>
+                      <th class="sheet-status-th">
+                          ステータス名検討中
+                      </th>
+                      <tr data-statusCd="99-End">
+                        <td><i class="fa"></i>ステータス名検討中</td>
+                      </tr>
+                  </table>
+                </td>                  
+              </tr>
+            </table>
+          </div>
+        
+        </div><!-- /.status-summary -->
+      
+        </div>
+      
+      
+        <div class="hyokasheetInner">
+      
+          <div class="sheet-section">
+            
+            
+            <div id="us-template-rendering" class="readonly"></div>
+            
+          </div><!-- /sheet-section -->
+      
+        </div><!-- /hyokasheetInner -->
+      
+      
+      
+      
+      
+      <script id="us-template-layout-hbtn" type="text/template">
+      
+        <button type="button" id="" class="xlDownload btn">{{= label.JkskExcelDlBtn }}</button>
+        <button type="button" id="" class="xlDownload btn">Excelアップロード</button>
+        {{ if( _data["user"].isOperator ) { }}
+        <div class="btn-group">
+          <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">上長選択 <span class="caret"></span></button>
+          <ul class="dropdown-menu dropdown-menu-right">
+            <li><a id="btn_actors">上長(承認者)の確認・変更</a></li>
+            <li><a id="btn_chgflowptn">フローパターンの確認・変更</a></li>
+          </ul>
+        </div>
+        {{ } }}
+      
+      </script>
+      
+      <style>
+        .sheet-header-info th {
+          word-break: keep-all
+        }
+        .mod-table .q-comment{
+        background-color: #EEEEEE
+        }
+        
+        .mod-table.bosShoken th {
+          background-color: #FFEFD4
+        }
+        .mod-table.kakoGyomu th {
+          background-color: #EDEDED;
+        }
+        .mod-table .kakoGyomuNo5 th {
+          background-color: #DEDEDE
+        }
+        .mod-table .kakoGyomuNo5 td {
+          background-color: #DEDEDE
+        }
+        .mod-table .thick-line{
+          border-right: 6px solid #EEEEEE;
+        }
+        .btn-style{
+        background-color: #D4D4D4;
+        }
+
+        </style>
+        
+        <script id="us-template-layout-attr" type="text/template">
+        
+          <table class="sheet-header-info">
+            <tr><th>共通社員番号</th><td>{{= sheet.stfNo }}</td></tr>
+            <tr><th>氏名</th><td>{{= sheet.ownPersonName }}</td></tr>
+            <tr><th>所属部署</th><td>{{= sheet.deptNm }}</td></tr>
+            <tr><th>領域・グレード</th><td>xxx</td></tr>
+            <tr><th>ランク</th><td>xxx</td></tr>
+            <tr><th>原籍</th><td>xxx</td></tr>
+            <tr><th>上長名</th><td>xxx xxxx</td></tr>
+          </table>
+        
+        </script>
+        <script id="us-template-layout" type="text/template">
+        
+          <div class="mod-table ami">
+            <table>
+              <tr>
+                <th>入力時の注意事項</th>
+              </tr>
+              <tr>
+                <td>-2019年度の自己申告は、ソフトバンク（SB）、・・・・・・・・・・にて合同実施しています。<br>-入力を中断する場合は必ず「途中保存をしてメニューに戻る」ボタンをクリックしてください。<br>-途中保存を行なわずにブラウザを閉じてしまいますと、新たに入力した内容は破棄されます。<br>-90分間この画面を開いたまま放置しますと、自動的にログアウトします。<br>-フリーテキスト枠内には文字数制限があります。（1000文字程度）<br>-＊のついた項目は必須入力となります。<br>-昨年度自己申告を回答済の方については、一部記入いただいた内容をプリセットしている場合がございます。<br>-注1）画面上には2019年9月1日時点の所属部署名が記載されています。<br>-注2）上長は2019年10月1日時点の直属上長を選択してください。</td>
+              </tr>
+            </table>
+          </div>
+        
+        
+          <!-- .cstab -->
+          <div class="cstab">
+            <ul class="tabarea">
+              <li id="tab01"><a href="#">自己申告</a></li>
+              <li id="tab02"><a href="#">海外・外国語利用経験</a></li>
+            </ul>
+            <div class="separater"></div>
+          </div>
+          <!-- /.cstab -->
+        
+          <!-- 自己申告 start -->
+          <div class="tabpage tab01">
+            <h3 class="lightBg">
+              自己申告
+              <button type="button" class="btn cspe" style="margin:-5px 5px 0px; 10px;" data-cspe="jksk_own">自己申告入力</button>
+            </h3>
+            
+            <h4>現在の業務について</h4>
+            <div class="mod-table ami">
+              <table>
+                <tr>
+                  <td class="q-comment">現在従事している業務を「現在の業務内容」に記入してください。<br>それ以前の業務に関しては「過去に従事していた業務」に記入してください。<br>なお従事期間はジョブローテーションや異動の参考情報になります。誤りの無いよう上長と面談時に必ず確認をしてください。</td>
+                </tr>
+              </table>
+            </div>
+            
+            <h3></h3>
+        
+            <div class="mod-table ami">
+              <table>
+                <tr>
+                  <th rowspan="5" style="width: 13%;">
+                    <span style="font-weight: bold;">現在の業務内容</span>
+                    <!-- <h3></h3>
+                    <button type="button" class="btn btn-default">過去業務へ移動</button>
+                    <h3></h3>
+                    <button type="button" class="btn btn-danger">削除</button> -->
+                  </th>
+                  <th style="width: 17%;">所属企業<span style="color:red;"> ※</span></th>
+                  <td style="width:20%;"></td>
+                  <th style="width:25%;">所属企業名（SBグループ以外の場合）</th>
+                  <td style="width:25%;"></td>
+                </tr>
+                <tr>
+                  <th>業務分類(職種/職種2/分類)<span style="color:red;"> ※</span></th>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>業務内容<span style="color:red;"> ※</span></th>
+                  <td colspan="3"></td>
+                </tr>
+                <tr>
+                  <th>従事期間<span style="color:red;"> ※</span></th>
+                  <td colspan="3" style="padding:0px;">
+                    <table style="border: 0px;">
+                      <th style="width: 10%; text-align: center;">開始</th>
+                      <td style="width: 23%;"></td>
+                      <th style="width: 10%; text-align:center">～</th>
+                      <td style="width: 23%;">2019/09</td>
+                      <th style="width: 10%; text-align: center;">従事期間</th>
+                      <td style="width: 24%;"></td>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <th>現在の勤務地での勤務年数<span style="color:red;"> ※</span></th>
+                  <td colspan="3" style="padding:0px;">
+                    <table style="border: 0px;">
+                      <th style="width: 15%;">勤務地域</th>
+                      <td></td>
+                      <th style="width: 15%;">勤務期間</th>
+                      <td></td>            
+                      <td style="width: 10%;">年</td>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
+        
+            <h3></h3>
+        
+            <div class="mod-table ami kakoGyomu">
+              <table>
+                <tr>
+                  <th style="width:13%; background-color:#EDEDED;" rowspan="4">過去の業務内容①</th>
+                  <th style="width:17%;">所属企業</th>
+                  <td style="width:20%;"></td>
+                  <th style="width:25%;">所属企業名（SBグループ以外の場合）</td>
+                  <td style="width:25%;"></td>
+                </tr>
+                <tr>
+                  <th>業務分類(職種/職種2/分類)</th>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>業務内容</th>
+                  <td colspan="3"></td>
+                </tr>
+                <tr>
+                  <th>従事期間</th>
+                  <td colspan="3" style="padding:0px;">
+                    <table>
+                      <tr>
+                        <th style="width:10%; text-align: center;">自</th>
+                        <td style="width:23%;"></td>
+                        <th style="width:10%; text-align:center">～至</th>
+                        <td style="width:23%;"></td>
+                        <th style="width:10%; text-align: center;">期間</th>
+                        <td style="width:24%;"></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="background-color:#EDEDED;" rowspan="4">過去の業務内容②</th>
+                  <th>所属企業</th>
+                  <td></td>
+                  <th>所属企業名（SBグループ以外の場合）</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>業務分類(職種/職種2/分類)</th>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>業務内容</th>
+                  <td colspan="3"></td>
+                </tr>
+                <tr>
+                  <th>従事期間</th>
+                  <td colspan="3" style="padding:0px;">
+                    <table>
+                      <tr>
+                        <th style="width:10%; text-align: center;">自</th>
+                        <td style="width:23%;"></td>
+                        <th style="width:10%; text-align:center">～至</th>
+                        <td style="width:23%;"></td>
+                        <th style="width:10%; text-align: center;">期間</th>
+                        <td style="width:24%;"></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="background-color:#EDEDED;" rowspan="4">過去の業務内容③</th>
+                  <th>所属企業</th>
+                  <td></td>
+                  <th>所属企業名（SBグループ以外の場合）</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>業務分類(職種/職種2/分類)</th>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>業務内容</th>
+                  <td colspan="3"></td>
+                </tr>
+                <tr>
+                  <th>従事期間</th>
+                  <td colspan="3" style="padding:0px;">
+                    <table>
+                      <tr>
+                       <th style="width:10%; text-align: center;">自</th>
+                      <td style="width:23%;"></td>
+                      <th style="width:10%; text-align:center">～至</th>
+                      <td style="width:23%;"></td>
+                      <th style="width:10%; text-align: center;">期間</th>
+                      <td style="width:24%;"></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="background-color:#EDEDED;" rowspan="4">過去の業務内容④</th>
+                  <th>所属企業</th>
+                  <td></td>
+                  <th>所属企業名（SBグループ以外の場合）</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>業務分類(職種/職種2/分類)</th>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>業務内容</th>
+                  <td colspan="3"></td>
+                </tr>
+                <tr>
+                  <th>従事期間</th>
+                  <td colspan="3" style="padding:0px;">
+                    <table>
+                      <tr>
+                      <th style="width:10%; text-align: center;">自</th>
+                      <td style="width:23%;"></td>
+                      <th style="width:10%; text-align:center">～至</th>
+                      <td style="width:23%;"></td>
+                      <th style="width:10%; text-align: center;">期間</th>
+                      <td style="width:24%;"></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr class="kakoGyomuNo5">
+                  <th rowspan="4">過去の業務内容⑤<br><br>※「過去の業務内容⑤」は翌年度の自己申告シートには引き継がれません。</th>
+                  <th>所属企業</th>
+                  <td></td>
+                  <th>所属企業名（SBグループ以外の場合）</th>
+                  <td></td>
+                </tr>
+                <tr class="kakoGyomuNo5">
+                  <th>業務分類(職種/職種2/分類)</th>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr class="kakoGyomuNo5">
+                  <th>業務内容</th>
+                  <td colspan="3"></td>
+                </tr>
+                <tr class="kakoGyomuNo5">
+                  <th>従事期間</th>
+                  <td colspan="3" style="padding:0px;">
+                    <table>
+                      <tr>
+                        <th style="width:10%; text-align: center;">自</th>
+                        <td style="width:23%;"></td>
+                        <th style="width:10%; text-align:center">～至</th>
+                        <td style="width:23%;"></td>
+                        <th style="width:10%; text-align: center;">期間</th>
+                        <td style="width:24%;"></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>  
+              </table>
+            </div>
+        
+            <h3></h3>
+        
+            <div class="mod-table ami">
+              <table>
+                <tr>
+                  <td class="q-comment">以下の各項目について過去1年間を通して(過去1年以内に異動した場合は現部署に異動してから現在まで)<br>それぞれ最もよくあてはまるものを1つ選択してください。</td>
+                </tr>
+              </table>
+            </div>
+        
+            <h3></h3>
+        
+            <div class="mod-table ami">
+              <table>
+                <tr>
+                  <th rowspan="4" style="width: 15%; font-weight: bold;">現在の仕事および職場環境等</th>
+                  <th style="width:40%;">現在担当している仕事は向いている仕事ですか<span style="color:red;"> ※</span></th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>現在担当している仕事はやりがいを感じるものですか<span style="color:red;"> ※</span></th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>現在の仕事を通じて成長できていると感じますか<span style="color:red;"> ※</span></th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>現在の職場は、あなたや同僚・後輩にとって働きやすい環境ですか<span style="color:red;"> ※</span></th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th rowspan="6" style="width: 15%; font-weight: bold;">仕事の適正</th>
+                  <th rowspan="3">あなたに適性があると思う仕事はどのようなものですか<br>(最大3つ)<span style="color:red;"> ※</span></th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>  
+                <tr>
+                  <th rowspan="3">あなたに適性がないと思う仕事はどのようなものですか<br>(最大3つ)<span style="color:red;"> ※</span></th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>  
+              </table>
+            </div>
+          
+        
+            <h4>語学力</h4>
+        
+            <div class="mod-table ami">
+              <table>
+                <tr>
+                  <td class="q-comment">会社で実施した英語関連の検定結果のうち最新情報を表示させています。</td>
+                </tr>
+              </table>
+            </div>
+            
+            <h3></h3>
+        
+            <div class="mod-table ami">
+              <table>
+                <tr>
+                  <th style="width:40%;">資格名 {{= tooltip( "※最新取得日の結果を表示しています。" ) }}</th>
+                  <th style="width:10%;">取得日</th>
+                  <th style="width:10%;">有効期限</th>
+                  <th>詳細</th>
+                </tr>
+                <tr>
+                  <td>模擬トレ(社内)</td>
+                  <td>2018/03/31</td>
+                  <td>-</td>
+                  <td>510点(TOEIC換算点) ※~2018・3・31までに取得した模擬トレ/CASECの最高スコア</td>
+                </tr>
+                <tr>
+                  <td>模擬トレ(追い込み型)</td>
+                  <td>2017/03/31</td>
+                  <td>-</td>
+                  <td>500点(TOEIC換算点) ※~2018・3・31までに取得した模擬トレ/CASECの最高スコア</td>
+                </tr> 
+                <tr>
+                  <td>模擬トレ(Ｌ＆Ｒ)</td>
+                  <td>2018/09/31</td>
+                  <td>-</td>
+                  <td>490点(TOEIC換算点) ※~2018・3・31までに取得した模擬トレ/CASECの最高スコア</td>
+                </tr>  
+                <tr>
+                  <td>TOEIC(社内)</td>
+                  <td>2013/12/01</td>
+                  <td>-</td>
+                  <td>565点</td>
+                </tr>
+                <tr>
+                  <td>TOEIC(?)</td>
+                  <td>2013/09/01</td>
+                  <td>-</td>
+                  <td>570点</td>
+                </tr>       
+              </table>
+            </div>
+        
+            <h3></h3>
+            <button type="button" class="btn btn-default btn-style">語学レベル目安</button>
+            <h3></h3>
+
+            <div class="mod-table ami">
+              <table>
+                <tr>
+                  <td class="q-comment">ご自身の語学力にあてはまるものを選択してください。</td>
+                </tr>
+              </table>
+            </div>
+            <h3></h3>
+        
+            <div class="mod-table ami">
+              <table>
+                <tr>
+                  <th colspan="2" style="font-weight: bold;">言語</th>
+                  <td colspan="3">英語</td>
+                </tr>
+                <tr>
+                  <th rowspan="2">レベル</th>
+                  <th>読み書き<span style="color:red;"> ※</span></th>
+                  <td colspan="3"></td>
+                </tr>    
+                <tr>
+                  <th>会話<span style="color:red;"> ※</span></th>
+                  <td colspan="3"></td>
+                </tr>          
+                <tr>
+                  <th colspan="2" style="font-weight: bold;">言語（英語以外①）</th>
+                  <td></td>
+                  <th style="width:20%;">(｢その他｣の外国語名について)</th>
+                  <td></td>          
+                </tr>
+                <tr>
+                  <th rowspan="2">レベル</th>
+                  <th>読み書き</th>
+                  <td colspan="3"></td>
+                </tr>    
+                <tr>
+                  <th>会話</th>
+                  <td colspan="3"></td>
+                </tr>
+                <tr>
+                  <th colspan="2" style="font-weight: bold;">言語（英語以外②）</th>
+                  <td></td>
+                  <th>(｢その他｣の外国語名について)</th>
+                  <td></td>          
+                </tr>
+                <tr>
+                  <th rowspan="2">レベル</th>
+                  <th>読み書き</th>
+                  <td colspan="3"></td>
+                </tr>    
+                <tr>
+                  <th>会話</th>
+                  <td colspan="3"></td>
+                </tr>
+                <tr>
+                  <th colspan="2" style="width:30%">今後、外国語を用いた業務に携われる機会があったら、<br>挑戦してみたいと思いますか（※国内外問わず）<span style="color:red;"> ※</span></th>
+                  <td colspan="3"></td>
+                </tr>
+                <tr>
+                  <th colspan="2">挑戦したい業務内容(詳細)・理由</th>
+                  <td colspan="3"></td>
+                </tr>        
+              </table>
+            </div>
+            <h3></h3>        
+
+            <h4>保有資格/スキル</h4>
+        
+            <div class="mod-table ami">
+              <table>
+                <tr>
+                  <td class="q-comment">会社で実施したIT/統計関連の検定結果のうち最新情報を表示させています。</td>
+                </tr>
+              </table>
+            </div>
+            <h3></h3>
+        
+            <div class="mod-table ami">
+              <table>
+                <tr>
+                  <th style="width:40%;">資格名 {{= tooltip( "※最新取得日の結果を表示しています。" ) }}</th>
+                  <th style="width:10%;">取得日</th>
+                  <th style="width:10%;">有効期限</th>
+                  <th>詳細</th>
+                </tr>
+                <tr>
+                  <td>IT検定</td>
+                  <td>2019/01/01</td>
+                  <td>-</td>
+                  <td>6(AI,IoT,ロボット：50%/プログラミング：40%/コンピュータ：20%/データベース：60%/ネットワーク：80%/セキュリティ：60%/システム開発：80%)</td>
+                </tr>        
+                <tr>
+                  <td>SB流ビジネス統計検定</td>
+                  <td>2018/12/01</td>
+                  <td>-</td>
+                  <td>6(ビジネス数学：3/統計知識3)</td>
+                </tr>        
+              </table>
+            </div>
+            
+            <h3></h3>
+        
+            <div class="mod-table ami">
+              <table>
+                <tr>
+                  <td class="q-comment">人事Naviの「資格登録」にてご自身で申請された資格を表示しております。<br>資格を追加される場合は「追加資格(選択入力)」欄の「資格選択」より追加してください。<br>※「資格選択」に表示されない資格があった場合は「追加資格(その他)」にてご記入ください。<br>※「資格選択」から追加頂いた資格は人事Naviの資格取得歴に後日反映されます</td>
+                </tr>
+              </table>
+            </div>
+            
+            <div style="margin: 30px;"></div>
+            <h3 style="float: left;">人事Navi登録済み資格</h3>
+            <div style="float: right; margin: 10px;">
+              <button type="button" class="btn btn-default">全件ON/OFF</button>
+            </div>
+        
+            <h3></h3>
+        
+            <div class="mod-table ami">
+              <table>
+                <tr>
+                  <th style="width:20%">保有資格・免許名①</th>
+                  <td style="width:40%"></td>
+                  <th style="width:10%">取得時期</th>
+                  <td style="width:10%"></td>
+                  <th style="width:10%">有効期限</th>
+                  <td style="width:10%"></td>
+                </tr>
+                <tr>
+                  <th>保有資格・免許名②</th>
+                  <td></td>
+                  <th>取得時期</th>
+                  <td></td>
+                  <th>有効期限</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>保有資格・免許名③</th>
+                  <td></td>
+                  <th>取得時期</th>
+                  <td></td>
+                  <th>有効期限</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>保有資格・免許名④</th>
+                  <td></td>
+                  <th>取得時期</th>
+                  <td></td>
+                  <th>有効期限</th>
+                  <td></td>
+                </tr>     
+                <tr>
+                  <th>保有資格・免許名⑤</th>
+                  <td></td>
+                  <th>取得時期</th>
+                  <td></td>
+                  <th>有効期限</th>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+        
+            <div style="margin: 30px;"></div>
+            <h3 style="float: left;">追加資格(選択入力)</h3>
+            <!-- <div style="float: right; margin: 10px;">
+              <button type="button" class="btn btn-default">人事Navi資格申請へ</button>
+            </div> -->
+        
+            <div class="mod-table ami">
+              <table>
+                <tr>
+                  <th style="width:20%">追加保有資格・免許名①</th>
+                  <td style="width:40%"></td>
+                  <th style="width:10%">取得時期 {{= tooltip( "取得日が不明な場合は「1日」にて記載してください(例：〇月1日)" ) }}</th>
+                  <td style="width:10%"></td>
+                  <th style="width:10%">有効期限</th>
+                  <td style="width:10%"></td>
+                </tr>
+                <tr>
+                  <th>追加保有資格・免許名②</th>
+                  <td></td>
+                  <th>取得時期</th>
+                  <td></td>
+                  <th>有効期限</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>追加保有資格・免許名③</th>
+                  <td></td>
+                  <th>取得時期</th>
+                  <td></td>
+                  <th>有効期限</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>追加保有資格・免許名④</th>
+                  <td></td>
+                  <th>取得時期</th>
+                  <td></td>
+                  <th>有効期限</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>追加保有資格・免許名⑤</th>
+                  <td></td>
+                  <th>取得時期</th>
+                  <td></td>
+                  <th>有効期限</th>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+        
+            <div style="margin: 30px;"></div>
+            <h3>追加資格(その他)　※追加資格(選択入力)に該当資格がない場合のみ、下記欄をご利用ください。</h3>
+        
+            <div class="mod-table ami">
+              <table>
+                <tr>
+                  <th style="width:20%">追加保有資格・免許名①</th>
+                  <td style="width:40%"></td>
+                  <th style="width:10%">取得時期 {{= tooltip( "取得日が不明な場合は「1日」にて記載してください(例：〇月1日)" ) }}</th>
+                  <td style="width:10%"></td>
+                  <th style="width:10%">有効期限</th>
+                  <td style="width:10%"></td>
+                </tr>
+                <tr>
+                  <th>追加保有資格・免許名②</th>
+                  <td></td>
+                  <th>取得時期</th>
+                  <td></td>
+                  <th>有効期限</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>追加保有資格・免許名③</th>
+                  <td></td>
+                  <th>取得時期</th>
+                  <td></td>
+                  <th>有効期限</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>追加保有資格・免許名④</th>
+                  <td></td>
+                  <th>取得時期</th>
+                  <td></td>
+                  <th>有効期限</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>追加保有資格・免許名⑤</th>
+                  <td></td>
+                  <th>取得時期</th>
+                  <td></td>
+                  <th>有効期限</th>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+        
+            <!-- <h3></h3>
+        
+            <div class="mod-table ami">
+              <table>
+                <tr>
+                  <th style="width:20%;">保有資格：その他特筆すべきスキル他</th>
+                  <td></td>
+                </tr>
+              </table>
+            </div> -->
+          
+            <h3></h3>
+        
+            <div class="mod-table ami">
+              <table>
+                <tr>
+                  <td class="q-comment">ExcelとAccessそれぞれについて、ご自身のスキルとしてあてはまるものに1つチェックしてください。</td>
+                </tr>
+              </table>
+            </div>
+        
+            <h3></h3>
+            <div style="display:flex; justify-content:space-between; width:20%;">
+            <button type="button" class="btn btn-default btn-style">Excelレベル</button>
+            <button type="button" class="btn btn-default btn-style">Accessレベル</button>
+            </div>
+            <h3></h3>
+        
+            <div class="mod-table ami">
+              <table>
+                <tr>
+                  <th style="width:20%;">Excelレベル<span style="color:red;"> ※</span></th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>Accessレベル<span style="color:red;"> ※</span></th>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+            
+            <h3></h3>
+        
+            <div class="mod-table ami">
+              <table>
+                <tr>
+                  <td class="q-comment">プログラミング用ヘッダ(文言検討中)</td>
+                </tr>
+              </table>
+            </div>
+        
+            <h3></h3>
+            <button type="button" class="btn btn-default btn-style">プログラミングレベル</button>
+            <h3></h3>
+        
+            <div class="mod-table ami">
+              <table>
+                <tr>
+                  <th style="width:30%;">プログラミングスキルをお持ちですか？<span style="color:red;"> ※</span></th>
+                  <td colspan="7" ></td>
+                </tr>
+                <tr>
+                  <th style="text-align: center;" rowspan="22">言語とそのレベルについてあてはまるものを選択してください。<br>※①～⑯以外の言語スキルをお持ちの場合、⑰その他に言語（レベル）を記入してください。<br>※「コンピュータ言語」「マークアップ言語」も広くプログラミングスキルとしてお聞きしています。</th>
+                  <th class="thick-line" colspan="2">プログラミング言語</th>
+                  <th style="text-align: center;">なし</th>
+                  <th style="text-align: center;">初級</th>
+                  <th style="text-align: center;">中級</th>
+                  <th style="text-align: center;" class="thick-line">上級</th>
+                  <th style="text-align: center;">業務利用</th>
+                </tr>
+                <tr>
+                  <td class="thick-line" colspan="2" style="width:30%;">Java（システム開発）</td>
+                  <td></td>
+                  <td></td>          
+                  <td></td>          
+                  <td class="thick-line" ></td>          
+                  <td></td>          
+                </tr>
+                <tr>
+                  <td class="thick-line" colspan="2" style="width:30%;">Java（Androidアプリ）</td>
+                  <td></td>
+                  <td></td>          
+                  <td></td>          
+                  <td class="thick-line" ></td>          
+                  <td></td>          
+                </tr>
+                <tr>
+                  <td class="thick-line" colspan="2" style="width:30%;">C</td>
+                  <td></td>
+                  <td></td>          
+                  <td></td>          
+                  <td class="thick-line" ></td>          
+                  <td></td>          
+                </tr>
+                <tr>
+                  <td  class="thick-line" colspan="2">C++</td>
+                  <td></td>
+                  <td></td>          
+                  <td></td>          
+                  <td class="thick-line" ></td>          
+                  <td></td> 
+                </tr>
+                <tr>
+                  <td  class="thick-line" colspan="2">C#</td>
+                  <td></td>
+                  <td></td>          
+                  <td></td>          
+                  <td class="thick-line" ></td>          
+                  <td></td> 
+                </tr>
+                <tr>
+                  <td  class="thick-line" colspan="2">SQL</td>
+                  <td></td>
+                  <td></td>          
+                  <td></td>          
+                  <td class="thick-line" ></td>          
+                  <td></td> 
+                </tr>
+                <tr>
+                  <td  class="thick-line" colspan="2">HTML/CSS</td>
+                  <td></td>
+                  <td></td>          
+                  <td></td>          
+                  <td class="thick-line" ></td>          
+                  <td></td> 
+                </tr>
+                <tr>
+                  <td  class="thick-line" colspan="2">JavaScript</td>
+                  <td></td>
+                  <td></td>          
+                  <td></td>          
+                  <td class="thick-line" ></td>          
+                  <td></td> 
+                </tr>
+                <tr>
+                  <td  class="thick-line" colspan="2">Python</td>
+                  <td></td>
+                  <td></td>          
+                  <td></td>          
+                  <td class="thick-line" ></td>          
+                  <td></td> 
+                </tr>
+                <tr>
+                  <td  class="thick-line" colspan="2">R</td>
+                  <td></td>
+                  <td></td>          
+                  <td></td>          
+                  <td class="thick-line" ></td>          
+                  <td></td> 
+                </tr>
+                <tr>
+                  <td  class="thick-line" colspan="2">Ruby</td>
+                  <td></td>
+                  <td></td>          
+                  <td></td>          
+                  <td class="thick-line" ></td>          
+                  <td></td> 
+                </tr>
+                <tr>
+                  <td  class="thick-line" colspan="2">Perl</td>
+                  <td></td>
+                  <td></td>          
+                  <td></td>          
+                  <td class="thick-line" ></td>          
+                  <td></td> 
+                </tr>        
+                <tr>
+                  <td  class="thick-line" colspan="2">PHP</td>
+                  <td></td>
+                  <td></td>          
+                  <td></td>          
+                  <td class="thick-line" ></td>          
+                  <td></td> 
+                </tr>
+                <tr>
+                  <td  class="thick-line" colspan="2">Go</td>
+                  <td></td>
+                  <td></td>          
+                  <td></td>          
+                  <td class="thick-line" ></td>          
+                  <td></td> 
+                </tr>        
+                <tr>
+                  <td  class="thick-line" colspan="2">Swift</td>
+                  <td></td>
+                  <td></td>          
+                  <td></td>          
+                  <td class="thick-line" ></td>          
+                  <td></td> 
+                </tr>
+                <tr>
+                  <td  class="thick-line" colspan="2">Kotlin</td>
+                  <td></td>
+                  <td></td>          
+                  <td></td>          
+                  <td class="thick-line" ></td>          
+                  <td></td> 
+                </tr>
+                <tr>
+                  <td  class="thick-line" colspan="2">Scala</td>
+                  <td></td>
+                  <td></td>          
+                  <td></td>          
+                  <td class="thick-line" ></td>          
+                  <td></td> 
+                </tr>        
+                <tr>
+                  <td  class="thick-line" colspan="2">Object-C</td>
+                  <td></td>
+                  <td></td>          
+                  <td></td>          
+                  <td class="thick-line" ></td>          
+                  <td></td> 
+                </tr>
+                <tr>
+                  <td  class="thick-line" colspan="2">GoogleAppsScript</td>
+                  <td></td>
+                  <td></td>          
+                  <td></td>          
+                  <td class="thick-line" ></td>          
+                  <td></td> 
+                </tr>
+                <tr>
+                  <td  class="thick-line" colspan="2">VisualBasic/VBA</td>
+                  <td></td>
+                  <td></td>          
+                  <td></td>          
+                  <td class="thick-line" ></td>          
+                  <td></td> 
+                </tr>
+                <tr>
+                  <td >その他</td>
+                  <td class="thick-line" style="width:15%;"></td>
+                  <td></td>
+                  <td></td>          
+                  <td></td>          
+                  <td class="thick-line" ></td>          
+                  <td></td>         
+                </tr>
+                <tr>
+                  <th>ハッカソン/プログラミングコンテスト・イベント等での受賞歴があれば、企画名および実績を教えて下さい。 {{= tooltip( "※「あり」の場合、詳細も記入してください。" ) }}<span style="color:red;"> ※</span></th>
+                  <td></td>
+                  <td colspan="6"></td>
+                </tr>
+                <tr>
+                  <th>Github アカウントがあればご記入ください</th>
+                  <td colspan="7"></td>
+                </tr>
+                <tr>
+                  <th>OSS公開経験があれば、その内容を教えて下さい。 {{= tooltip( "※「あり」の場合、詳細も記入してください。" ) }}<span style="color:red;"> ※</span></th>
+                  <td></td>
+                  <td colspan="6"></td>
+                </tr>                
+              </table>
+            </div>
+        
+            <h3></h3>
+        
+            <h4>今後のキャリアについて</h4>
+            <div class="mod-table ami">
+              <table>
+                <tr>
+                  <td class="q-comment">ご自身の今後のキャリアについて、目指したい姿・役割とその理由を記入してください。</td>
+                </tr>
+              </table>
+            </div>
+        
+            <h3></h3>
+        
+            <div class="mod-table ami">
+              <table>
+                <tr>
+                  <td class="q-comment">あなたはFY19末に役職バトンタッチを迎える予定です。<br>「1年以内のキャリアをどう考えているか」の設問には、「1年以内に新しい業務に挑戦したい」を選択してください。<br>併せて、「理由・背景・思い」の欄に、具体的に「どの部署」で「どの様な業務」に挑戦したいか、必ずご記載ください。<br>①現在所属している部署での活躍を希望→「現在の業務でキャリアアップしたい」を選択<br>②現在所属している部以外での活躍を希望→「直ちに新しい業務に挑戦してみたい」「1年以内に新しい業務に挑戦したい」のいずれかを選択</td>
+                </tr>
+              </table>
+            </div>
+        
+            <h3></h3>
+            <div class="mod-table ami">
+              <table>
+                <tr>
+                  <th style="width:30%;">現在の部署で拡大したい業務・チャレンジしたい業務を記入してください<span style="color:red;"> ※</span></th>
+                  <td colspan="3"></td>
+                </tr>
+                <tr>
+                  <th>1年以内のキャリアをどう考えているか<span style="color:red;"> ※</span></th>
+                  <td colspan="3"></td>
+                </tr>
+                <tr>
+                  <th>経験したい業務①</th>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>経験したい業務②</th>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>1年以内に携わりたい業務詳細</th>
+                  <td colspan="3"></td>
+                </tr>
+                <tr>
+                  <th>理由<span style="color:red;"> ※</span></th>
+                  <td colspan="3"></td>
+                </tr>                
+              </table>
+            </div>
+        
+        
+            <h3></h3>  
+            
+            <div class="mod-table ami">
+              <table>
+                <tr>
+                  <th style="width:30%;">1年後～3年以内にチャレンジしたい業務・目指したい役割<span style="color:red;"> ※</span></th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>理由<span style="color:red;"> ※</span></th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>そこに向けての取り組みや身につけるべきスキル・経験<span style="color:red;"> ※</span></th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>今後、管理職を目指したいと思いますか<span style="color:red;"> ※</span></th>
+                  <td></td>
+                </tr>             
+              </table>
+            </div>
+        
+            <h3></h3>
+        
+            <h4>その他</h4>
+            <div class="mod-table ami">
+              <table>
+                <tr>
+                  <th>単身赴任</th>
+                  <td colspan="3"></td>
+                </tr>
+                <tr>
+                  <th style="width:30%;" rowspan="3">希望勤務地<br>※最大3つまで選択可能。<br>※アソシエイト（A）領域の方は回答不要</th>
+                  <td style="width:22%;"></td>
+                  <th style="width:26%;">海外を選んだ方は、国名を記入してください。</td>
+                  <td style="width:22%;"></td>
+                </tr>
+                <tr>
+                  <td style="width:22%;"></td>
+                  <th style="width:26%;">海外を選んだ方は、国名を記入してください。</td>
+                  <td style="width:22%;"></td>
+                </tr>
+                <tr>
+                  <td style="width:22%;"></td>
+                  <th style="width:26%;">海外を選んだ方は、国名を記入してください。</th>
+                  <td style="width:22%;"></td>
+                </tr>
+                <tr>
+                  <th>希望勤務地理由</th>
+                  <td colspan="3"></td>
+                </tr>
+                <tr>
+                  <th>今後仕事をしていく上で、家族/健康面/住居等について上長に伝えておきたいこと</th>
+                  <td colspan="3"></td>
+                </tr>
+              </table>
+            </div>
+            <div style="float: left;">
+              <h4>上長所見欄</h4>
+            </div>
+            <div style="float: right; margin: 10px;">
+              <button type="button" class="btn cspe"  style="margin-top: 6px;" data-cspe="jksk_own">上長所見欄入力</button>
+            </div>
+            <div class="mod-table ami bosShoken">
+              <table>
+                <tr>
+                  <th style="width:30%;">面談実施日<span style="color:red;"> ※</span></th>
+                  <td></td>
+                </tr>              
+              </table>
+            </div>
+        
+            <h3></h3>
+        
+            <div class="mod-table ami bosShoken">
+              <table>
+                <tr>
+                  <th style="width:30%;">現在～1年以内にチャレンジさせたい業務詳細<span style="color:red;"> ※</span></th>
+                  <td colspan="3"></td>
+                </tr>
+                <tr>
+                  <th>1年以内のキャリアをどう考えているか<span style="color:red;"> ※</span></th>
+                  <td colspan="3"></td>
+                </tr>
+                <tr>
+                  <th>経験させたい業務</th>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>理由<span style="color:red;"> ※</span></th>
+                  <td colspan="3"></td>
+                </tr>                
+              </table>
+            </div>
+                
+            <h3></h3>
+        
+            <div class="mod-table ami bosShoken">
+              <table>
+                <tr>
+                  <th style="width:30%;">1年後～3年以内にチャレンジさせたい業務・役割<span style="color:red;"> ※</span></th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>理由<span style="color:red;"> ※</span></th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>現在の業務や今後のキャリアについて、面談にて伝えた内容やアドバイス等を記載ください<span style="color:red;"> ※</span></th>
+                  <td></td>
+                </tr>            
+              </table>
+            </div>  
+        
+            <h3></h3>
+        
+            <div class="mod-table ami bosShoken">
+              <table>
+                <tr>
+                  <th style="width:30%;">日々の業務面での強み<br>※能力、スキル、行動を書いてください<span style="color:red;"> ※</span></th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>日々の業務面での弱み（育成課題）<br>※能力、スキル、行動を書いてください<span style="color:red;"> ※</span></th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>性格面での特徴<span style="color:red;"> ※</span></th>
+                  <td></td>
+                </tr>        
+                <tr>
+                  <th>特記事項</th>
+                  <td></td>
+                </tr>               
+              </table>
+            </div>   
+            
+            <!-- <h3><span class="checkarea">{{= checkmark("on") }}</span>　本人申告欄『現在の業務内容・従事期間』は正しく記載されている事を確認しました。</h3> -->
+        
+          </div>
+        
+          <!-- 現行業務 end -->
+        
+          <!-- 過去業務 start -->
+          <div class="tabpage tab02">
+            <h3 class="lightBg">
+                海外・外国語利用経験
+                <button type="button" class="btn cspe" style="margin:-5px 5px 0px; 10px;" data-cspe="jksk_own">海外・外国語利用経験入力</button>
+            </h3>
+        
+        
+        
+          <h3></h3>
+        
+          <div class="mod-table ami">
+            <table>
+              <tr>
+                <th style="width:30%; font-weight:bold;" colspan="2">現在に至るまで、日本で日本語以外の言語を用いたビジネス経験はありますか？<span style="color:red;"> ※</span></th>
+                <td colspan="2"></td>
+              </tr>
+              <tr>
+                <th rowspan="3" style="width:5%;">①</th>
+                <th rowspan="2" style="width:25%;">言語選択</th>
+                <td colspan="2"></td>
+              </tr>
+              <tr>
+                <th style="width:25%;">その他記入欄</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th style="width:25%;">業務内容 {{= tooltip( "※内容に関しては「米国企業との交渉を2年担当した」「英語資料作成を担当した」など業務内容がわかるように記載" ) }}</th>
+                <td colspan="2"></td>
+              </tr>
+              <tr>
+                <th rowspan="3" style="width:5%;">②</th>
+                <th rowspan="2" style="width:25%;">言語選択</th>
+                <td colspan="2"></td>
+              </tr>
+              <tr>
+                <th>その他記入欄</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th style="width:25%;">業務内容</th>
+                <td colspan="2"></td>
+              </tr>
+              <tr>
+                <th rowspan="3" style="width:5%;">③</th>
+                <th rowspan="2" style="width:25%;">言語選択</th>
+                <td colspan="2"></td>
+              </tr>
+              <tr>
+                <th>その他記入欄</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th style="width:25%;">業務内容</th>
+                <td colspan="2"></td>
+              </tr>
+              <tr>
+                <th style="width:30%;" colspan="2">回答日時点で、業務で英語を使われていますか？</th>
+                <td colspan="2"></td>
+              </tr>   
+            </table>
+          </div>
+        
+          <h3></h3>
+        
+          <div class="mod-table ami">
+            <table>
+              <tr>
+                <th colspan="2" style="width:30%; font-weight:bold;" >これまで日本以外の国でのビジネス経験はありますか？<span style="color:red;"> ※</span></th>
+                <td colspan="3"></td>
+              </tr>
+              <tr>
+                <th rowspan="6" style="width:5%;">①</th>
+                <th rowspan="2"style="width:25%;">地域・国</th>
+                <th style="width:25%;">地域</th>
+                <td colspan="2"></td>
+              </tr>
+              <tr>
+                <th>国</th>
+                <td colspan="2"></td>
+              </tr>
+              <tr>
+                <th>種別</th>
+                <td colspan="3"></td>
+              </tr> 
+              <tr>
+                <th>業務分類(職種/職種2/分類)</th>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>業務内容</th>
+                <td colspan="3"></td>
+              </tr>
+              <tr>
+                <th>期間</th>
+                <td colspan="3" style="padding:0px;">
+                  <table>
+                    <tr>
+                      <th style="width:10%; text-align: center;">自</th>
+                      <td style="width:23%;"></td>
+                      <th style="width:10%; text-align:center">～至</th>
+                      <td style="width:23%;"></td>
+                      <th style="width:10%; text-align: center;">期間</th>
+                      <td style="width:24%;"></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <th rowspan="6">②</th>
+                <th rowspan="2">地域・国</th>
+                <th>地域</th>
+                <td colspan="2"></td>
+              </tr>
+              <tr>
+                <th>国</th>
+                <td colspan="2"></td>
+              </tr>
+              <tr>
+                <th>種別</th>
+                <td colspan="3"></td>
+              </tr> 
+              <tr>
+                <th>業務分類(職種/職種2/分類)</th>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>業務内容</th>
+                <td colspan="3"></td>
+              </tr>
+              <tr>
+                <th>期間</th>
+                <td colspan="3" style="padding:0px;">
+                  <table>
+                    <tr>
+                      <th style="width:10%; text-align: center;">自</th>
+                      <td style="width:23%;"></td>
+                      <th style="width:10%; text-align:center">～至</th>
+                      <td style="width:23%;"></td>
+                      <th style="width:10%; text-align: center;">期間</th>
+                      <td style="width:24%;"></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <th rowspan="6">③</th>
+                <th rowspan="2">地域・国</th>
+                <th>地域</th>
+                <td colspan="2"></td>
+              </tr>
+              <tr>
+                <th>国</th>
+                <td colspan="2"></td>
+              </tr>
+              <tr>
+                <th>種別</th>
+                <td colspan="3"></td>
+              </tr> 
+              <tr>
+                <th>業務分類(職種/職種2/分類)</th>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>業務内容</th>
+                <td colspan="3"></td>
+              </tr>
+              <tr>
+                <th>期間</th>
+                <td colspan="3" style="padding:0px;">
+                  <table>
+                    <tr>
+                      <th style="width:10%; text-align: center;">自</th>
+                      <td style="width:23%;"></td>
+                      <th style="width:10%; text-align:center">～至</th>
+                      <td style="width:23%;"></td>
+                      <th style="width:10%; text-align: center;">期間</th>
+                      <td style="width:24%;"></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>      
+            </table>
+          </div>
+        
+          <h3></h3>
+        
+          <div class="mod-table ami">
+            <table>
+              <tr>
+                <th colspan="2" style="font-weight:bold;">これまで日本以外の国での就学経験、留学経験はありますか？<br>（日本でインターナショナルスクールに通学した方もこちらに記入ください）<span style="color:red;"> ※</span></th>
+                <td colspan="2"></td>
+              </tr>
+              <tr>
+                <th style="width:5%;" rowspan="5">①</th>
+                <th style="width:25%;" rowspan="2">地域・国</th>
+                <th style="width:25%;">地域</th>
+                <td style="width:45%;"></td>
+              </tr>
+              <tr>
+                <th>国</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th rowspan="2">経験内容</th>
+                <td colspan="2"></td>
+              </tr>
+              <tr>
+                <th>その他記入欄</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>期間</th>
+                <td colspan="2" style="padding:0px;">
+                  <table>
+                    <tr>
+                      <th style="width:10%; text-align: center;">自</th>
+                      <td style="width:23%;"></td>
+                      <th style="width:10%; text-align:center">～至</th>
+                      <td style="width:23%;"></td>
+                      <th style="width:10%; text-align: center;">期間</th>
+                      <td style="width:24%;"></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <th rowspan="5">②</th>
+                <th rowspan="2">地域・国</th>
+                <th>地域</th>
+                <td ></td>
+              </tr>
+              <tr>
+                <th>国</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th rowspan="2">経験内容</th>
+                <td colspan="2"></td>
+              </tr>
+              <tr>
+                <th>その他記入欄</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>期間</th>
+                <td colspan="2" style="padding:0px;">
+                  <table>
+                    <tr>
+                      <th style="width:10%; text-align: center;">自</th>
+                      <td style="width:23%;"></td>
+                      <th style="width:10%; text-align:center">～至</th>
+                      <td style="width:23%;"></td>
+                      <th style="width:10%; text-align: center;">期間</th>
+                      <td style="width:24%;"></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr> 
+              <tr>
+                <th rowspan="5">③</th>
+                <th rowspan="2">地域・国</th>
+                <th>地域</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>国</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th rowspan="2">経験内容</th>
+                <td colspan="2"></td>
+              </tr>
+              <tr>
+                <th>その他記入欄</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>期間</th>
+                <td colspan="2" style="padding:0px;">
+                  <table>
+                    <tr>
+                      <th style="width:10%; text-align: center;">自</th>
+                      <td style="width:23%;"></td>
+                      <th style="width:10%; text-align:center">～至</th>
+                      <td style="width:23%;"></td>
+                      <th style="width:10%; text-align: center;">期間</th>
+                      <td style="width:24%;"></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>      
+            </table>
+          </div>  
+          <!-- <h3><span class="checkarea">{{= checkmark("on") }}</span>　『過去経験』について正しく記載されている事を確認しました。</h3> -->
+          
+        </div>
+          <!-- 過去業務 end -->
+        
+        
+        </script>
+        
+        
+        
+          
+          
+        
+        
+        
+        
+        
+        
+        
+        
+            <div id="modal-overlay"></div>
+          <div id="modal-window" class="modal-body">
+          </div>
+        
+        
+          <div class="modal-body-src">
+            <div class="CsDeliv">
+              <div class="closearea"><a class="close" href="#"><i class="fa fa-close"></i></a></div>
+              <div class="modal-header">
+                <h4>メッセージ</h4>
+                <p>送信先へコメントを入力して下さい。<br>コメント無しの場合は、そのままOKを押下して下さい。</p>
+              </div>
+              <div class="modal-body">
+                <textarea class="block" name="deliv_msg" rows="5"></textarea>
+              </div>
+              <div class="modal-footer">
+                <button id="modal-submit-btn" type="button" class="btn btn-primary">OK</button>
+              </div>
+            </div>
+          </div>
+        
+        
+        
+          
+          
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <style type="text/css">
+        #action-history {
+          display: none;
+        }
+        </style>
+        <div id="action-history" class="hyokasheetInner">
+          <div class="sheet-section">
+        
+          <h3 class="lightBg">操作履歴</h3>
+          
+          <div class="mod-table">
+            <table>
+              <tr>
+                <th>操作時刻</th>
+                <th>操作者</th>
+                <th>立場</th>
+                <th>操作時ステータス</th>
+                <th>操作</th>
+                <th>コメント</th>
+              </tr>
+            
+            </table>
+          </div>
+        
+          </div><!-- /sheet-section -->
+        </div><!-- /hyokasheetInner -->
+        
+        
+        
+        </div><!-- /.pnl-body --></div><!-- /.pnl -->
+        
+        
+        
+        <input type="hidden" name="windowMode" value="">
+        <input type="hidden" name="sheetId" value="810024-MAJOR-2016T-jksk">
+        <input type="hidden" name="csPartialEdit" value="">
+        <input type="hidden" name="csPartialEditArg" value="">
+        <input type="hidden" name="exclusiveKey" value="0">
+        <input type="hidden" name="xlsharp" value="">
+        <input type="hidden" name="tabkeep" value="">
+        
+        
+        </div><!-- /.container --></div><!-- /.desk --></div><!-- /#gOperation -->
+        <input type="hidden" name="state" value="">
+        <input type="hidden" name="tokenNo" value="278fcf64-8a9d-40a3-8bae-1cc6579e8efd">
+        </form>
+        
+        </div><!-- /#gBody -->
+        
+        <script>
+        var writeFillList = [
+          'Fill--jksk_own_get_ym_02', 'Fill--jksk_own_get_ym_01', 'Fill--jksk_own_get_ym_03', 'Fill--jksk_own_start_ym_03', 'Fill--jksk_own_start_ym_02', 'Fill--jksk_own_start_ym_01', 'Fill--jksk_own_sg_cmpa_01', 'Fill--jksk_own_sg_cmpa_03', 'Fill--jksk_own_sg_cmpa_02', 'Fill--jksk_own_naiyou_03', 'Fill--jksk_own_naiyou_02', 'Fill--jksk_own_comment', 'Fill--jksk_own_naiyou_01', 'Fill--jksk_own_kg_end_ym_03', 'Fill--jksk_own_kg_end_ym_01', 'Fill--jksk_own_kg_end_ym_02', 'Fill--jksk_own_exam_ymd', 'Fill--jksk_own_kg_lang_01', 'Fill--jksk_own_kg_lang_02', 'Fill--jksk_own_kg_start_ym_02', 'Fill--jksk_own_lang_comment_02', 'Fill--jksk_own_kg_start_ym_03', 'Fill--jksk_own_lang_comment_03', 'Fill--jksk_own_kg_start_ym_01', 'Fill--jksk_own_lang_comment_01', 'Fill--jksk_own_kg_naiyo_01', 'Fill--jksk_own_kg_naiyo_02', 'Fill--jksk_own_kg_naiyo_03', 'Fill--jksk_own_toeic', 'Fill--jksk_own_bunrui_03', 'Fill--jksk_own_bunrui_01', 'Fill--jksk_own_sg_retire_ym_03', 'Fill--jksk_own_bunrui_02', 'Fill--jksk_own_ppt', 'Fill--jksk_own_sg_retire_ym_01', 'Fill--jksk_own_sg_retire_ym_02', 'Fill--jksk_own_kg_lang_03', 'Fill--jksk_own_excel', 'Fill--jksk_own_sg_enter_ym_03', 'Fill--jksk_own_sg_enter_ym_02', 'Fill--jksk_own_lang_02', 'Fill--jksk_own_sg_enter_ym_01', 'Fill--jksk_own_skill_02', 'Fill--jksk_own_lang_03', 'Fill--jksk_own_skill_01', 'Fill--jksk_own_dept_03', 'Fill--jksk_own_lang_01', 'Fill--jksk_own_dept_01', 'Fill--jksk_own_dept_02', 'Fill--jksk_own_end_ym_03', 'Fill--jksk_own_end_ym_02', 'Fill--jksk_own_end_ym_01', 'Fill--jksk_own_edit', 'Fill--jksk_own_lang_lv_01', 'Fill--jksk_own_lang_lv_02', 'Fill--jksk_own_lang_lv_03', 'Fill--jksk_own_skill_03', 'Fill--jksk_own_kg_country_03', 'Fill--jksk_own_sg_naiyo_02', 'Fill--jksk_own_sg_naiyo_01', 'Fill--jksk_own_word', 'Fill--jksk_own_sg_naiyo_03', 'Fill--jksk_own_kg_country_01', 'Fill--jksk_own_kg_country_02', 'Fill--jksk_own_sg_place_03', 'Fill--jksk_own_sg_place_02', 'Fill--jksk_own_sg_place_01'
+        ];
+        
+        
+        
+        var cspd = { dummy: ''
+        
+          , "cspd-jksk_kg_kinmuti": [ {}
+          
+            , {value: '', text: ''}
+          
+            , {value: 'アジア', text: 'アジア'}
+          
+            , {value: 'アフリカ', text: 'アフリカ'}
+          
+            , {value: '北米', text: '北米'}
+          
+            , {value: '中東', text: '中東'}
+          
+            , {value: '大洋州', text: '大洋州'}
+          
+            , {value: '中米・カリブ海', text: '中米・カリブ海'}
+          
+            , {value: '南米', text: '南米'}
+          
+            , {value: 'ヨーロッパ', text: 'ヨーロッパ'}
+          
+          ]
+        
+          , "cspd-jksk_langlv": [ {}
+          
+            , {value: '', text: ''}
+          
+            , {value: '日常会話レベル', text: '日常会話レベル'}
+          
+            , {value: 'ビジネスレベル', text: 'ビジネスレベル'}
+          
+            , {value: 'ネイティブモデル', text: 'ネイティブモデル'}
+          
+          ]
+        
+          , "cspd-jksk_oalv": [ {}
+          
+            , {value: '', text: ''}
+          
+            , {value: '未経験', text: '未経験'}
+          
+            , {value: '初級', text: '初級'}
+          
+            , {value: '中級', text: '中級'}
+          
+            , {value: '上級', text: '上級'}
+          
+          ]
+        
+          , "cspd-jksk_sg_kinmuti": [ {}
+          
+            , {value: '', text: ''}
+          
+            , {value: '北海道', text: '北海道'}
+          
+            , {value: '東北', text: '東北'}
+          
+            , {value: '関東', text: '関東'}
+          
+            , {value: '中部', text: '中部'}
+          
+            , {value: '近畿', text: '近畿'}
+          
+            , {value: '中国', text: '中国'}
+          
+            , {value: '四国', text: '四国'}
+          
+            , {value: '九州', text: '九州'}
+          
+          ]
+        
+        };
+        </script>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <script>
+        var _data = {};
+        _data["user"]  = {"party":"MAJOR","langNo":1,"mainKengen":"","login_no":"ZZZZZZ","kanji_simei":"業務アカウントZ","operatorGuid":"ZZZZZZ","isOperator":true};
+        _data["sheet"] = {"sheetId":"810024-MAJOR-2016T-jksk","party":"MAJOR","operationCd":"2016T-jksk","operationNm":"2016年度　自己申告","operationType":"STAMP","operationSort":"2016_4","activeFlg":"1","formGrpCd":"grp-jksk","formGrpNm":"自己申告シート","formCtgCd":"ctg-JUNIOR","formCd":"frm-jksk-J03","formNm":"自己申告(3等級)","ownGuid":"810024","layoutCd":"lay-jksk-v1","labelSetCd":"lbl-jksk-v1","paramSetCd":"prm-jksk-v1","fillSetCd":"fil-jksk-v1","maskCd":"msk-jksk-v1","multiFormFlg":"0","flowCd":"flw-jksk","flowPtn":"flwptn-normal","seqNo":"00","statusCd":"00-New","statusNm":"本人記入中(本人)","mainActorCd":"act-owner","holdGuid":"810024","ownPersonName":"四浦 育男","ownPersonKana":"ｼｳﾗ ｲｸｵ","sheetSort":"1001-1-H1-00-00-110024","cmpaCd":"1001","cmpaNm":"株式会社リシテア","stfNo":"110024","deptCd":"H1-00-00","deptNm":"人事総務統括本部","fullDeptCd":"","fullDeptNm":"人事総務統括本部_連結","hierarchy":"1","deptSort":"1001-1-H1-00-00","slcId":"16-08","clsACd":"B","clsANm":"正社員","clsBCd":"J03","clsBNm":"3等級","clsCCd":"Y03","clsCNm":"主任","clsDCd":"","clsDNm":"","clsECd":"","clsENm":"","clsFCd":"","clsFNm":"","clsGCd":"","clsGNm":"","clsHCd":"","clsHNm":"","clsICd":"","clsINm":"","clsJCd":"","clsJNm":"","clsKCd":"","clsKNm":"","clsLCd":"","clsLNm":"","clsMCd":"","clsMNm":"","clsNCd":"","clsNNm":"","txtA":"","txtB":"","txtC":"","txtD":"","txtE":"","txtF":"","txtG":"","txtH":"","txtI":"","txtJ":"","txtK":"","txtL":"","txtM":"","txtN":"","exclusiveKey":0};
+        _data["fill"] = { "dummy" : ''
+        
+          , "jksk_own_get_ym_02" : ''
+          , "jksk_own_get_ym_01" : ''
+          , "jksk_own_get_ym_03" : ''
+          , "jksk_own_start_ym_03" : ''
+          , "jksk_own_start_ym_02" : ''
+          , "jksk_own_start_ym_01" : ''
+          , "jksk_own_sg_cmpa_01" : ''
+          , "jksk_own_sg_cmpa_03" : ''
+          , "jksk_own_sg_cmpa_02" : ''
+          , "jksk_own_naiyou_03" : ''
+          , "jksk_own_naiyou_02" : ''
+          , "jksk_own_comment" : ''
+          , "jksk_own_naiyou_01" : ''
+          , "jksk_own_kg_end_ym_03" : ''
+          , "jksk_own_kg_end_ym_01" : ''
+          , "jksk_own_kg_end_ym_02" : ''
+          , "jksk_own_exam_ymd" : ''
+          , "jksk_own_kg_lang_01" : ''
+          , "jksk_own_kg_lang_02" : ''
+          , "jksk_own_kg_start_ym_02" : ''
+          , "jksk_own_lang_comment_02" : ''
+          , "jksk_own_kg_start_ym_03" : ''
+          , "jksk_own_lang_comment_03" : ''
+          , "jksk_own_kg_start_ym_01" : ''
+          , "jksk_own_lang_comment_01" : ''
+          , "jksk_own_kg_naiyo_01" : ''
+          , "jksk_own_kg_naiyo_02" : ''
+          , "jksk_own_kg_naiyo_03" : ''
+          , "jksk_own_toeic" : ''
+          , "chk_necessary_jksk" : ''
+          , "jksk_own_bunrui_03" : ''
+          , "jksk_own_bunrui_01" : ''
+          , "jksk_own_sg_retire_ym_03" : ''
+          , "jksk_own_bunrui_02" : ''
+          , "jksk_own_ppt" : ''
+          , "jksk_own_sg_retire_ym_01" : ''
+          , "jksk_own_sg_retire_ym_02" : ''
+          , "jksk_own_kg_lang_03" : ''
+          , "jksk_own_excel" : ''
+          , "jksk_own_sg_enter_ym_03" : ''
+          , "jksk_own_sg_enter_ym_02" : ''
+          , "jksk_own_lang_02" : ''
+          , "jksk_own_sg_enter_ym_01" : ''
+          , "jksk_own_skill_02" : ''
+          , "jksk_own_lang_03" : ''
+          , "jksk_own_skill_01" : ''
+          , "jksk_own_dept_03" : ''
+          , "jksk_own_lang_01" : ''
+          , "jksk_own_dept_01" : ''
+          , "jksk_own_dept_02" : ''
+          , "jksk_own_end_ym_03" : ''
+          , "jksk_own_end_ym_02" : ''
+          , "jksk_own_end_ym_01" : ''
+          , "jksk_own_edit" : ''
+          , "jksk_own_lang_lv_01" : ''
+          , "jksk_own_lang_lv_02" : ''
+          , "jksk_own_lang_lv_03" : ''
+          , "jksk_own_skill_03" : ''
+          , "jksk_own_kg_country_03" : ''
+          , "jksk_own_sg_naiyo_02" : ''
+          , "jksk_own_sg_naiyo_01" : ''
+          , "jksk_own_word" : ''
+          , "jksk_own_sg_naiyo_03" : ''
+          , "jksk_own_kg_country_01" : ''
+          , "jksk_own_kg_country_02" : ''
+          , "jksk_own_sg_place_03" : ''
+          , "jksk_own_sg_place_02" : ''
+          , "jksk_own_sg_place_01" : ''
+        };
+        _data["label"] = {"JkskOwnSkill":"保有資格・免許・スキル（自由記入欄）","JkskOwnEdit":"編集","JkskOwnKgEnd":"業務終了年月","JkskOwnToeic":"TOEICスコア（例　750）","JkskOwnKgLang":"使用言語","JkskOwnSgPlace":"勤務地","JkskHeaderAttr2":"氏名","JkskOwnPptLv3Kaisetu":"挿入する図形や画像データの作成、相互関係及び階層の図解化、EXCELグラフの利用","JkskHeaderAttr1":"従業員番号","JkskOwnWord":"Word","JkskOwnEnd":"業務終了年月","JkskEng":"英語","JkskOwnPptLv1Kaisetu":"基本的なスライドの作成","JkskHeaderAttr5":"職能等級","JkskOwnKgNaiyo":"業務内容","JkskHeaderAttr4":"役職","JkskOwnPptLv2Kaisetu":"グラフや画像データ（外部で作成されたもの）を活用したスライドの作成、カラーコーディネーションやフォントなど、ビジュアル面の配慮","JkskHeaderAttr3":"所属","JkskOwnComment":"自由記入欄","JkskLang":"その他言語","JkskOwnStart":"業務開始年月","JkskOwnNaiyou":"業務内容","JkskRefChgBtn":"参照者の変更","JkskOwnExcelLv1Kaisetu":"螺旋やフォントの設定、SUMやAVERAGEなど簡単な関数ができる","JkskOwnPpt":"PowerPoint","JkskSgKeiken1":"①","JkskOwnLang":"言語","JkskOwnKgStart":"業務開始年月","JkskOwnKgCountry":"国名","JkskOwnPptLv3":"上級","JkskOwnLangComment":"自由記入欄","JkskOwnPptLv1":"初級","JkskOwnPptLv2":"中級","JkskOwnStartYm":"（例　1998/04）","JkskOwnExcelLv3Kaisetu":"マクロが使える+ピポットテーブルが使える","JkskOwnExcel":"Excel","JkskOwnSgEnter":"入社年月","JkskOwnExcelLv1":"初級","JkskOwnExcelLv2":"中級","JkskOwnExcelLv3":"上級","JkskEng3":"③","JkskEng2":"②","JkskOwnWordLv2Kaisetu":"複雑なレイアウトの文書作成から、宛名ラベルなどを作成できる差し込み印刷、複雑な表作成、長文作成ができる","JkskEng1":"①","JkskSyok":"主な職務スキル","JkskKgKeiken2":"②","JkskOwnEndYm":"（例　2013/04）","JkskKgKeiken3":"③","JkskOwnLangLv":"言語レベル","JkskOwnSyokuSkill":"その他職務スキル","JkskOwnDept":"所属","JkskSyokuSkill1":"①","JkskSyokuSkill2":"②","JkskOwnSgNaiyo":"業務内容","JkskOwnSgRetire":"退社年月","JkskKgKeiken1":"①","JkskSyokuSkill3":"③","JkskOwnSgCmpa":"会社名(任意記入)","JkskOwnBunrui":"業務分類","JkskOwnRan":"本人記入欄","JkskOwnSgEnterYm":"（例　1998/04）","JkskSgKeiken":"国内での業務経験","JkskSgKeiken2":"②","JkskExcelDlBtn":"Excelダウンロード","JkskSgKeiken3":"③","JkskKoh":"候補","JkskOwnExcelLv2Kaisetu":"串刺し集計、VLOOKUPやIF関数が使える","JkskKgKeiken":"海外での業務経験","JkskOwnGetYm":"取得年月（例　1998/04）","JkskKreki1":"①","JkskKreki2":"②","JkskOwnWordLv3":"上級","JkskOwnSgRetireYm":"（例　2013/04）","JkskOwnWordLv2":"中級","JkskOwnWordLv1":"初級","JkskOwnKgStartYm":"（例　1998/04）","JkskOwnKgEndYm":"（例　2013/04）","JkskTab":"自己申告","JkskKreki3":"③","JkskOwnExamYmd":"試験日（例　1998/04）","JkskOwnWordLv3Kaisetu":"作業を自動化するマクロ機能や、他アプリケーションソフトとの連携、ワークグループでの文書の活用ができる","JkskKreki":"職務経歴","JkskOwnWordLv1Kaisetu":"Wordの基本操作をもとに、ビジネス文書の作成、画像や図形、表を文書入れた案内状の作成"};
+        _data["param"] = null;
+        _data["actor"] = { "dummy" : ''
+        
+          , "act-owner": {
+              "actOrRef": 'ACT'
+            , "actorNm": '本人'
+            , "actorSort": '10'
+            , "guid": '810024'
+            , "personName": '四浦 育男'
+            }
+          , "act-jinji": {
+              "actOrRef": 'ACT'
+            , "actorNm": '人事'
+            , "actorSort": '20'
+            , "guid": 'ZZZZZZ'
+            , "personName": '業務アカウントZ'
+            }
+        };
+        _data["tooltip"] = function(str) {
+          return '<span data-toggle="tooltip" title="'+str+'"><i class="fa fa-info-circle"></i></span>';
+        }
+        _data["checkmark"] = function(arg) {
+          var judge = false;
+          if (typeof arg === "boolean") { judge = arg; }
+          if (typeof arg === "string")  { judge = (arg === "on"); }
+          return judge ? '<i class="checkmark fa fa-check"></i>' : '';
+        }
+        </script>
+        
+        <script>
+        usTemplateRender('#us-template-layout-hbtn', '#us-template-rendering-hbtn', _data);
+        usTemplateRender('#us-template-layout-attr', '#us-template-rendering-attr', _data);
+        usTemplateRender('#us-template-layout', '#us-template-rendering', _data);
+        </script>
+        <script type="text/javascript" src="/sheet/view/sheet/careersheet.js"></script>
+        <script>
+        
+        var confMsgList = { dummy: ''
+          
+          
+          
+          
+          , FORWARD: "提出します。よろしいですか？"
+          
+          
+        };
+        var __CS_WAIT_MODAL = { dummy: ''
+          
+          
+          
+          
+          , FORWARD: false
+          
+          
+        };
+        
+        function execSheetAction( actionCd ) {
+          if (actionCd == 'FORWARD' || actionCd == 'SKIP') {
+            if (typeof customForwardCheck === "function" && !customForwardCheck()) {
+              return false;
+            }
+          }
+          if (__CS_WAIT_MODAL[actionCd]) {
+            openCsDelivModal( actionCd );
+            return false;
+          }
+          if ($('#modal-overlay:visible').length > 0) {
+            if (($('#modal-window textarea').val()+"").length > 100) {
+              alert("コメントは100文字以内にして下さい");
+              return false;
+            }
+          }
+          var confMsg = confMsgList[actionCd];
+          if (confMsg != '' && !confirm(confMsg)) {
+            __CS_WAIT_MODAL[__CS_MODAL_ACTION_CD] = true;
+            return false;
+          }
+          pageSubmit( '/servlet/CsSheetActionServlet', actionCd );
+        }
+        
+        var isMainWindow = true;
+        var initTabId = '';
+        
+        var __MsgMap = {};
+        __MsgMap["APP_MSG_PC_ONLY"] = '\u304A\u4F7F\u3044\u306E\u30C7\u30D0\u30A4\u30B9\u3067\u306F\u305D\u306E\u64CD\u4F5C\u306F\u30B5\u30DD\u30FC\u30C8\u3055\u308C\u3066\u3044\u307E\u305B\u3093\u3002PC\u3092\u3054\u5229\u7528\u304F\u3060\u3055\u3044\u3002';
+        __MsgMap["LSHSHT_MSG_CHK_UPFILE_REQUIRED"] = '\u30A2\u30C3\u30D7\u30ED\u30FC\u30C9\u30D5\u30A1\u30A4\u30EB\u3092\u6307\u5B9A\u3057\u3066\u304F\u3060\u3055\u3044\u3002';
+        __MsgMap["LSHSHT_MSG_CHK_UPFILE_TOO_LARGE"] = '\u30A2\u30C3\u30D7\u30ED\u30FC\u30C9\u30D5\u30A1\u30A4\u30EB\u306E\"\u30B5\u30A4\u30BA\"\u304C\u5927\u304D\u3059\u304E\u307E\u3059\u3002';
+        __MsgMap["LSHSHT_MSG_CHK_INT_100"] = '0\uFF5E100\u306E\u6574\u6570\u3067\u5165\u529B\u3057\u3066\u4E0B\u3055\u3044\u3002';
+        
+        $(function(){
+          $document = $(document);
+          
+           /**
+           ** Initialize
+          **/
+          if (!isMainWindow) {
+            $('.cspe').hide();
+            $('.mp_edit').hide();
+            // 子画面を開いたときにセッションのシート情報が書き換えられるので、
+            // 再描画することで元に戻す。ただし子画面で何も操作しないことが前提。
+            window.opener.reloadSheet();
+          }
+          cstabActivate(initTabId);
+          drawStatusSummary('00-New', 'ZZZZZZ', '810024');
+          if ($('#action-history-tgt').exists()) {
+            $('#action-history .sheet-section').children().appendTo('#action-history-tgt');
+          }
+          
+          $('[data-cspdrstr]').each(function(){
+            var self = this;
+            var key = $(self).data('cspdrstr');
+            var txt = $(self).text();
+            $.each(cspd[key], function(){
+              if (this.value == txt) {
+                $(self).text( this.text );
+              }
+            });
+          });
+        
+          //立場切替 表示判定
+          var actorCdList = [];
+          
+            actorCdList.push("act-jinji");
+          
+        
+          if( actorCdList.length <= 1 ) {
+            $('.showSwitchActor').css("display", "none");
+          }
+        
+          //立場切替 選択されているアクターのチェックマーク
+          var slctedActor = "act-jinji";
+          $('.do-switchActor[data-actorCd="' + slctedActor + '"]').append('<i class="fa fa-check" style="float:right;"></i>');
+        
+           /**
+           ** Event
+          **/
+          /* Action Buttons */
+          $document.on('click', '.csActionBtns button', function(){
+            execSheetAction( $(this).data('actioncd') );
+          });
+          
+          
+          $document.on('click', '#disabledWrap.clickToReload', function(event){
+            _DISABLED = false;
+            $('[name=state], [name=tokenNo]').prop('disabled', false);
+            showSheet('/servlet/CsSheetServlet', 'RESTORE', '810024-MAJOR-2016T-jksk');
+          });
+          
+          $document.on('click', '#transRELOAD', function(event){
+            event.preventDefault();
+            reloadSheet();
+          });
+          
+          $document.on('click', 'a.refSheet', function(event){
+            event.preventDefault();    
+            var relatedId = $(this).attr('relatedId');
+            var relatedSheetId = $(this).attr('relatedSheetId');
+            makeRequestParameter( "relatedId", relatedId );
+            openSubWindow('/servlet/CsSheetServlet', 'PAST', relatedSheetId, 1000, 800, false);
+          });
+          // フローパターン
+          $document.on('click', '#btn_chgflowptn', function(){
+            makeRequestParameter( "viewMode", "InnerSheet" );
+            pageSubmit('/view/sheet/VHD010_ChgFlowPtn.jsp', 'INIT');
+          });
+          // 記入者の確認・変更
+          $document.on('click', '#btn_actors', function(){
+            pageSubmit('/view/sheet/VHD014_CsActors.jsp', 'INIT');
+          });
+          // 参照者の確認・変更
+          $document.on('click', '#btn_referers', function(){
+            pageSubmit('/view/sheet/VHD013_CsReferers.jsp', 'INIT');
+          });
+          //立場切替
+          $('.do-switchActor').click( function(){
+            var switchActorCd = $(this).attr('data-actorcd');
+            addRequestParameter( 'switchActorCd', switchActorCd );
+            pageSubmit('/servlet/CsSheetServlet', 'SWITCH_ACTOR');
+          });
+        
+          
+          $document.on('click', '.tablist a', function(ev){
+            ev.preventDefault();
+            var tabId = $(this).parent().prop('id');
+            document.F001.csTab.value = tabId;
+            pageSubmit('/servlet/CsSheetServlet', 'TAB');
+          });
+          
+          $document.on('click', '.cspe', function(){
+            var cspe    = $(this).data('cspe');
+            var cspearg = $(this).data('cspearg');
+            if (typeof customPartialEditBeforeCheck === "function") {
+              if (!customPartialEditBeforeCheck( cspe, cspearg, $(this) )) { return false; }
+            }
+            document.F001.csPartialEdit.value = cspe;
+            document.F001.csPartialEditArg.value = cspearg;
+            var tabId   = $('.tabarea > .active').attr('id');		makeRequestParameter('tabkeep', tabId);
+            pageSubmit('/servlet/CsSheetServlet', 'EDIT');
+          });
+        });
+        
+        function reloadSheet() {
+          showSheet('/servlet/CsSheetServlet', 'RESTORE', '810024-MAJOR-2016T-jksk');
+        }
+        </script>
+        <script id="modal-template-xlup" type="text/template">
+        
+          <div class="CsExcelUpload">
+            <div class="closearea"><a class="close" href="#"><i class="fa fa-close"></i></a></div>
+            <div class="modal-header">
+              <h4>Excelアップロード</h4>
+              <p>アップロードするExcelファイルを指定して下さい。<br>回答内容は編集可能な範囲で反映され、ステータスは変更されません。</p>
+            </div>
+            <div class="modal-body">
+              <div class="form-group well" style="margin-bottom: 0;">
+                <input type="file" id="excelFile" name="excelFile">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button id="modal-submit-btn" type="button" class="btn btn-primary">アップロード</button>
+            </div>
+          </div>
+        
+        </script>
+        
+        
+        <script>﻿$(function(){
+          $document = $(document);
+          
+        
+          /* Excelダウンロードボタン */
+          var xlBtnid = _data["sheet"].layoutCd;
+          if ( xlBtnid == "lay-cpln-v1" ){
+            $(".xlDownload").attr("id", "CPLN");
+          }
+          else if ( xlBtnid == "lay-mkhy-v1" ){
+            $(".xlDownload").attr("id", "MKHY");
+          }
+            else if ( xlBtnid == "lay-jksk-v1" ){
+            $(".xlDownload").attr("id", "JKSK");
+          }
+          else if ( xlBtnid == "lay-skill-v1" ){
+            $(".xlDownload").attr("id", "SKILL");
+          }
+          else {
+            $(".xlDownload").remove();
+          }
+          
+          
+          /* 編集ボタン */
+          $('button.cspe').each(function(){
+            var chkfilid = "Fill--" + $(this).attr("data-cspe") + "_edit"; 
+            if ( $.inArray( chkfilid, writeFillList ) == -1 ) {
+              $(this).remove();
+            }
+          })
+          
+           /* 補正 */
+          $(function(){
+            $(document).on( 'blur', '.weight input', function(){
+              $(this).val( pretty0to100( $(this).val() ) );
+              autoCalcMokHyo();
+              autoCalcWeight();
+            });
+          });
+          
+          /* jRange */
+          if ($('.tmpl-mrls').exists()) {
+            mrlsInitJRange();
+          }
+          
+          /*フィードバックグラフ*/
+          if ($('.skillGraph').exists()) {
+            drawSkillRadarGraph();
+            drawSkillHorizontalGraph();
+          }
+        
+          /*推奨研修・あなたのスキルレベル表示*/
+          if ($('.FeedbackTable').exists()) {
+            colorChangeSkillFeedback();
+          }
+          
+           /* Auto Calc */
+          if ($('.autoCalcMok').exists()) {
+            autoCalcMokHyo();
+            autoCalcWeight();
+          }
+        
+          // SB 用(編集画面タブ切換え)
+          var tabpages = $('.tabpage');
+          tabpages.hide();
+          var tabId = "tab01"; //編集画面ではtab01が初期値として設定とする。
+          $('#'+tabId).addClass("active");
+          $('.tabpage.'+tabId).addClass("active").show();
+          
+          // SB 用(編集画面タブ切換え)
+          $document.on("click", ".cstab ul li a",function(event) {
+            event.preventDefault();
+            tabpages.hide();
+            $(".cstab ul li").removeClass("active");
+            var nextCls = "." + $(this).parent().attr("id");// tab01
+            var nextId  = "#" + $(this).parent().attr("id");// tab01
+            $(nextCls).show();
+            $(nextId).addClass("active");
+          });
+          
+          // SB日付
+          // $(".datepicker").datepicker({
+          // 	//showButtonPanel: true,
+          // 	changeYear: true,
+          // 	changeMonth: true
+          // 	//minDate: "-1M",
+          // 	//maxDate: "+1M",
+          // 	//firstDay: 1
+          // });
+          // $('.datepicker').datepicker("option", "dateFormat", 'yy/mm/dd' );
+        
+          $document.on( 'change', '.autoCalcMok select', function(){
+            autoCalcMokHyo();
+            autoCalcWeight();
+          });
+          $document.on( 'blur', '.autoCalcMok input', function(){
+            autoCalcMokHyo();
+            autoCalcWeight();
+          });
+          
+          if ($('.autoCalcSKill').exists()) {
+            autoCalcWeightSkill();
+          }
+          $document.on( 'blur', 'input.autoCalcSKill', function(){
+            autoCalcWeightSkill();
+          });
+        });	
+        
+        function mrlsInitJRange() {
+          $('input.jrange').jRange({
+            from: 1,
+            to: 5,
+            step: 1,
+            scale: [1,2,3,4,5],
+            format: '%s',
+            width: 300,
+            showLabels: false,
+            snap: true
+          });
+          $('.jrange-disable').jRange('disable');
+        }
+        
+          
+        
+        
+        function errMsg(msgID) {
+          var labels = _data["label"];
+          var msgs = {
+          "MkhyMokErrorMsg" : labels["MkhyMokErrorMsg"],
+          "MkhyWeiErrorMsg" : labels["MkhyWeiErrorMsg"],
+          "MkhyHyHErrorMsg" : labels["MkhyHyHErrorMsg"],
+          "MkhyHyBErrorMsg" : labels["MkhyHyBErrorMsg"],
+          "MkhyHyFErrorMsg" : labels["MkhyHyFErrorMsg"],
+          "CplnErrorChkMsg" : labels["CplnErrorChkMsg"],
+          "MrlsErrorChkMsg" : labels["MrlsErrorChkMsg"],
+          }
+          return msgs[msgID];
+        }
+        
+        
+        
+        
+        
+          
+        
+        function autoCalcMokHyo() {
+          var hyoSumOwn = new Decimal(0);
+          var hyoSumBos = new Decimal(0);
+          $('.oneMokuhyo').each(function(){
+            $area = $(this);
+            var mltRsltOwn = new Decimal(1);
+            var mltRsltBos = new Decimal(1);
+            $(".mok_hyo_own_mlti_tgt", $area).each(function(){
+              var pointOwn = new Decimal(getCellNum( $(this) ));
+              mltRsltOwn = mltRsltOwn.times(pointOwn);
+            })
+            hyoSumOwn = hyoSumOwn.plus(mltRsltOwn);
+            if (mltRsltOwn == 0){
+              $(".mok_hyo_own_mlti_rslt", $area).text("")
+            } else {
+              $(".mok_hyo_own_mlti_rslt", $area).text(mltRsltOwn.toFixed(2))
+            }
+            $(".mok_hyo_bos_mlti_tgt", $area).each(function(){
+              var pointBos = new Decimal(getCellNum( $(this) ));
+              mltRsltBos = mltRsltBos.times(pointBos);
+            })
+            hyoSumBos = hyoSumBos.plus(mltRsltBos);
+            if (mltRsltBos == 0){
+              $(".mok_hyo_bos_mlti_rslt", $area).text("")
+            } else {
+              $(".mok_hyo_bos_mlti_rslt", $area).text(mltRsltBos.toFixed(2))
+            }
+          });
+          if (hyoSumOwn == 0){
+            $(".mok_hyo_own_sum_rslt").text("");
+          } else {
+            $(".mok_hyo_own_sum_rslt").text(hyoSumOwn.toFixed(2));
+          }
+          if (hyoSumBos == 0){
+            $(".mok_hyo_bos_sum_rslt").text("");
+          } else {
+            $(".mok_hyo_bos_sum_rslt").text(hyoSumBos.toFixed(2));
+          }
+        }
+        
+        
+        function autoCalcWeight() {
+          var weightSum = new Decimal(0);
+          $('.mok_wght_sum_tgt').each(function(){
+            var weight = new Decimal(getCellNum( $(this) ));
+            weightSum = weightSum.plus(weight);
+          })
+          if (weightSum == 0){
+            $(".mok_wght_sum_rslt").text("");
+          } else {
+            $(".mok_wght_sum_rslt").text(weightSum.toFixed(0));
+          }
+        }
+        
+        function customPartialEditCheck(cspe, cspearg) {
+          return true;
+        }
+        
+        function customForwardCheck() {
+          try {
+            if ( _data["sheet"].layoutCd == 'lay-mkhy-v1' ){
+              if (needsCheck("Fill--chk_necessary_mkhy_mok_hon")) {
+                /* 目標設定未入力チェック */
+                chkEmpMok();
+                /* ウェイトチェック */
+                chkWeight100();
+              }
+              if (needsCheck("Fill--chk_necessary_mkhy_hyo_hon")) {
+                /* 評価(本人)未入力チェック */
+                chkEmpHyoOwn();
+              }
+              if (needsCheck("Fill--chk_necessary_mkhy_hyo_bos")) {
+                /* 評価(本人)未入力チェック */
+                chkEmpHyoBos();
+              }
+              /* 評価結果チェック */
+              if (needsCheck("Fill--chk_necessary_mkhy_hyo_fin_1st")) {
+                chkEmpHyoFinal("chkEmpty_hyo_final_1st");
+              }
+              if (needsCheck("Fill--chk_necessary_mkhy_hyo_fin_2nd")) {
+                chkEmpHyoFinal("chkEmpty_hyo_final_2nd");
+              }
+              if (needsCheck("Fill--chk_necessary_mkhy_hyo_fin_3rd")) {
+                chkEmpHyoFinal("chkEmpty_hyo_final_3rd");
+              }
+            }
+            if ( _data["sheet"].layoutCd == 'lay-mrls-v1' ){
+              if (needsCheck("Fill--chk_necessary_mrls")) {
+                /* モラルサーベイ必須チェック */
+                chkEmpMrl();
+              }
+            }
+            if ( _data["sheet"].layoutCd == 'lay-cpln-v1' ){
+              if (needsCheck("Fill--chk_necessary_cpln")) {
+                /* キャリアプラン必須チェック */
+                chkEmpCpln();
+              }
+            }
+          } catch (e) {
+            alert(e);
+            return false;
+          }
+          return true;
+        }
+        
+        function chkEmpMok() {
+          var chkRst = true;
+          $("[class*='chkMkhyArea']").each(function(){ 	
+            var isAllBlank = true;
+            var $chkEmptyMok = $(".chkEmpty_mok", this);
+            var mokNum = $(this).attr("class").substr(19,2);
+            var mokViewClassNm = "chkMkhyView" + mokNum;
+            $chkEmptyMok.each(function(){ 
+              if( !(_.isEmpty( $.trim($(this).text()) ))){
+                isAllBlank = false;
+              }
+            })
+            //全て未入力の場合はチェック不要
+            if (!isAllBlank){
+              $chkEmptyMok.each(function(){ 
+                if( _.isEmpty( $.trim($(this).text()) )){
+                  chkRst = false;
+                  $(this).addClass("error");
+                }
+              })	
+              $(".chkEmpty_mok", '.' + mokViewClassNm).each(function(){ 
+                if( _.isEmpty( $.trim($(this).text()) )){
+                  chkRst = false;
+                  $(this).addClass("error");
+                }
+              })	
+            }	
+          })
+          if (!chkRst){
+            throw errMsg("MkhyMokErrorMsg");
+          }
+        }
+        
+        function chkWeight100() {
+            var wght_sum = _data["fill"]["mkhy_konki_ichiran_weight_sum_san"];
+          if (_.isEmpty(wght_sum)) {
+            return true;
+          } else {
+            wght_sum = new Decimal(wght_sum);
+          }
+          if (wght_sum != 100) {
+          　　//エラークラスの付与
+            $(".mokWeight").each(function(){ 
+                $(this).addClass("error");
+             })
+            throw errMsg("MkhyWeiErrorMsg");
+          }
+        }
+        
+        function chkEmpHyoOwn() {
+          var chkRst = true;
+          $("[class*='chkMkhyArea']").each(function(){ 	
+            var isAllBlank = true;
+            var $chkEmptyMok = $(".chkEmpty_hyo_own", this);
+            var mokNum = $(this).attr("class").substr(19,2);
+            var mokViewClassNm = "chkMkhyView" + mokNum;
+            $chkEmptyMok.each(function(){ 
+              if( !(_.isEmpty( $.trim($(this).text()) ))){
+                isAllBlank = false;
+              }
+            })
+            //全て未入力の場合はチェック不要
+            if (!isAllBlank){
+              $chkEmptyMok.each(function(){ 
+                if( _.isEmpty( $.trim($(this).text()) )){
+                  chkRst = false;
+                  $(this).addClass("error");
+                }
+              })	
+              $(".chkEmpty_hyo_own", '.' + mokViewClassNm).each(function(){ 
+                if( _.isEmpty( $.trim($(this).text()) )){
+                  chkRst = false;
+                  $(this).addClass("error");
+                }
+              })	
+            }	
+          })
+          if (!chkRst){
+            throw errMsg("MkhyHyHErrorMsg");
+          }
+        }
+        
+        function chkEmpHyoBos() {
+          var chkRst = true;
+          $("[class*='chkMkhyArea']").each(function(){ 	
+            var isAllBlank = true;
+            var $chkEmptyMok = $(".chkEmpty_hyo_bos", this);
+            var mokNum = $(this).attr("class").substr(19,2);
+            var mokViewClassNm = "chkMkhyView" + mokNum;
+            $chkEmptyMok.each(function(){ 
+              if( !(_.isEmpty( $.trim($(this).text()) ))){
+                isAllBlank = false;
+              }
+            })
+            //全て未入力の場合はチェック不要
+            if (!isAllBlank){
+              $chkEmptyMok.each(function(){ 
+                if( _.isEmpty( $.trim($(this).text()) )){
+                  chkRst = false;
+                  $(this).addClass("error");
+                }
+              })
+              $(".chkEmpty_hyo_bos", '.' + mokViewClassNm).each(function(){ 
+                if( _.isEmpty( $.trim($(this).text()) )){
+                  chkRst = false;
+                  $(this).addClass("error");
+                }
+              })	
+            }	
+          })
+          if (!chkRst){
+            throw errMsg("MkhyHyBErrorMsg");
+          }
+        }
+        
+        function chkEmpHyoFinal(classNm) {
+          var $chkHyoka = $("." + classNm);
+          if( _.isEmpty( $.trim($chkHyoka.text()) )){
+            $chkHyoka.addClass("error");
+            throw errMsg("MkhyHyFErrorMsg");
+          }
+        }
+        
+        function chkEmpMrl() {
+          var chkRst = true;
+          $(".chkEmpty_mrls").each(function(){ 	
+            if( _.isEmpty( $.trim($(this).text()) )){
+              chkRst = false;
+              $(this).addClass("error");
+            }
+          })
+          if (!chkRst){
+            throw errMsg("MrlsErrorChkMsg");
+          }
+        }
+        
+        function chkEmpCpln() {
+          var chkRst = true;
+          $(".chkEmpty_cpln").each(function(){ 	
+            if( _.isEmpty( $.trim($(this).text()) )){
+              chkRst = false;
+              $(this).addClass("error");
+            }
+          })
+          if (!chkRst){
+            throw errMsg("CplnErrorChkMsg");
+          }
+        }
+        
+        
+        function autoCalcWeightSkill() {
+          var weightSum = 0;
+          $('.skill_wght_sum_tgt').each(function(i,e){
+            var num = Number($(e).val());
+            weightSum = weightSum + num;
+          })
+          if (weightSum == 0){
+            $(".skill_wght_sum_rslt").text("");
+          } else {
+            $(".skill_wght_sum_rslt").text(weightSum);
+          }
+        }
+        
+        function customForwardCheck(actioncd) {
+        /* スキル申請時必須チェック */
+          var result = true;
+          console.log(actioncd);
+          if ( _data["sheet"].layoutCd == 'lay-skill-v1' || _data["sheet"].layoutCd == 'lay-gymkn-v1'){
+            if(actioncd == "FORWARD"){
+              if (needsCheck("Fill--chk_necessary_skill")) {
+                result = chkEmpZenTab();
+              } else if(needsCheck("Fill--chk_necessary_gymkn")) {
+                result = checkGyomuKbnTab();
+              }
+            }
+          }
+          return result;
+        }
+        
+        function customPartialEditCheck(cspe, cspearg) {
+        /* スキル保存時必須チェック */
+          $('.sheet-section .chkNG').removeClass('chkNG');
+          var result = true;
+          if(cspe ===  "skill_gyomukbn"){
+            result = checkSkillGyomukbn();
+          }
+          if(cspe ===  "skill_zokusei"){
+            result = checkSkillZokusei();
+          }
+          if(cspe ===  "skill_check"){
+            result = checkSkillCheck();
+          }
+          if(cspe === "gymkn_gyomukbn") {
+            result = checkGyomuGyomuKbn();
+          }
+          return result;
+        }
+        
+        /*
+          業務区分調査シートの申請ボタン押下時、業務区分調査タブチェック
+            ウェイト合計値のチェック
+            担当業務内容の入力チェック
+        */
+        function checkGyomuKbnTab() {
+          $('.chkEmpTantoGyomu').removeClass("error");
+          $('.skill_wght_sum_rslt').removeClass("error");
+        
+          var val = $('.chkEmpTantoGyomu').text();
+          if(_.isEmpty(val)){
+            $('.chkEmpTantoGyomu').addClass("error");
+            alert('担当業務を選択してください。');
+            return false;
+          }
+        
+          val = $('.skill_wght_sum_rslt').text();
+          if(_.isEmpty(val)){
+            $('.skill_wght_sum_rslt').addClass("error");
+            alert('ウェイトを入力してください。');
+            return false;
+          }
+          return true;
+        }
+        
+        /*
+          業務区分調査シートの担当業務内容の入力チェック
+        */
+        function checkGyomuTantoGyomu() {
+          var $this = $('.chkEmpSkillZokusei');
+        
+          var errorflg = true;
+          var v = $this.val();
+          if(_.isEmpty(v)){
+            $this.addClass("chkNG");
+            errorflg = false;
+          }
+          if (!errorflg){
+            alert("担当業務を選択してください。");
+            return false;
+          }
+          return true;
+        }
+        
+        /*
+          業務区分調査シートの「保存」ボタン押下時チェック
+            ウェイトの合計値チェック
+            担当業務内容の入力チェック
+        */
+        function checkGyomuGyomuKbn() {
+          if(!checkGyomuTantoGyomu()) {
+            return false;
+          }
+        
+          $('.skill_wght_sum_rslt').removeClass("error");
+          var errorflg = true;
+          var wght_sum = $('.skill_wght_sum_rslt').text();
+          if (_.isEmpty(wght_sum)) {
+            errorflg = false;
+          } else {
+            wght_sum = new Decimal(wght_sum);
+          }
+          if (wght_sum != 100) {
+            errorflg = false;
+          }
+          if(!errorflg){
+            //エラークラスの付与
+            $('.skill_wght_sum_rslt').addClass("error");
+            alert("ウェイト合計が100%になるようにウェイトを入力してください。");
+            return false;
+          }
+          return true;
+        }
+        
+        function checkSkillGyomukbn() {
+          var result = true;
+          //result = chkSeinoSeisuSkillGyomuKbn();
+          //if(result){
+          result = chkWeight100SkillGyomuKbn();
+          //}
+          return result;
+        }
+        
+        function checkSkillZokusei() {
+          var result = true;
+          var isEmptyChkOk = true;
+        
+          var A = chkEmpSkillZokusei();
+          var B = chkSetsumon09();
+          var C = chkSetsumon11();
+          var D = chkSetsumon12();
+          
+          isEmptyChkOk = A && B && C && D;
+          if(!isEmptyChkOk){
+            alert("属性調査設問にすべて回答してください。");
+            result = isEmptyChkOk;
+          }
+          else {
+            result = chkSeinoSeisuSkillZokusei();
+            if(result) {
+              result = chkHaniSkillZokusei();
+              if(result) {
+                result = chkMujunSkillZokusei01();
+                if(result) {
+                  result = chkMujunSkillZokusei02();
+                  if(result) {
+                    result = chkHaniSkillZokuseiNenGetsu();
+                  }
+                }
+              }
+            }
+          }
+          return result;
+        }
+        
+        function checkSkillCheck() {
+          var result = true;
+          result = chkEmpSkillSkill();
+          if(result){
+            result = chkKuhakuSkillSkillBosComment();
+          }
+          return result;
+        }
+        
+        function chkEmpZenTab() {
+          if(_data["sheet"].statusCd == "00-New"){
+        
+            var errorflg = true;
+            $(".chkEmpZenTabHon").each(function(i,e){
+              if( _.isEmpty( $.trim($(this).text()) )){
+                errorflg = false;
+              }
+            })
+            if (!errorflg){
+              alert("未入力タブが存在します。")
+              return false;
+            }
+            return true;
+          }
+          if(_data["sheet"].statusCd == "01-Check1st" || _data["sheet"].statusCd =="02-Check2nd"){
+            var errorflg = true;
+            $(".chkEmpZenTabHyo").each(function(i,e){
+              if( _.isEmpty( $.trim($(this).text()) )){
+                errorflg = false;
+              }
+            })
+            if (!errorflg){
+              alert("未入力タブが存在します。")
+              return false;
+            }
+            return true;
+          }
+        }
+        
+        function chkWeight100SkillGyomuKbn() {
+          errorflg = true;
+          var wght_sum = $('.skill_wght_sum_rslt').text();
+          if (_.isEmpty(wght_sum)) {
+            errorflg = false;
+          } else {
+            wght_sum = new Decimal(wght_sum);
+          }
+          if (wght_sum != 100) {
+            errorflg = false;
+          }
+          if(!errorflg){
+            //エラークラスの付与
+            $('.skill_wght_sum_rslt').addClass("error");
+            alert("業務区分調査のウェイト合計が100%になるようにウェイトを入力してください。");
+            return false;
+          }
+          return true;
+        }
+        
+        function chkEmpSkillZokusei() {
+          var errorflg = true;
+          $('.chkEmpSkillZokusei').each(function(i,e){
+            var v = $(e).val();
+            if(_.isEmpty(v)){
+              $(this).addClass("chkNG");
+              errorflg = false;
+            };
+          })
+          if (!errorflg){
+            return false;
+          }
+          return true;
+        }
+        
+        function chkSetsumon09() {
+          var hasCheck = $('.chkSetsumon09 input:checked').exists();
+          var isSonota = !($.trim($('.chkEmpSkillZokuseiTextOther01').val()) === "");
+          if(!(hasCheck || isSonota)){
+            $('.chkSetsumon09').addClass('chkNG');
+            $('.chkEmpSkillZokuseiTextOther01').addClass('chkNG');
+          }
+          return hasCheck || isSonota;
+        }
+        
+        function chkSetsumon11() {
+          var hasCheck = $('.chkSetsumon11 input:checked').exists();
+          var isSonota = !($.trim($('.chkEmpSkillZokuseiTextOther02').val()) === "");
+          if(!(hasCheck || isSonota)){
+            $('.chkSetsumon11').addClass('chkNG');
+            $('.chkEmpSkillZokuseiTextOther02').addClass('chkNG');
+          }
+          return hasCheck || isSonota;
+        }
+        
+        function chkSetsumon12() {
+          var hasCheck = $('.chkSetsumon12 input:checked').exists();
+          var isSonota = !($.trim($('.chkEmpSkillZokuseiTextOther03').val()) === "");
+          if(!(hasCheck || isSonota)){
+            $('.chkSetsumon12').addClass('chkNG');
+            $('.chkEmpSkillZokuseiTextOther03').addClass('chkNG');
+          }
+          return hasCheck || isSonota;
+        }
+        
+        function chkSeinoSeisuSkillZokusei() {
+          var errorflg = false;
+          $('.skill_zokusei_seinoseisu').each(function(i,e){
+            var v = $(e).val();
+            if(!_.isEmpty(v)){
+              if(!/^([1-9]\d*|0)$/.test(v)){
+                $(e).addClass('chkNG');
+                errorflg = true;
+              }
+            }
+          });
+          if(errorflg){
+            alert("正の整数を入力してください。");
+            return false;
+          }
+          return true; 
+        }
+        
+        function chkHaniSkillZokusei() {
+          var errorflg = false;
+          $('.skill_zokusei_hani').each(function(i,e){
+            var v = $(e).val();
+            if(!_.isEmpty(v)){
+              if(!(1950 <= v && 2030 >= v)){
+                errorflg = true;
+                $(this).addClass('chkNG');
+              }
+            }
+          });
+          if(errorflg){
+            alert('設問6の数値を見直してください。');
+            return false;
+          }
+          return true;
+        }
+        
+        function chkMujunSkillZokusei01() {
+          if($('input[name=Fill--skill_zokusei_09_chotatsu]').prop("checked")){
+            var count = 0;
+            $('.chkEmpSkillZokuseiChkBx01').each(function(i,e){
+              if($(this).prop("checked")){
+                count = count + 1;
+              }
+            })
+            $('.chkEmpSkillZokuseiTextOther01').each(function(i,e){
+              var v = $(e).val();
+              if(!_.isEmpty(v)){
+                count = count + 1;
+              }
+            })
+            if(count > 1){
+              //$('input[name=Fill--skill_zokusei_09_chotatsu]').closest('.checkbox').addClass('chkNG');
+              alert("設問9または設問11で「調達業務以外は経験していない」、「所有資格なし」を選択している場合は、他項目を選択しないでください。");
+              return false;
+            }
+          }
+          return true;
+        }
+        
+        function chkMujunSkillZokusei02() {
+          if($('input[name=Fill--skill_zokusei_11_sikakunashi]').prop("checked")){
+            var count = 0;
+            $('.chkEmpSkillZokuseiChkBx02').each(function(i,e){
+              if($(this).prop("checked")){
+                count = count + 1;
+              }
+            })
+            $('.chkEmpSkillZokuseiTextOther02').each(function(i,e){
+              var v = $(e).val();
+              if(!_.isEmpty(v)){
+                count = count + 1;
+              }
+            })
+            if(count > 1){
+              //$('input[name=Fill--skill_zokusei_11_sikakunashi]').closest('.checkbox').addClass('chkNG');
+              alert("設問9または設問11で「調達業務以外は経験していない」、「所有資格なし」を選択している場合は、他項目を選択しないでください。");
+              return false;
+            }
+          }
+          return true;
+        }
+        
+        function chkHaniSkillZokuseiNenGetsu() {
+          var errorflg = false;
+          $('.skill_zokusei_hani_Nen').each(function(i,e){
+            var v = $(e).val();
+            if(!_.isEmpty(v)){
+              if(!( 0 <= v && 99 >= v)){
+                errorflg = true;
+                $(this).addClass('chkNG');
+              }
+            }
+          });
+          $('.skill_zokusei_hani_Getsu').each(function(i,e){
+            var v = $(e).val();
+            if(!_.isEmpty(v)){
+              if(!( 0 <= v && 11 >= v)){
+                errorflg = true;
+                $(this).addClass('chkNG');
+              }
+            }
+          });
+          if(errorflg){
+            alert('設問7の数値を見直してください。');
+            return false;
+          }
+          return true;
+        }
+        
+        function chkEmpSkillSkill() {
+          var errorflg = true;
+          if(_data["sheet"].statusCd == "00-New"){
+            $('.chkEmpSkillSkill').each(function(i,e){
+              var v = $(e).val();
+              if(_.isEmpty(v)){
+                $(this).addClass("chkNG");
+                errorflg = false;
+              };
+            })
+            if (!errorflg){
+              alert("調達スキルチェックをすべて記入してください。");
+              return false;
+            }
+            return true;
+          }
+        
+          if(_data["sheet"].statusCd == "01-Check1st" || _data["sheet"].statusCd =="02-Check2nd"){
+            $('.chkEmpSkillSkillHyo').each(function(i,e){
+              var v = $(e).val();
+              if(_.isEmpty(v)){
+                $(this).addClass("chkNG");
+                errorflg = false;
+              };
+            })
+            if (!errorflg){
+              alert("調達スキルチェックをすべて記入してください。");
+              return false;
+            }
+            return true;
+          }
+        }
+        
+        function chkKuhakuSkillSkillBosComment() {
+          if(_data["sheet"].statusCd == "01-Check1st" || _data["sheet"].statusCd =="02-Check2nd"){
+            var errorflg = true;
+            var v = $('textarea[name=Fill--skill_bos_comment]').val()
+            if(_.isEmpty(v) || /^[\s]+$/.test(v)){
+              $('textarea[name=Fill--skill_bos_comment]').addClass("chkNG");
+              errorflg = false;
+            }
+            if(!errorflg){
+              alert('上司コメントを正しく入力してください。')
+              return false;
+            }
+          }
+          return true;
+        }
+        
+        function colorChangeSkillFeedback() {
+          // 昨年度(本人)と今年度(本人)比較
+          if(!(_data["fill"]["skill_csr_hyo_sak"] === "")){
+            if(_data["fill"]["skill_csr_hyo_kon"] < _data["fill"]["skill_csr_hyo_sak"]){
+              $("td[name=skill_csr_hyo_kon]").css('backgroundColor', '#88C6F2');
+            }
+              if(_data["fill"]["skill_csr_hyo_kon"] > _data["fill"]["skill_csr_hyo_sak"]){
+              $("td[name=skill_csr_hyo_kon]").css('backgroundColor', '#FF7E5E');
+            }
+              if(_data["fill"]["skill_senryaku_hyo_kon"] < _data["fill"]["skill_senryaku_hyo_sak"]){
+              $("td[name=skill_senryaku_hyo_kon]").css('backgroundColor', '#88C6F2');
+            }
+              if(_data["fill"]["skill_senryaku_hyo_kon"] > _data["fill"]["skill_senryaku_hyo_sak"]){
+              $("td[name=skill_senryaku_hyo_kon]").css('backgroundColor', '#FF7E5E');
+            }
+              if(_data["fill"]["skill_kaihatsukobai_hyo_kon"] < _data["fill"]["skill_kaihatsukobai_hyo_sak"]){
+              $("td[name=skill_kaihatsukobai_hyo_kon]").css('backgroundColor', '#88C6F2');
+            }
+              if(_data["fill"]["skill_kaihatsukobai_hyo_kon"] > _data["fill"]["skill_kaihatsukobai_hyo_sak"]){
+              $("td[name=skill_kaihatsukobai_hyo_kon]").css('backgroundColor', '#FF7E5E');
+            }
+              if(_data["fill"]["skill_chotatsukanren_hyo_kon"] < _data["fill"]["skill_chotatsukanren_hyo_sak"]){
+              $("td[name=skill_chotatsukanren_hyo_kon]").css('backgroundColor', '#88C6F2');
+            }
+              if(_data["fill"]["skill_chotatsukanren_hyo_kon"] > _data["fill"]["skill_chotatsukanren_hyo_sak"]){
+              $("td[name=skill_chotatsukanren_hyo_kon]").css('backgroundColor', '#FF7E5E');
+            }
+              if(_data["fill"]["skill_chotatsugyomu_hyo_kon"] < _data["fill"]["skill_chotatsugyomu_hyo_sak"]){
+              $("td[name=skill_chotatsugyomu_hyo_kon]").css('backgroundColor', '#88C6F2');
+            }
+              if(_data["fill"]["skill_chotatsugyomu_hyo_kon"] > _data["fill"]["skill_chotatsugyomu_hyo_sak"]){
+              $("td[name=skill_chotatsugyomu_hyo_kon]").css('backgroundColor', '#FF7E5E');
+            }
+              if(_data["fill"]["skill_global_hyo_kon"] < _data["fill"]["skill_global_hyo_sak"]){
+              $("td[name=skill_global_hyo_kon]").css('backgroundColor', '#88C6F2');
+            }
+              if(_data["fill"]["skill_global_hyo_kon"] > _data["fill"]["skill_global_hyo_sak"]){
+              $("td[name=skill_global_hyo_kon]").css('backgroundColor', '#FF7E5E');
+            }
+              if(_data["fill"]["skill_kansetsu_hyo_kon"] < _data["fill"]["skill_kansetsu_hyo_sak"]){
+              $("td[name=skill_kansetsu_hyo_kon]").css('backgroundColor', '#88C6F2');
+            }
+              if(_data["fill"]["skill_kansetsu_hyo_kon"] > _data["fill"]["skill_kansetsu_hyo_sak"]){
+              $("td[name=skill_kansetsu_hyo_kon]").css('backgroundColor', '#FF7E5E');
+            }
+              if(_data["fill"]["skill_seisan_hyo_kon"] < _data["fill"]["skill_seisan_hyo_sak"]){
+              $("td[name=skill_seisan_hyo_kon]").css('backgroundColor', '#88C6F2');
+            }
+              if(_data["fill"]["skill_seisan_hyo_kon"] > _data["fill"]["skill_seisan_hyo_sak"]){
+              $("td[name=skill_seisan_hyo_kon]").css('backgroundColor', '#FF7E5E');
+            }
+              if(_data["fill"]["skill_chotatsujyoho_kiban_hyo_kon"] < _data["fill"]["skill_chotatsujyoho_kiban_hyo_sak"]){
+              $("td[name=skill_chotatsujyoho_kiban_hyo_kon]").css('backgroundColor', '#88C6F2');
+            }
+              if(_data["fill"]["skill_chotatsujyoho_kiban_hyo_kon"] > _data["fill"]["skill_chotatsujyoho_kiban_hyo_sak"]){
+              $("td[name=skill_chotatsujyoho_kiban_hyo_kon]").css('backgroundColor', '#FF7E5E');
+            }
+          }
+        
+          // 昨年度(上司)※非表示 と今年度(上司)比較
+          if(!(_data["fill"]["skill_csr_hyo_bos"] === "")){
+            if(!(_data["fill"]["skill_csr_hyo_sak_bos"] === "")){
+              if(_data["fill"]["skill_csr_hyo_bos"] < _data["fill"]["skill_csr_hyo_sak_bos"]){
+                $("td[name=skill_csr_hyo_bos]").css('backgroundColor', '#88C6F2');
+              }
+                if(_data["fill"]["skill_csr_hyo_bos"] > _data["fill"]["skill_csr_hyo_sak_bos"]){
+                $("td[name=skill_csr_hyo_bos]").css('backgroundColor', '#FF7E5E');
+              }
+                if(_data["fill"]["skill_senryaku_hyo_bos"] < _data["fill"]["skill_senryaku_hyo_sak_bos"]){
+                $("td[name=skill_senryaku_hyo_bos]").css('backgroundColor', '#88C6F2');
+              }
+                if(_data["fill"]["skill_senryaku_hyo_bos"] > _data["fill"]["skill_senryaku_hyo_sak_bos"]){
+                $("td[name=skill_senryaku_hyo_bos]").css('backgroundColor', '#FF7E5E');
+              }
+                if(_data["fill"]["skill_kaihatsukobai_hyo_bos"] < _data["fill"]["skill_kaihatsukobai_hyo_sak_bos"]){
+                $("td[name=skill_kaihatsukobai_hyo_bos]").css('backgroundColor', '#88C6F2');
+              }
+                if(_data["fill"]["skill_kaihatsukobai_hyo_bos"] > _data["fill"]["skill_kaihatsukobai_hyo_sak_bos"]){
+                $("td[name=skill_kaihatsukobai_hyo_bos]").css('backgroundColor', '#FF7E5E');
+              }
+                if(_data["fill"]["skill_chotatsukanren_hyo_bos"] < _data["fill"]["skill_chotatsukanren_hyo_sak_bos"]){
+                $("td[name=skill_chotatsukanren_hyo_bos]").css('backgroundColor', '#88C6F2');
+              }
+                if(_data["fill"]["skill_chotatsukanren_hyo_bos"] > _data["fill"]["skill_chotatsukanren_hyo_sak_bos"]){
+                $("td[name=skill_chotatsukanren_hyo_bos]").css('backgroundColor', '#FF7E5E');
+              }
+                if(_data["fill"]["skill_chotatsugyomu_hyo_bos"] < _data["fill"]["skill_chotatsugyomu_hyo_sak_bos"]){
+                $("td[name=skill_chotatsugyomu_hyo_bos]").css('backgroundColor', '#88C6F2');
+              }
+                if(_data["fill"]["skill_chotatsugyomu_hyo_bos"] > _data["fill"]["skill_chotatsugyomu_hyo_sak_bos"]){
+                $("td[name=skill_chotatsugyomu_hyo_bos]").css('backgroundColor', '#FF7E5E');
+              }
+                if(_data["fill"]["skill_global_hyo_bos"] < _data["fill"]["skill_global_hyo_sak_bos"]){
+                $("td[name=skill_global_hyo_bos]").css('backgroundColor', '#88C6F2');
+              }
+                if(_data["fill"]["skill_global_hyo_bos"] > _data["fill"]["skill_global_hyo_sak_bos"]){
+                $("td[name=skill_global_hyo_bos]").css('backgroundColor', '#FF7E5E');
+              }
+                if(_data["fill"]["skill_kansetsu_hyo_bos"] < _data["fill"]["skill_kansetsu_hyo_sak_bos"]){
+                $("td[name=skill_kansetsu_hyo_bos]").css('backgroundColor', '#88C6F2');
+              }
+                if(_data["fill"]["skill_kansetsu_hyo_bos"] > _data["fill"]["skill_kansetsu_hyo_sak_bos"]){
+                $("td[name=skill_kansetsu_hyo_bos]").css('backgroundColor', '#FF7E5E');
+              }
+                if(_data["fill"]["skill_seisan_hyo_bos"] < _data["fill"]["skill_seisan_hyo_sak_bos"]){
+                $("td[name=skill_seisan_hyo_bos]").css('backgroundColor', '#88C6F2');
+              }
+                if(_data["fill"]["skill_seisan_hyo_bos"] > _data["fill"]["skill_seisan_hyo_sak_bos"]){
+                $("td[name=skill_seisan_hyo_bos]").css('backgroundColor', '#FF7E5E');
+              }
+                if(_data["fill"]["skill_chotatsujyoho_kiban_hyo_bos"] < _data["fill"]["skill_chotatsujyoho_kiban_hyo_sak_bos"]){
+                $("td[name=skill_chotatsujyoho_kiban_hyo_bos]").css('backgroundColor', '#88C6F2');
+              }
+                if(_data["fill"]["skill_chotatsujyoho_kiban_hyo_bos"] > _data["fill"]["skill_chotatsujyoho_kiban_hyo_sak_bos"]){
+                $("td[name=skill_chotatsujyoho_kiban_hyo_bos]").css('backgroundColor', '#FF7E5E');
+              }
+            }
+          }
+        }
+        
+        function drawSkillRadarGraph(){
+          var f = _data["fill"];
+          var p = _data["param"];
+          var dsBos = {
+            label: "今年度（上司）",
+            backgroundColor: "rgba(153, 102, 255, 0.2)",
+            borderColor: "rgba(153, 102, 255, 0.8)",
+            pointBackgroundColor: "rgba(153, 102, 255, 0.8)",
+            pointBorderColor: "rgba(153, 102, 255, 0.8)",
+            pointHoverBackgroundColor: "rgba(153, 102, 255, 0.8)",
+            pointHoverBorderColor: "rgba(153, 102, 255, 0.8)",
+            pointRadius: 1,
+            borderWidth: 2,
+            data: [
+              f["skill_csr_hyo_bos"],
+              f["skill_senryaku_hyo_bos"],
+              f["skill_kaihatsukobai_hyo_bos"],
+              f["skill_chotatsukanren_hyo_bos"],
+              f["skill_chotatsugyomu_hyo_bos"],
+              f["skill_global_hyo_bos"],
+              f["skill_kansetsu_hyo_bos"],
+              f["skill_seisan_hyo_bos"],
+              f["skill_chotatsujyoho_kiban_hyo_bos"]
+            ]
+          };
+          var dsKon = {
+            label: "今年度（本人）",
+            backgroundColor: "rgba(0, 176, 255, 0.2)",
+            borderColor: "rgba(0, 176, 255, 0.8)",
+            pointBackgroundColor: "rgba(0, 176, 255, 0.8)",
+            pointBorderColor: "rgba(0, 176, 255, 0.8)",
+            pointHoverBackgroundColor: "rgba(0, 176, 255, 0.8)",
+            pointHoverBorderColor: "rgba(0, 176, 255, 0.8)",
+            pointRadius: 1,
+            borderWidth: 2,
+            data: [
+              f["skill_csr_hyo_kon"],
+              f["skill_senryaku_hyo_kon"],
+              f["skill_kaihatsukobai_hyo_kon"],
+              f["skill_chotatsukanren_hyo_kon"],
+              f["skill_chotatsugyomu_hyo_kon"],
+              f["skill_global_hyo_kon"],
+              f["skill_kansetsu_hyo_kon"],
+              f["skill_seisan_hyo_kon"],
+              f["skill_chotatsujyoho_kiban_hyo_kon"]
+            ]
+          };
+          var dsSak = {
+            label: "昨年度（本人）",
+            backgroundColor: "rgba(255, 178, 0, 0.0)",
+            borderColor: "rgba(255, 178, 0, 0.8)",
+            pointBackgroundColor: "rgba(255, 178, 0, 0.4)",
+            pointBorderColor: "rgba(255, 178, 0, 0.2)",
+            pointHoverBackgroundColor: "rgba(255, 178, 0, 0.4)",
+            pointHoverBorderColor: "rgba(255, 178, 0, 0.2)",
+            pointRadius: 1,
+            borderWidth: 1,
+            data: [
+              f["skill_csr_hyo_sak"],
+              f["skill_senryaku_hyo_sak"],
+              f["skill_kaihatsukobai_hyo_sak"],
+              f["skill_chotatsukanren_hyo_sak"],
+              f["skill_chotatsugyomu_hyo_sak"],
+              f["skill_global_hyo_sak"],
+              f["skill_kansetsu_hyo_sak"],
+              f["skill_seisan_hyo_sak"],
+              f["skill_chotatsujyoho_kiban_hyo_sak"]
+            ]
+          };
+          var dsAvg = {
+            label: "全社平均",
+            backgroundColor: "rgba(255, 99, 132,0.0)",
+            borderColor: "rgba(255, 99, 132,0.8)",
+            pointBackgroundColor: "rgba(255, 99, 132,0.4)",
+            pointBorderColor: "rgba(255, 99, 132,0.2)",
+            pointHoverBackgroundColor: "rgba(255, 99, 132,0.4)",
+            pointHoverBorderColor: "rgba(255, 99, 132,0.2)",
+            pointRadius: 1,
+            borderWidth: 1,
+            data: [
+              p["skill_csr_hyo_sak_avg"],
+              p["skill_senryaku_hyo_sak_avg"],
+              p["skill_kaihatsukobai_hyo_sak_avg"],
+              p["skill_chotatsukanren_hyo_sak_avg"],
+              p["skill_chotatsugyomu_hyo_sak_avg"],
+              p["skill_global_hyo_sak_avg"],
+              p["skill_kansetsu_hyo_sak_avg"],
+              p["skill_seisan_hyo_sak_avg"],
+              p["skill_chotatsujyoho_kiban_hyo_sak_avg"]
+            ]
+          };
+          var useDataSets = [];
+          if (dsBos.data[0] === "") { makeItTransparent(dsBos); }
+          if (dsKon.data[0] === "") { makeItTransparent(dsKon); }
+          if (dsSak.data[0] === "") { makeItTransparent(dsSak); }
+          if (dsAvg.data[0] === "") { makeItTransparent(dsAvg); }
+          useDataSets.push(dsBos);
+          useDataSets.push(dsKon);
+          useDataSets.push(dsSak);
+          useDataSets.push(dsAvg);
+        
+          var ctx = document.getElementById("myRadarChart");
+          var myRadarChart = new Chart(ctx, {
+            type: 'radar',
+            data: {
+              labels: ["CSR", "戦略マネジメント", "開発購買", "調達関連知識", "調達実務", "グローバル調達", "間接材調達", "生産管理", "調達情報基盤"],
+              datasets: useDataSets
+            },
+            options: {
+              layout: {
+                padding: 10
+              },
+              legend: {
+                position: "top",
+                labels: { fontSize: 11 }
+              },
+              scale: {
+                gridLines: {
+                  color: "rgba(0,0,0,0.05)"
+                },
+                angleLines: {
+                  color: "rgba(0,0,0,0.05)"
+                },
+                ticks: {
+                  min: 1,
+                  max: 5
+                }
+              }
+            }
+          });
+        }
+        
+        function makeItTransparent(d) {
+          d["backgroundColor"] = "rgba(0,0,0,0)";
+          d["borderColor"] = "rgba(0,0,0,0)";
+          d["pointBackgroundColor"] = "rgba(0,0,0,0)";
+          d["pointBorderColor"] = "rgba(0,0,0,0)";
+          d["pointHoverBackgroundColor"] = "rgba(0,0,0,0)";
+          d["pointHoverBorderColor"] = "rgba(0,0,0,0)";
+          d["data"] = [9,9,9,9,9,9,9,9,9];
+        }
+        
+        function drawSkillHorizontalGraph(){
+          var f = _data["fill"];
+          var p = _data["param"];
+          var ds = {
+            you: [
+              f["skill_sotai_your_csr"],
+              f["skill_sotai_your_senryaku"],
+              f["skill_sotai_your_kaihatsukobai"],
+              f["skill_sotai_your_chotatsukanren"],
+              f["skill_sotai_your_chotatsugyomu"],
+              f["skill_sotai_your_global"],
+              f["skill_sotai_your_kansetsu"],
+              f["skill_sotai_your_seisan"],
+              f["skill_sotai_your_chotatsujyoho_kiban"]
+            ],
+            lt2: [
+              p["skill_avgrate_csr_lt2"],
+              p["skill_avgrate_sen_lt2"],
+              p["skill_avgrate_kai_lt2"],
+              p["skill_avgrate_cka_lt2"],
+              p["skill_avgrate_cgy_lt2"],
+              p["skill_avgrate_glo_lt2"],
+              p["skill_avgrate_kan_lt2"],
+              p["skill_avgrate_sei_lt2"],
+              p["skill_avgrate_cjy_lt2"]
+            ],
+            lt3: [
+              p["skill_avgrate_csr_lt3"],
+              p["skill_avgrate_sen_lt3"],
+              p["skill_avgrate_kai_lt3"],
+              p["skill_avgrate_cka_lt3"],
+              p["skill_avgrate_cgy_lt3"],
+              p["skill_avgrate_glo_lt3"],
+              p["skill_avgrate_kan_lt3"],
+              p["skill_avgrate_sei_lt3"],
+              p["skill_avgrate_cjy_lt3"]
+            ],
+            lt4: [
+              p["skill_avgrate_csr_lt4"],
+              p["skill_avgrate_sen_lt4"],
+              p["skill_avgrate_kai_lt4"],
+              p["skill_avgrate_cka_lt4"],
+              p["skill_avgrate_cgy_lt4"],
+              p["skill_avgrate_glo_lt4"],
+              p["skill_avgrate_kan_lt4"],
+              p["skill_avgrate_sei_lt4"],
+              p["skill_avgrate_cjy_lt4"]
+            ],
+            gt4: [
+              p["skill_avgrate_csr_gt4"],
+              p["skill_avgrate_sen_gt4"],
+              p["skill_avgrate_kai_gt4"],
+              p["skill_avgrate_cka_gt4"],
+              p["skill_avgrate_cgy_gt4"],
+              p["skill_avgrate_glo_gt4"],
+              p["skill_avgrate_kan_gt4"],
+              p["skill_avgrate_sei_gt4"],
+              p["skill_avgrate_cjy_gt4"]
+            ]
+          };
+          var ctx = document.getElementById("myHorizontalChart");
+          var data = {
+            labels: [
+              "CSR",
+              "戦略マネジメント",
+              "開発購買",
+              "調達関連知識",
+              "調達実務",
+              "グローバル調達",
+              "間接材調達",
+              "生産管理",
+              "調達情報基盤"
+            ],
+            datasets: [
+              {
+                type: 'line',
+                yAxisID: "y-axis-you",
+                label: 'あなたの位置',
+                data: ds.you,
+                backgroundColor: "rgba(85,142,213,1.0)",
+                borderColorer: "rgba(85,142,213,1.0)",
+                fill: false,
+                borderWidth: 2,
+                lineTension: 0
+              },
+              {
+                type: 'bar',
+                yAxisID: "y-axis-avg",
+                label: '2未満',
+                data: ds.lt2,
+                backgroundColor: "rgba(147,205,221,1.0)",
+                hoverBackgroundColor: "rgba(147,205,221,1.0)",
+                borderWidth: 1
+              },
+              {
+                type: 'bar',
+                yAxisID: "y-axis-avg",
+                label: '2以上3未満',
+                data: ds.lt3,
+                backgroundColor: "rgba(195,214,155,1.0)",
+                hoverBackgroundColor: "rgba(195,214,155,1.0)",
+                borderWidth: 1
+              },
+              {
+                type: 'bar',
+                yAxisID: "y-axis-avg",
+                label: '3以上4未満',
+                data: ds.lt4,
+                backgroundColor: "rgba(249,247,173,1.0)",
+                hoverBackgroundColor: "rgba(249,247,173,1.0)",
+                borderWidth: 1
+              },
+              {
+                type: 'bar',
+                yAxisID: "y-axis-avg",
+                label: '4以上',
+                data: ds.gt4,
+                backgroundColor: "rgba(217,150,148,1.0)",
+                hoverBackgroundColor: "rgba(217,150,148,1.0)",
+                borderWidth: 1
+              }
+            ]
+          };
+          var options = {
+            legend: {
+              position: 'top',
+              display: false,
+              label: {
+                boxHeight: 2
+              }
+            },
+            tooltips: {
+              enabled: false
+            },
+            scales: {
+              xAxes: [
+                {
+                  stacked: true,
+                  gridLines: { display: false },
+                  ticks: { fontColor:'#333' },
+                  barThickness: 30,
+                  display: false
+                }
+              ],
+              yAxes: [
+                {
+                  id: "y-axis-you",
+                  display: true,
+                  position: "right",
+                  gridLines: { display: false },
+                  ticks: { beginAtZero: true, min: 0, max: 100, fontColor: "#fff" },
+                  stacked: true,
+                },
+                {
+                  id: "y-axis-avg",
+                  position: "left",
+                  ticks: { beginAtZero: true, max: 100, stepSize: 20 },
+                  stacked: true,
+                  scaleLabel:{
+                    display: false,
+                    labelString: "全社平均(%)",
+                  }
+                }
+              ]
+            }
+          };
+        
+          var myHorizontalChart = new Chart(ctx, {
+            type: 'bar',
+            data: data,
+            options: options
+          });
+        }
+        </script>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <script type="text/javascript" src="/sheet/assets/vendor/lysithea/js/components-fw.js"></script>
+        
+        <script>
+        var __serverKey = '1561456615176';
+        var __cookieKey = '';
+        
+        $(function(){
+          App.root = "/sheet";
+          App.Config = { PopAlertTimeout: true };
+          App.loadLabelMap(__labelMap);
+          App.activate();
+          App.startup();
+          
+          /* Window Auto Close */
+          setInterval( "checkWindowKey()", 1000 );
+          
+          /* Alert Before Session Timeout  */
+          if (App.Config.PopAlertTimeout) {
+            setPopAlertAt('3600');
+            setInterval( function(){ popAlertTimeout(); }, 10000 );
+          }
+        });
+        </script>
+        
+        
+        
+        
+        </div><!-- /#gApp -->
+        </body>
+        </html>
+        

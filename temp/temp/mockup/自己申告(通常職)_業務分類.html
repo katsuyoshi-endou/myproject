@@ -1,0 +1,570 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html onContextmenu="return false;">
+<head>
+
+
+
+	<title>リシテア/人財戦略</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Expires" content="Sat, 01 Jan 2000 00:00:00 GMT">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+
+
+
+	<!-- Vendor libraries bundled by webpack -->
+	<script type="text/javascript" src="./assets/bundle/vendor.bundle.js"></script>
+
+	<!-- Custom components bundled by webpack -->
+	<script src="./assets/bundle/components.bundle.js"></script>
+	<link rel="stylesheet" href="./assets/bundle/components.bundle.css" />
+
+	<!-- Bootstrap -->
+	<script type="text/javascript" src="./assets/vendor/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="./assets/vendor/bootstrap-3.3.7/css/bootstrap.min.css" media="screen">
+
+	<!-- FontAwesome -->
+	<link rel="stylesheet" href="./assets/vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+
+	<!-- Chart.js -->
+	<script type="text/javascript" src="./assets/vendor/Chart.bundle.min.js"></script>
+
+	<!-- jRange -->
+	<script type="text/javascript" src="./assets/vendor/jrange/jquery.range-min.js"></script>
+	<link rel="stylesheet" href="./assets/vendor/jrange/jquery.range.css">
+
+	<!-- Lysithea -->
+	<link rel="stylesheet" href="./assets/vendor/lysithea/css/lysithea.css" media="screen, projection" />
+
+
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="./assets/bundle/style.bundle.css" />
+	
+
+	<!-- JavaScript -->
+	<script type="text/javascript" src="./dyres/labelmap.js"></script>
+	<script type="text/javascript" src="./assets/vendor/lysithea/js/common.js"></script>
+	<script type="text/javascript" src="./assets/vendor/lysithea/js/jQ-common.js"></script>
+
+
+
+
+<link rel="stylesheet" href="./view/sheet/careersheet.css" type="text/css" media="screen" />
+<style type="text/css">
+#Multi tbody tr {
+	display: none;
+}
+#Multi tbody tr.shown {
+	display: table-row;
+}
+</style>
+</head>
+<body id="lyca" data-vmid="VmSHVFSS">
+<div id="gApp">
+
+
+
+
+
+
+<style type="text/css">
+.reqd {
+	display: none;
+}
+.required .reqd {
+	display: inline-flex;
+	margin-left: 5px;
+}
+.required .btn_del {
+	display: none;
+}
+.showcase-999{
+width: 999px;
+margin: 0 auto;
+}
+.showcase-500 .mod-table table{
+width: 100%;
+}
+</style>
+</head>
+<body id="lyca" data-vmid="VmSHVACT">
+<div id="gApp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+/* Window Auto Close */
+// var serverKey = '1559550480361';
+// var cookieKey = '';
+// setInterval( "checkWindowKey()", 1000 );
+</script>
+
+
+<div id="gHeader">
+	<div class="appbar">
+		<div class="holder">
+			<div class="appbar-L">
+				<nav class="appLogo">
+					<span class="appName">
+						<span class="title">LYSITHEA</span>
+					</span>
+				</nav>
+			</div>
+			<div class="appbar-C">
+				<div class="func-title">業務分類</div>
+			</div>
+			<div class="appbar-R">
+				<div class="func-logout">
+					<!-- <button class="btn btn-transp" type="button" onclick="javascript:window.close();">
+						<i class="fa fa-close"></i>
+						<span>閉じる</span>
+					</button> -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="gBody">
+
+<form name="F001" method="post" action="/sheet/servlet/CommonServlet" target="_self" onsubmit="return false;">
+<input type="hidden" name="_FW_TRANSIT_KINOU_ID" value="VHD014" />
+<input type="hidden" name="_FW_TRANSIT_ACTION" value="" />
+
+<div id="navbar">
+	<div class="navbar-body btns"></div>
+</div>
+
+
+
+<div class="navbarBtns">
+	<div class="leftArea">
+		<div class="btns" style="display:inline-block;margin:0;padding:0;">
+			<button class="btn btn-back backToHome" type="button">戻る</button>
+		</div><!-- /btns -->
+	</div><!-- /leftArea -->
+	<div class="rightArea">
+		<button type="button" id="btn_FORWARD" class="btn btn-secondary btn-big">選択</button>
+	</div><!-- /rightArea -->
+</div>
+</div>
+
+
+
+<div id="gOperation"><div class="desk">
+
+  <div class="showcase-999">
+    <div class="mod-table">
+      <table>
+        <tr>
+          <th>職種</th>
+          <td>
+            <select name="example">
+              <option value="サンプル1"></option>
+              <option value="サンプル2">サンプル2</option>
+              <option value="サンプル3">サンプル3</option>
+            </select>
+          </td>
+          <th>職種2</th>
+          <td>
+            <select name="example">
+              <option value="サンプル1"></option>
+              <option value="サンプル2">サンプル2</option>
+              <option value="サンプル3">サンプル3</option>
+            </select>
+          </td>
+          <th>分類</th>
+          <td>
+            <select name="example">
+              <option value="サンプル1"></option>
+              <option value="サンプル2">サンプル2</option>
+              <option value="サンプル3">サンプル3</option>
+            </select>
+          </td>
+        </tr>        
+      </table>
+    </div>
+  </div>
+
+  <h3></h3>
+
+	<div class="showcase-999">
+		<div id="actorlist" class="mod-table">
+			<table style="margin:0 auto;">
+				<tr>
+					<th></th>
+					<th style="width:20%;">職種</th>
+					<th style="width:15%;">職種2</th>
+					<th style="width:20%;">業務分類</th>
+					<th style="width:40%;">説明</th>
+        </tr>
+        <tr>
+          <td>
+            <span class="radio">
+              <label>
+                <input type="radio" value="1" name="aaa"/>
+                <i class="fa fa-circle"></i>
+              </label>
+            </span>
+          </td>
+          <td>直販営業</td>
+          <td>法人ソリューション営業</td>
+          <td>国際</td>
+          <td>ｸﾞﾛｰﾊﾞﾙ企業･国際ｷｬﾘｱ向けの音声系･ﾃﾞｰﾀ系ｻｰﾋﾞｽ営業</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="radio">
+              <label>
+                <input type="radio" value="1" name="aaa"/>
+                <i class="fa fa-circle"></i>
+              </label>
+            </span>
+          </td>
+          <td>直販営業</td>
+          <td>法人ソリューション営業</td>
+          <td>法人・アカウント</td>
+          <td>大手ｱｶｳﾝﾄ企業向けの法人直販・ｿﾘｭｰｼｮﾝ営業</td>
+        </tr>    
+        <tr>
+          <td>
+            <span class="radio">
+              <label>
+                <input type="radio" value="1" name="aaa"/>
+                <i class="fa fa-circle"></i>
+              </label>
+            </span>
+          </td>
+          <td>直販営業</td>
+          <td>法人ソリューション営業</td>
+          <td>法人・新規</td>
+          <td>新規獲得を中心とした法人直販・ｿﾘｭｰｼｮﾝ営業</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="radio">
+              <label>
+                <input type="radio" value="1" name="aaa"/>
+                <i class="fa fa-circle"></i>
+              </label>
+            </span>
+          </td>
+          <td>直販営業</td>
+          <td>法人ソリューション営業</td>
+          <td>法人直販営業全般</td>
+          <td>法人直販営業に関する全般</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="radio">
+              <label>
+                <input type="radio" value="1" name="aaa"/>
+                <i class="fa fa-circle"></i>
+              </label>
+            </span>
+          </td>
+          <td>直販営業</td>
+          <td>法人ソリューション営業</td>
+          <td>非対面営業</td>
+          <td>WEB/ﾒｰﾙ/電話活用を中心した法人直販・ｿﾘｭｰｼｮﾝ営業</td>
+        </tr>                          
+			</table>
+		</div><!-- /.mod-table -->
+	</div><!-- /.container -->
+
+<input type="hidden" name="actorCd" value="">
+<input type="hidden" name="VHD012Mode" value="CHG_ACT">
+<input type="hidden" name="windowMode" value="SubWindow">
+
+
+</div><!-- /.desk --></div><!-- /#gOperation -->
+<input type="hidden" name="state" value="">
+<input type="hidden" name="tokenNo" value="28994047-3a67-410e-b7b9-3417bf57ef0a">
+</form>
+
+</div><!-- /#gBody -->
+
+<script type="text/javascript" src="./view/sheet/careersheet.js"></script>
+<script>
+var flowPtnJson = [{"code":"flwptn-normal","name":"通常フロー","pathStatuses":["00-New","01-Check1st","03-Feedback","99-End"],"mainActors":["act-owner","act-1st","act-jinji"]},{"code":"flwptn-hyo-none","name":"評価者なしフロー","pathStatuses":["00-New","03-Feedback","99-End"],"mainActors":["act-owner","act-jinji"]},{"code":"flwptn-hyo-2nd","name":"2次評価者までフロー","pathStatuses":["00-New","01-Check1st","02-Check2nd","03-Feedback","99-End"],"mainActors":["act-jinji","act-2nd","act-1st","act-owner"]}];
+var flowPtnList = {};
+_.each(flowPtnJson, function(fp){ return flowPtnList[fp.code] = fp; });
+
+var loginId = 'ZZZZZZZ';
+var currentFlowPtn = 'flwptn-hyo-none';
+$(function(){
+	 /**
+	 ** Initialize
+	**/
+	
+	var hBtns = $('div.headerButtons button');
+	$('#command .buttons p').append( hBtns );
+	
+	refreshRequiredState( currentFlowPtn );
+	refreshChgBtnState( loginId );
+	
+	 /**
+	 ** Event
+	**/
+	$(document).on('click', '#actorlist .btn_chg', function(){
+		document.F001.actorCd.value = $(this).attr('data-actorCd');
+		pageSubmit('/view/sheet/VHD012_CsPersonSelect.jsp', 'INIT');
+	});
+
+	$(document).on('click', '#actorlist .btn_del', function(){
+		var actorCd   = $(this).closest('[data-actorcd]').attr('data-actorcd');
+		var actorGuid = $(this).closest('[data-actorguid]').attr('data-actorguid');
+		if (actorGuid === "") {
+			alert("評価者が未設定です。");
+			return false;
+		}
+		var ans = confirm("評価者が未設定になりますがよろしいですか？");
+		if (!ans) { return false; }
+		document.F001.actorCd.value = actorCd;
+		pageSubmit('/servlet/CsActorServlet', 'DEL_ACT');
+	});
+
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+.debuginfo {
+	display: none;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	z-index: 9999;
+	width: 60%;
+	height: 90%;
+	overflow: auto;
+	padding: 20px;
+	background: #fff;
+	border: 1px solid #ddd;
+	box-shadow: 0 1px 3px 0 #aaa;
+	font-size: 12px;
+	font-family: Arial;
+}
+.debuginfo h3 {
+	padding: 0 0 4px;
+	font-size: 20px;
+	color: #555;
+}
+.debuginfo table {
+	width: 100%;
+	border-collapse: collapse;
+}
+.debuginfo th {
+	padding: 4px;
+	border: 1px solid #e9e9e9;
+	background-color: #f7f7f7;
+	text-align: left;
+	color: #666;
+}
+.debuginfo td {
+	padding: 4px;
+	border: 1px solid #e9e9e9;
+	font-family: monospace;
+}
+.debuginfo label {
+	color: #999;
+}
+</style>
+<div class="debuginfo">
+<h3>Request Parameters</h3>
+<table>
+	<tr>
+		<th style="width:25%;">Parameter Name</th>
+		<th>Parameter Value</th>
+	</tr>
+
+	<tr>
+		<td>_FW_TRANSIT_ACTION</td>
+		
+		<td></td>
+		
+	</tr>
+
+	<tr>
+		<td>_FW_TRANSIT_KINOU_ID</td>
+		
+		<td>VHD010</td>
+		
+	</tr>
+
+	<tr>
+		<td>csPartialEdit</td>
+		
+		<td></td>
+		
+	</tr>
+
+	<tr>
+		<td>csPartialEditArg</td>
+		
+		<td></td>
+		
+	</tr>
+
+	<tr>
+		<td>deliv_msg</td>
+		
+		<td></td>
+		
+	</tr>
+
+	<tr>
+		<td>exclusiveKey</td>
+		
+		<td>0</td>
+		
+	</tr>
+
+	<tr>
+		<td>sheetId</td>
+		
+		<td>6005453-PANA-2020T-skchk</td>
+		
+	</tr>
+
+	<tr>
+		<td>state</td>
+		
+		<td>INIT</td>
+		
+	</tr>
+
+	<tr>
+		<td>tabkeep</td>
+		
+		<td></td>
+		
+	</tr>
+
+	<tr>
+		<td>tokenNo</td>
+		
+		<td>28994047-3a67-410e-b7b9-3417bf57ef0a</td>
+		
+	</tr>
+
+	<tr>
+		<td>windowMode</td>
+		
+		<td>SubWindow</td>
+		
+	</tr>
+
+	<tr>
+		<td>xlsharp</td>
+		
+		<td></td>
+		
+	</tr>
+
+</table>
+</div>
+<!-- $('.debuginfo').show(); -->
+
+
+
+
+<script type="text/javascript" src="./assets/vendor/lysithea/js/components-fw.js"></script>
+
+
+<!-- <script type="text/javascript" src="./assets/js/components-sheet.js"></script> -->
+
+
+<script>
+var __serverKey = '1559550480361';
+var __cookieKey = '';
+var isAutoJCT = 'YES' === 'YES';
+
+$(function(){
+	/* Customized for Junction */
+	App.root = isAutoJCT ? document.location.pathname.match(/^(\/[\w]+)?\/sheet/)[0] : "/sheet";
+	App.Config = { PopAlertTimeout: true };
+	App.loadLabelMap(__labelMap);
+	App.activate();
+	App.startup();
+	
+	/* Window Auto Close */
+	setInterval( "checkWindowKey()", 1000 );
+	
+	/* Alert Before Session Timeout  */
+	if (App.Config.PopAlertTimeout) {
+		setPopAlertAt('3600');
+		setInterval( function(){ popAlertTimeout(); }, 10000 );
+	}
+});
+</script>
+
+
+
+
+</div><!-- /#gApp -->
+</body>
+</html>
