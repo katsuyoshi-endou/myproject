@@ -25,6 +25,11 @@
     $("div#bossShokenArea").show();
   }
 
+  // 「単身赴任」欄の表示・非表示
+  if (needsCheck("jksk_bos_mendan")) {
+    $("div#tanshinArea").show();
+  }
+
   // 「未申請」のとき、「過去業務へ移動」と「回答内容クリア」ボタンを表示
   if (_data.sheet.statusCd === "00-New") {
     var elem = $("div.GeGyomuBtnGrp");
@@ -75,7 +80,7 @@
 
   // プログラミングスキル欄の自動展開
   $document.on("change", "#jksk_skill_prog_ques_01", function() {
-    ctrlProgLevelTableRows($(this));
+    ctrlVisibleClsElementsById("jksk_skill_prog_ques_01", "ある", "tr", "prgLvlAnsGrp");
   });
 
   // 全件ON/OFFボタンでの表示・非表示切り替え
@@ -150,24 +155,146 @@
     $target.text(kikan);
   });
 
+  $("button#shikakuClearBtn01", "button#shikakuClearBtn02", "button#shikakuClearBtn03", "button#shikakuClearBtn04", "button#shikakuClearBtn05").on("click", function() {
+    var index = $(this).attr("id").slice(-2);
+
+    clearShikakuTuikaSentakuArea(index);
+  });
+
   // 日本語以外のビジネス経験の表示・非表示制御
   $document.on("change", "#jksk_glo_busi_lang_ans01", function() {
-    ctrlGloBusiLangTableRows($(this));
+    ctrlVisibleClsElementsById("jksk_glo_busi_lang_ans01", "ある", "tr", "gloBusiLangAnsGrp");
   });
 
   // 日本以外のビジネス経験の表示・非表示制御
   $document.on("change", "#jksk_glo_busi_exp_ans01", function() {
-    ctrlGloBusiExpTableRows($(this));
+    ctrlVisibleClsElementsById("jksk_glo_busi_exp_ans01", "ある", "tr", "gloBusiExpAnsGrp");
   });
 
   // 就学・留学経験の表示・非表示制御
   $document.on("change", "#jksk_glo_ryu_exp_ans01", function() {
-    ctrlGloRyuExpTableRows($(this));
+    ctrlVisibleClsElementsById("jksk_glo_ryu_exp_ans01", "ある", "tr", "gloRyuExpAnsGrp");
   });
 
+  // 「語学スキル目安」ボタン押下
+  $("button#LangSkillIndicBtn").on("click", function() {
+    $("div#LangLevelModalWnd").fadeIn();
+  });
+
+  // 「語学スキル目安」ポップアップウィンドウ閉じるイベント
+  $("div#LangLevelModalWnd div.closearea, div#LangLevelModalWnd div.closearea a.close").on("click", function() {
+    $("div#LangLevelModalWnd").fadeOut();
+  });
+
+  // 「Excelレベル」ボタン押下
+  $("button#ExcelLvlBtn").on("click", function() {
+    $("#ExcelLevelModalWnd").fadeIn();
+  });
+
+  // 「Excelレベル」ポップアップウィンドウ閉じるイベント
+  $("div#ExcelLevelModalWnd div.closearea, div#ExcelLevelModalWnd div.closearea a.close").on("click", function() {
+    $("div#LangLevelModalWnd").fadeOut();
+  });
+
+  // Accessレベルボタン押下
+  $("button#AccessLvlBtn").on("click", function() {
+    $("#AccessLevelModalWnd").fadeIn();
+  });
+
+  // 「Accessレベル」ポップアップウィンドウ閉じるイベント
+  $("div#AccessLevelModalWnd div.closearea, div#AccessLevelModalWnd div.closearea a.close").on("click", function() {
+    $("div#LangLevelModalWnd").fadeOut();
+  });
+
+  // プログラミングレベルボタン押下
+  $("button#ProgSkillLvlBtn").on("click", function() {
+    $("#ProgLevelModalWnd").fadeIn();
+  });
+
+  // 「プログラミングレベル」ポップアップウィンドウ閉じるイベント
+  $("div#ProgLevelModalWnd div.closearea, div#ProgLevelModalWnd div.closearea a.close").on("click", function() {
+    $("div#LangLevelModalWnd").fadeOut();
+  });
+  
   // 初期化処理
   initialJkskSheet();
 });
+
+function makeRequestParameterFromReadField() {
+  // 参照綱目のhiddenフィールドを作成
+  var idx;
+  var i;
+  var val;
+  var status;
+
+  status = _data.sheet.statusCd;
+
+  if (status === "00-New") {
+    // 現在の業務内容
+    makeRequestParameter("jksk_ge_shokushu_A", getValueById("jksk_ge_shokushu_A"));
+    makeRequestParameter("jksk_ge_shokushu_B", getValueById("jksk_ge_shokushu_B"));
+    makeRequestParameter("jksk_ge_shokushu_C", getValueById("jksk_ge_shokushu_C"));
+    makeRequestParameter("jksk_ge_shu", getValueById("jksk_ge_shu"));
+
+    // 過去の業務内容1-4
+    for (i = 1; i <= 4; i++) {
+      idx = ("0" + i).slice(-2);
+
+      makeRequestParameter("jksk_ka_" + idx + "_shokushu_A", getValueById("jksk_ka_" + idx + "_shokushu_A"));
+      makeRequestParameter("jksk_ka_" + idx + "_shokushu_B", getValueById("jksk_ka_" + idx + "_shokushu_B"));
+      makeRequestParameter("jksk_ka_" + idx + "_shokushu_C", getValueById("jksk_ka_" + idx + "_shokushu_C"));
+    }
+
+    // 過去の業務内容5
+    makeRequestParameter("jksk_ka_05_shozoku", getValueById("jksk_ka_05_shozoku"));
+    makeRequestParameter("jksk_ka_05_kigyomei", getValueById("jksk_ka_05_kigyomei"));
+    makeRequestParameter("jksk_ka_05_shokushu_A", getValueById("jksk_ka_05_shokushu_A"));
+    makeRequestParameter("jksk_ka_05_shokushu_B", getValueById("jksk_ka_05_shokushu_B"));
+    makeRequestParameter("jksk_ka_05_shokushu_C", getValueById("jksk_ka_05_shokushu_C"));
+    makeRequestParameter("jksk_ka_05_gyomunaiyo", getValueById("jksk_ka_05_gyomunaiyo"));
+    makeRequestParameter("jksk_ka_05_kai", getValueById("jksk_ka_05_kai"));
+    makeRequestParameter("jksk_ka_05_shu", getValueById("jksk_ka_05_shu"));
+
+    // 追加資格（選択入力）
+    for (i = 1; i <= 5; i++) {
+      idx = ("0" + i).slice(-2);
+
+      val = getValueById("jksk_skill_shikaku_tsuika_sen_" + idx + "_nm");
+      if (val !== "") {
+        makeRequestParameter("jksk_skill_shikaku_tsuika_sen_" + idx + "_nm", val);
+      }
+    }
+
+    // 経験したい業務1-2
+    for (i = 3; i <= 4; i++) {
+      idx = ("0" + i).slice(-2);
+
+      // 未入力もしくは、3項目ともに入力されているかのため、先頭の項目で判断
+      val = getValueById("jksk_car_now_ques_" + idx + "_A");
+      if (val !== "") {
+        makeRequestParameter("jksk_car_now_ques_" + idx + "_A", getValueById("jksk_car_now_ques_" + idx + "_A"));
+        makeRequestParameter("jksk_car_now_ques_" + idx + "_B", getValueById("jksk_car_now_ques_" + idx + "_B"));
+        makeRequestParameter("jksk_car_now_ques_" + idx + "_C", getValueById("jksk_car_now_ques_" + idx + "_C"));
+      }
+    }
+
+    // 業務分類（ビジネス経験（日本以外の国）1-3）
+    for (i = 1; i <= 3; i++) {
+      idx = ("0" + i).slice(-2);
+
+      makeRequestParameter("jksk_glo_busi_exp_" + idx + "_shokushu_A", getValueById("jksk_glo_busi_exp_" + idx + "_shokushu_A"));
+      makeRequestParameter("jksk_glo_busi_exp_" + idx + "_shokushu_B", getValueById("jksk_glo_busi_exp_" + idx + "_shokushu_B"));
+      makeRequestParameter("jksk_glo_busi_exp_" + idx + "_shokushu_C", getValueById("jksk_glo_busi_exp_" + idx + "_shokushu_C"));
+    }
+
+  } else if (needsCheck("jksk_bos_mendan")) {
+      // 経験させたい業務
+      makeRequestParameter("jksk_bos_now_ques_03_A", getValueById("jksk_bos_now_ques_03_A"));
+      makeRequestParameter("jksk_bos_now_ques_03_B", getValueById("jksk_bos_now_ques_03_B"));
+      makeRequestParameter("jksk_bos_now_ques_03_C", getValueById("jksk_bos_now_ques_03_C"));
+    }
+  return true;
+}
 
 function errMsg(msgID) {
   var labels = _data.label;
@@ -190,6 +317,7 @@ function confMsg(msgID) {
     JkskClearCurGyomuConfMsg: labels.JkskClearCurGyomuConfMsg,
     JkskGlobalExpConfMsg: labels.JkskGlobalExpConfMsg,
     JkskCurrentGyomuConfMsg: labels.JkskCurrentGyomuConfMsg,
+    JkskClearShikakuTuikaConfMsg: labels.JkskClearShikakuTuikaConfMsg,
   };
   return msgs[msgID];
 }
@@ -200,19 +328,19 @@ function initialJkskSheet() {
   ctrlLanguageLavelTableRows($("#jksk_skill_lang_03_nm"));
 
   // プログラミングレベル1-20の表示・非表示
-  ctrlProgLevelTableRows($("#jksk_skill_prog_ques_01"));
+  ctrlVisibleClsElementsById("jksk_skill_prog_ques_01", "ある", "tr", "prgLvlAnsGrp");
 
   // 人事Navi登録済み資格6-10の表示・非表示
   ctrlJinjiNaviShikakuTableRows("#btn_skill_onoff", "init");
 
   // ビジネス経験（日本語以外）欄の表示・非表示
-  ctrlGloBusiLangTableRows($("#jksk_glo_busi_lang_ans01"));
+  ctrlVisibleClsElementsById("jksk_glo_busi_lang_ans01", "ある", "tr", "gloBusiLangAnsGrp");
 
   // ビジネス経験（日本以外）欄の表示・非表示
-  ctrlGloBusiExpTableRows($("#jksk_glo_busi_exp_ans01"));
+  ctrlVisibleClsElementsById("jksk_glo_busi_exp_ans01", "ある", "tr", "gloBusiExpAnsGrp");
 
   // 就学・留学経験欄の表示・非表示
-  ctrlGloRyuExpTableRows($("#jksk_glo_ryu_exp_ans01"));
+  ctrlVisibleClsElementsById("jksk_glo_ryu_exp_ans01", "ある", "tr", "gloRyuExpAnsGrp");
 }
 
 /**
@@ -563,17 +691,6 @@ function checkRequireById(id) {
   return true;
 }
 
-function checkSonotaKomoku() {
-  var errFlg = false;
-
-  // 「保有スキル・免許・資格」欄の「その他」選択時、未入力チェック
-  if (_data.fill.jksk_skill_lang_02_nm === "その他") {
-    if (_data.fill.jksk_skill_lang_02_nm_other === "") {
-      errFlg = true;
-    }
-  }
-}
-
 /**
  * elem1の要素の値が、value1であるとき、elem2の要素の値がvalue2であるかをチェックする
  */
@@ -746,7 +863,7 @@ function checkHalfwidthNumbers(numVal) {
 }
 
 function ctrlLanguageLavelTableRows($this) {
-  if ($this === undefined) {
+  if ($this.length === 0) {
     return true;
   }
 
@@ -769,34 +886,8 @@ function ctrlLanguageLavelTableRows($this) {
   return true;
 }
 
-function ctrlProgLevelTableRows($this) {
-  if ($this === undefined) {
-    return true;
-  }
-
-  if ($this.val() === "ある") {
-    $("tr.prgLvlAnsGrp").show();
-  } else {
-    $("tr.prgLvlAnsGrp").hide();
-  }
-  return true;
-}
-
-function ctrlGloBusiLangTableRows($this) {
-  if ($this === undefined) {
-    return true;
-  }
-
-  if ($this.val() === "ある") {
-    $("tr.gloBusiLangAnsGrp").show();
-  } else {
-    $("tr.gloBusiLangAnsGrp").hide();
-  }
-  return true;
-}
-
 function ctrlJinjiNaviShikakuTableRows($this, mode) {
-  if ($this === undefined) {
+  if ($this.length === 0) {
     return true;
   }
 
@@ -809,28 +900,67 @@ function ctrlJinjiNaviShikakuTableRows($this, mode) {
   return true;
 }
 
-function ctrlGloBusiExpTableRows($this) {
-  if ($this === undefined) {
+/**
+ * idで指定された要素の値が、valueであるとき、"elemName.claName"で指定された要素を表示する。
+ * また、valueに一致しないときは、非表示にする
+ * 
+ * @param {*} id 
+ * @param {*} pattern 
+ * @param {*} elemName
+ * @param {*} clsName 
+ */
+function ctrlVisibleClsElementsById(id, pattern, elemName, clsName) {
+  var val = getValueById(id);
+
+  var $elem = $(elemName + "." + clsName);
+  if ($elem.length === 0) {
     return true;
   }
 
-  if ($this.val() === "ある") {
-    $("tr.gloBusiExpAnsGrp").show();
-  } else {
-    $("tr.gloBusiExpAnsGrp").hide();
+  if (val.match(pattern)) {
+    $elem.show();
+  } else { 
+    $elem.hide();
   }
   return true;
 }
 
-function ctrlGloRyuExpTableRows($this) {
-  if ($this === undefined) {
-    return true;
+function clearShikakuTuikaSentakuArea(index) {
+  var msg = confMsg("JkskClearShikakuTuikaConfMsg");
+
+  if (!window.confirm(msg)) {
+    return false;
   }
 
-  if ($this.val() === "ある") {
-    $("tr.gloRyuExpAnsGrp").show();
-  } else {
-    $("tr.gloRyuExpAnsGrp").hide();
-  }
+  $("#jksk_skill_shikaku_tsuika_sen_" + index + "_nm").text("");
+  $("#jksk_skill_shikaku_tsuika_sen_" + index + "_date").val("");
+  $("#jksk_skill_shikaku_tsuika_sen_" + index + "_date").val("");
+
   return true;
+}
+
+/**
+ * idで指定された要素の値を取得する
+ * 
+ * @param {*} id 
+ */
+function getValueById(id) {
+  var ret = "";
+
+  if (id === "") {
+    return ret;
+  }
+
+  var $elem = $("#" + id);
+  if ($elem.length === 0) {
+    return ret;
+  }
+
+  var tName = elem[0].tagName.toUpperCase();
+  if (tName.match(/INPUT|TEXTAREA|SELECT/)) {
+    ret = $elem.val();
+  } else {
+    $elem.text();
+  }
+  return ret;
 }

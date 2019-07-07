@@ -100,4 +100,12 @@ function customPartialEditCheck(cspe, cspearg) {
   return result;
 }
 
+function makeReqParamFromReadonlyFields(cspe, cspearg) {
+  var result = true;
+
+  if (cspe === "jksk") {
+    result = makeRequestParameterFromReadField();
+  }
+  return result;
+}
 
