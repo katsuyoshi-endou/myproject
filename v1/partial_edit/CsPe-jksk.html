@@ -69,7 +69,7 @@
       <tr>
         <th rowspan="5" style="width: 13%;">
           <span style="font-weight: bold;">{{= label.JkskGeGyomu }}</span>
-          <div class="GeGyomuBtnGrp" style="display: none;">
+          <div class="GeGyomuBtnGrp">
             <button type="button" id="btn_AnsMove" class="btn" style="margin:5px;">{{= label.JkskGeMove }}</button>
             <button type="button" id="btn_AnsClr" class="btn" style="margin:5px; ">{{= label.JkskGeAnsClear }}</button>
           </div>
@@ -585,16 +585,16 @@
         <th style="width:20%;">{{= label['JkskSkillShikakuTsuikaJiyu01Nm'] }}</th>
         <td style="width:28%;"><input class="block" type="text" name="Fill--jksk_skill_shikaku_tsuika_jiyu_01_nm"></td>
         <th style="width:11%;">{{= label['JkskSkillShikakuTsuikaJiyu01Date'] }} {{= tooltip( label.JkskSkillShikakuTsuikaJiyuDateTips ) }}</th>
-        <td style="width:100px;"><input type="text" class="datepicker-date" name="Fill--jksk_skill_shikaku_tsuika_jiyu_01_date" style="width: 100px;"></td>
+        <td style="width:100px;"><input type="text" id="jksk_skill_shikaku_tsuika_jiyu_01_date" class="datepicker-date" name="Fill--jksk_skill_shikaku_tsuika_jiyu_01_date" style="width: 100px;"></td>
         <th style="width:11%;">{{= label['JkskSkillShikakuTsuikaJiyu01Kigen'] }}</th>
-        <td style="width:100px;"><input type="text" class="datepicker-date" name="Fill--jksk_skill_shikaku_tsuika_jiyu_01_kigen"></td>
+        <td style="width:100px;"><input type="text" id="jksk_skill_shikaku_tsuika_jiyu_01_kigen" class="datepicker-date" name="Fill--jksk_skill_shikaku_tsuika_jiyu_01_kigen"></td>
         {{ } else { }}
         <th>{{= label['JkskSkillShikakuTsuikaJiyu' +idx + 'Nm'] }}</th>
         <td><input class="block" type="text" name="Fill--jksk_skill_shikaku_tsuika_jiyu_{{= idx }}_nm"></td>
         <th>{{= label['JkskSkillShikakuTsuikaJiyu' + idx + 'Date'] }}</th>
-        <td><input type="text" class="datepicker-date" name="Fill--jksk_skill_shikaku_tsuika_jiyu_{{= idx }}_date" style="width: 100px;"></td>
+        <td><input type="text" id="jksk_skill_shikaku_tsuika_jiyu_{{= idx }}_date" class="datepicker-date" name="Fill--jksk_skill_shikaku_tsuika_jiyu_{{= idx }}_date" style="width: 100px;"></td>
         <th>{{= label['JkskSkillShikakuTsuikaJiyu' + idx + 'Kigen'] }}</th>
-        <td><input type="text" class="datepicker-date" name="Fill--jksk_skill_shikaku_tsuika_jiyu_{{= idx }}_kigen"></td>
+        <td><input type="text" id="jksk_skill_shikaku_tsuika_jiyu_{{= idx }}_kigen" class="datepicker-date" name="Fill--jksk_skill_shikaku_tsuika_jiyu_{{= idx }}_kigen"></td>
         {{ } }}
       </tr>
       {{ } }}
@@ -622,13 +622,14 @@
   <h3></h3>
 
   <div class="mod-table ami">
+    <div class="editTable">
     <table>
       <tr>
         <th rowspan="2" style="width:30%;">{{= label.JkskSkillExcelLv }}<span style="color:red;"> ※</span></th>
-        <th style="text-align: center; width:18%;">{{= label.JkskSkillProgLevel01 }}</th>
-        <th style="text-align: center; width:18%;">{{= label.JkskSkillProgLevel02 }}</th>
-        <th style="text-align: center; width:17%;">{{= label.JkskSkillProgLevel03 }}</th>
-        <th style="text-align: center; width:17%;">{{= label.JkskSkillProgLevel04 }}</th>
+          <th style="text-align: center; width:18%;">{{= label.JkskSkillExcelAccessLv01 }}</th>
+          <th style="text-align: center; width:18%;">{{= label.JkskSkillExcelAccessLv02 }}</th>
+          <th style="text-align: center; width:17%;">{{= label.JkskSkillExcelAccessLv03 }}</th>
+          <th style="text-align: center; width:17%;">{{= label.JkskSkillExcelAccessLv04 }}</th>
       </tr>
       <!-- Excelレベル -->
       <tr>
@@ -638,7 +639,7 @@
           <div style="display:flex; justify-content:space-around;">
             <span class="radio">
               <label>
-                <input type="radio" name="Fill--jksk_skill_excel_lv" value="{{= label['JkskSkillExcelAccessLv' + idx] }}"/>
+                  <input type="radio" name="Fill--jksk_skill_excel_lv" value="{{= param['jksk_skill_excel_access_lv_' + idx] }}"/>
                 <i class="fa fa-circle"></i>
               </label>
             </span>
@@ -655,7 +656,7 @@
           <div style=" display:flex; justify-content:space-around;">
             <span class="radio">
               <label>
-                <input type="radio" name="Fill--jksk_skill_access_lv" value="{{= label['JkskSkillExcelAccessLv' + idx] }}"/>
+                  <input type="radio" name="Fill--jksk_skill_access_lv" value="{{= param['jksk_skill_excel_access_lv_' + idx] }}"/>
                 <i class="fa fa-circle"></i>
               </label>
             </span>
@@ -664,6 +665,19 @@
         {{ } }}
       </tr>
     </table>
+  </div>
+    <div class="viewTable">
+      <table>
+        <tr>
+          <th style="width:20%;">{{= label.JkskSkillExcelLv }}<span style="color:red;"> ※</span></th>
+          <td class="required">{{= fill.jksk_skill_excel_lv }}</td>
+        </tr>
+        <tr>
+          <th>{{= label.JkskSkillAccessLv }}<span style="color:red;"> ※</span></th>
+          <td class="required">{{= fill.jksk_skill_access_lv }}</td>
+        </tr>
+      </table>
+    </div>
   </div>
 
   <h3></h3>
@@ -682,6 +696,8 @@
   <h3></h3>
 
   <div class="mod-table ami">
+    <!-- 編集用 -->
+    <div class="editTable">
     <table>
       <tr>
         <th style="width:30%;">{{= label.JkskSkillProgQues01 }}<span style="color:red;"> ※</span></th>
@@ -712,30 +728,38 @@
         {{ } else { }}
         <td>
         {{ } }}
+          {{ var opt = j === 1 ? "checked" : "" }}
           <div style="display: flex; justify-content: space-around;">
             <span class="radio">
               <label>
-                <input type="radio" name="Fill--jksk_skill_prog_type_{{= idx }}_lv" value="{{= label['JkskSkillProgLevel' + cnt1] }}"/>
+                <input type="radio" name="Fill--jksk_skill_prog_type_{{= idx }}_lv" value="{{= param['jksk_skill_prog_lvl_' + cnt1] }}" {{= opt }}/>
                 <i class="fa fa-circle"></i>
               </label>
             </span>
           </div>
         </td>
         {{ } }}
-
-        {{ for ( var k = 1; k <= 2; k++ ) { }}
-        {{ var cnt2 = ( '0' + k ).slice( -2 ); }}
+        <!-- 業務利用 -->
         <td>
           <div style=" display:flex; justify-content:space-around;">
             <span class="radio">
               <label>
-                <input type="radio" name="Fill--jksk_skill_prog_type_{{= idx }}_keiken" value="{{= label['JkskSkillProgKeiken' + cnt2] }}"/>
+                <input type="radio" name="Fill--jksk_skill_prog_type_{{= idx }}_keiken" value="{{= param['jksk_skill_prog_use_01'] }}" checked="checked"/>
                 <i class="fa fa-circle"></i>
               </label>
             </span>
           </div>
         </td>
-        {{ } }}
+        <td>
+          <div style=" display:flex; justify-content:space-around;">
+            <span class="radio">
+              <label>
+                <input type="radio" name="Fill--jksk_skill_prog_type_{{= idx }}_keiken" value="{{= param['jksk_skill_prog_use_02'] }}"/>
+                <i class="fa fa-circle"></i>
+              </label>
+            </span>
+          </div>
+        </td>
       </tr>
       {{ } }}
 
@@ -756,7 +780,7 @@
           <div style="display: flex; justify-content: space-around;">
             <span class="radio">
               <label>
-                <input type="radio" name="Fill--jksk_skill_prog_type_other_lv" value="{{= label['JkskSkillProgLevel' + cnt1] }}"/>
+                <input type="radio" name="Fill--jksk_skill_prog_type_other_lv" value="{{= param['jksk_skill_prog_lvl_' + cnt1] }}"/>
                 <i class="fa fa-circle"></i>
               </label>
             </span>
@@ -771,7 +795,7 @@
           <div style=" display:flex; justify-content:space-around;">
             <span class="radio">
               <label>
-                <input type="radio" name="Fill--jksk_skill_prog_type_other_keiken" value="{{= label['JkskSkillProgKeiken' + cnt2] }}"/>
+                <input type="radio" name="Fill--jksk_skill_prog_type_other_keiken" value="{{= param['jksk_skill_prog_use_' + cnt2] }}"/>
                 <i class="fa fa-circle"></i>
               </label>
             </span>
@@ -779,13 +803,14 @@
         </td>
         {{ } }}
       </tr>
+
       <!-- プログラミングスキル質問 -->
       <tr>
         <th>{{= label.JkskSkillProgQues02 }} {{= tooltip( label.JkskSkillProgQues02Tips ) }}<span style="color:red;"> ※</span></th>
         <td>
-          <select class="" name="Fill--jksk_skill_prog_ques_02" data-pulldown="cspd-jksk_prog_ans02"></select>
+          <select id="jksk_skill_prog_ques_02" class="" name="Fill--jksk_skill_prog_ques_02" data-pulldown="cspd-jksk_prog_ans02"></select>
         </td>
-        <td colspan="7"><textarea class="block" rows="3" name="Fill--jksk_skill_prog_ques_03"></textarea></td>
+        <td colspan="7"><textarea id="jksk_skill_prog_ques_03" class="block" rows="3" name="Fill--jksk_skill_prog_ques_03"></textarea></td>
       </tr>
       <tr>
         <th>{{= label.JkskSkillProgQues04 }}</th>
@@ -794,11 +819,69 @@
       <tr>
         <th>{{= label.JkskSkillProgQues05 }} {{= tooltip( label.JkskSkillProgQues05Tips ) }}<span style="color:red;"> ※</span></th>
         <td>
-          <select class="" name="Fill--jksk_skill_prog_ques_05" data-pulldown="cspd-jksk_prog_ans05"></select>
+          <select id="jksk_skill_prog_ques_05" class="" name="Fill--jksk_skill_prog_ques_05" data-pulldown="cspd-jksk_prog_ans05"></select>
         </td>
-        <td colspan="7"><textarea class="block" rows="3" name="Fill--jksk_skill_prog_ques_06"></textarea></td>
+        <td colspan="7"><textarea id="jksk_skill_prog_ques_06" class="block" rows="3" name="Fill--jksk_skill_prog_ques_06"></textarea></td>
       </tr>
     </table>
+  </div>
+    <!-- 閲覧用 -->
+    <div class="viewTable">
+      <table>
+        <tr>
+          <th style="width:30%;">{{= label.JkskSkillProgQues01 }}<span style="color:red;"> ※</span></th>
+          <td colspan="7" id="jksk_skill_prog_ques_01" class="required">{{= fill.jksk_skill_prog_ques_01 }}</td>
+        </tr>
+        <tr class="prgLvlAnsGrp">
+          <th style="text-align: center;" rowspan="22">{{= label.JkskSkillProgLevelText }}</th>
+          <th class="thick-line" colspan="2">{{= label.JkskSkillProgLang }}</th>
+          <th style="text-align: center;">{{= label.JkskSkillProgLevel01 }}</th>
+          <th style="text-align: center;">{{= label.JkskSkillProgLevel02 }}</th>
+          <th style="text-align: center;">{{= label.JkskSkillProgLevel03 }}</th>
+          <th style="text-align: center;" class="thick-line">{{= label.JkskSkillProgLevel04 }}</th>
+          <th style="text-align: center;">{{= label.JkskSkillProgKeiken }}</th>
+        </tr>
+
+        <!-- プログラミングスキル1- 20 -->
+        {{ for ( var i = 1; i <= 20; i++ ) { }}
+        {{ var idx = ( '0' + i ).slice( -2 ); }}
+        <tr class="prgLvlAnsGrp">
+          <td class="thick-line" colspan="2" style="width:30%;">{{= label['JkskSkillProgLang' + idx] }}</td>
+          <td style="text-align:center;">{{= fill['jksk_skill_prog_type_' + idx + '_lv_noexp'] }}</td>
+          <td style="text-align:center;">{{= fill['jksk_skill_prog_type_' + idx + '_lv_shoky'] }}</td>
+          <td style="text-align:center;">{{= fill['jksk_skill_prog_type_' + idx + '_lv_chuky'] }}</td>
+          <td style="text-align:center;" class="thick-line" >{{= fill['jksk_skill_prog_type_' + idx + '_lv_jouky'] }}</td>
+          <td>{{= fill['jksk_skill_prog_type_' + idx + '_keiken'] }}</td>
+        </tr>
+        {{ } }}
+
+        <!-- プログラミングスキル その他 -->
+        <tr class="prgLvlAnsGrp">
+          <td >{{= label.JkskSkillProgLangOther }}</td>
+          <td class="thick-line" style="width:15%;">{{= fill.jksk_skill_prog_type_other_nm }}</td>
+          <td style="text-align:center;">{{= fill.jksk_skill_prog_type_other_lv_noexp }}</td>
+          <td style="text-align:center;">{{= fill.jksk_skill_prog_type_other_lv_shoky }}</td>
+          <td style="text-align:center;">{{= fill.jksk_skill_prog_type_other_lv_chuky }}</td>
+          <td style="text-align:center;" class="thick-line" >{{= fill.jksk_skill_prog_type_other_lv_jouky }}</td>
+          <td>{{= fill.jksk_skill_prog_type_other_keiken }}</td>
+        </tr>
+        <!-- プログラミンスキルに関する質問 -->
+        <tr>
+          <th>{{= label.JkskSkillProgQues02 }} {{= tooltip( label.JkskSkillProgQues02Tips ) }}<span style="color:red;"> ※</span></th>
+          <td class="required" id="jksk_skill_prog_ques_02">{{= fill.jksk_skill_prog_ques_02 }}</td>
+          <td colspan="6" id="jksk_skill_prog_ques_03">{{= fill.jksk_skill_prog_ques_03 }}</td>
+        </tr>
+        <tr>
+          <th>{{= label.JkskSkillProgQues04 }}</th>
+          <td colspan="7">{{= fill.jksk_skill_prog_ques_04 }}</td>
+        </tr>
+        <tr>
+          <th>{{= label.JkskSkillProgQues05 }} {{= tooltip( label.JkskSkillProgQues05Tips ) }}<span style="color:red;"> ※</span></th>
+          <td id="jksk_skill_prog_ques_05" class="required">{{= fill.jksk_skill_prog_ques_05 }}</td>
+          <td colspan="6" id="jksk_skill_prog_ques_06">{{= fill.jksk_skill_prog_ques_06 }}</td>
+        </tr>
+      </table>
+    </div>
   </div>
 
   <h3></h3>
@@ -940,7 +1023,7 @@
   </div>
 
   <!-- 上長所見欄 -->
-  <div id="bossShokenArea" style="display: none;">
+  <div id="bossShokenArea">
     <div style="float: left;">
       <h4>{{= label.JkskBosShoken }}</h4>
     </div>
@@ -1035,6 +1118,7 @@
 
   <!-- 「自己申告」タブのhidden項目定義 -->
   <div class="jkskHiddenFields">
+    <div class="honninHiddenField">
     <!-- 現在の業務内容 -->
     <input type="hidden" name="Fill--jksk_ge_shokushu_A">
     <input type="hidden" name="Fill--jksk_ge_shokushu_B">
@@ -1075,12 +1159,14 @@
       <input type="hidden" name="Fill--jksk_car_now_ques_{{= idx }}_B">
       <input type="hidden" name="Fill--jksk_car_now_ques_{{= idx }}_C">
     {{ } }}
-
+    </div>
+    <div class="bossHiddenField">
     <!-- 経験させたい業務 -->
     <input type="hidden" name="Fill--jksk_bos_now_ques_03_A">
     <input type="hidden" name="Fill--jksk_bos_now_ques_03_B">
     <input type="hidden" name="Fill--jksk_bos_now_ques_03_C">
   </div>
+</div>
 </div>
 <!-- 自己申告タブ End -->
 
@@ -1096,7 +1182,7 @@
   <div class="mod-table ami">
     <table>
       <tr>
-        <th style="font-weight:bold;" colspan="2">{{= label.JkskGloBusiLangQues01 }}<span style="color:red;"> ※</span></th>
+        <th style="width:30%; font-weight:bold;" colspan="2">{{= label.JkskGloBusiLangQues01 }}<span style="color:red;"> ※</span></th>
         <td colspan="2">
           <select id="jksk_glo_busi_lang_ques_01" class="" name="Fill--jksk_glo_busi_lang_ques_01" data-pulldown="cspd-jksk_glo_busi_lang_ans01"></select>
         </td>
@@ -1139,7 +1225,7 @@
   <div class="mod-table ami">
     <table>
       <tr>
-        <th colspan="2" style="font-weight:bold;" >{{= label.JkskGloBusiExpQues01 }}<span style="color:red;"> ※</span></th>
+        <th colspan="2" style="width:30%; font-weight:bold;" >{{= label.JkskGloBusiExpQues01 }}<span style="color:red;"> ※</span></th>
         <td colspan="3">
           <select id="jksk_glo_busi_exp_ques_01" class="" name="Fill--jksk_glo_busi_exp_ques_01" data-pulldown="cspd-jksk_glo_busi_exp_ans01"></select>
         </td>
@@ -1155,7 +1241,7 @@
         </td>
       </tr>
       <tr class="gloBusiExpAnsGrp">
-        <th>{{= label['JkskGloBusiExp01Kuni'] }}</th>
+        <th>{{= label['JkskGloBusiExp' + idx + 'Kuni'] }}</th>
         <td colspan="2"><input class="block" type="text" name="Fill--jksk_glo_busi_exp_{{= idx }}_kuni"></td>
       </tr>
       <tr class="gloBusiExpAnsGrp">
@@ -1201,7 +1287,7 @@
   <div class="mod-table ami">
     <table>
       <tr>
-        <th colspan="2" style="font-weight:bold;">{{= label.JkskGloRyuQues01 }}<span style="color:red;"> ※</span></th>
+        <th colspan="2" style="width:30%; font-weight:bold;">{{= label.JkskGloRyuQues01 }}<span style="color:red;"> ※</span></th>
         <td colspan="2">
           <select id="jksk_glo_ryu_ques_01" class="" name="Fill--jksk_glo_ryu_ques_01" data-pulldown="cspd-jksk_glo_ryu_exp_ans01"></select>
         </td>
@@ -1255,8 +1341,6 @@
       <input type="hidden" name="Fill--jksk_glo_busi_exp_{{= idx }}_shokushu_A">
       <input type="hidden" name="Fill--jksk_glo_busi_exp_{{= idx }}_shokushu_B">
       <input type="hidden" name="Fill--jksk_glo_busi_exp_{{= idx }}_shokushu_C">
-      <input type="hidden" name="Fill--jksk_glo_busi_exp_{{= idx }}_kik">
-      <input type="hidden" name="Fill--jksk_glo_ryu_exp_{{= idx }}_kik">
     {{ } }}
   </div>
 </div>

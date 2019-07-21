@@ -1,16 +1,20 @@
 <script id="us-template-layout-hbtn" type="text/template">
 
+  {{ if( _data["user"].isOperator ) { }}
   <button type="button" id="" class="xlDownload btn">{{= label.JkskExcelDownload }}</button>
   <button type="button" id="excelUpload" class="xlUpload btn">{{= label.JkskExcelUpload }}</button>
-  {{ if( _data["user"].isOperator ) { }}
+  {{ } }}
   <div class="btn-group">
     <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">{{= label.JkskSettei }} <span class="caret"></span></button>
     <ul class="dropdown-menu dropdown-menu-right">
+      {{ if (_data["sheet"].flowPtn !== "flwptn-hyo-none") { }}
       <li><a id="btn_actors">{{= label.JkskApproveChng }}</a></li>
+      {{ } }}
+      {{ if( _data["user"].isOperator ) { }}
       <li><a id="btn_chgflowptn">{{= label.JkskFlowChng }}</a></li>
+      {{ } }}
     </ul>
   </div>
-  {{ } }}
 
 </script>
 
@@ -62,11 +66,11 @@ textarea {
   <table class="sheet-header-info">
     <tr><th>{{= label.JkskHeaderAttr1 }}</th><td>{{= sheet.stfNo }}</td></tr>
     <tr><th>{{= label.JkskHeaderAttr2 }}</th><td>{{= sheet.ownPersonName }}</td></tr>
-    <tr><th>{{= label.JkskHeaderAttr3 }}</th><td>{{= sheet.deptNm }}</td></tr>
+    <tr><th>{{= label.JkskHeaderAttr3 }}</th><td>{{= sheet.fullDeptNm }}</td></tr>
     <tr><th>{{= label.JkskHeaderAttr4 }}</th><td>{{= sheet.clsBNm }}</td></tr>
     <tr><th>{{= label.JkskHeaderAttr5 }}</th><td>{{= sheet.clsGNm }}</td></tr>
     <tr><th>{{= label.JkskHeaderAttr6 }}</th><td>{{= sheet.clsHNm }}</td></tr>
-    <tr><th>{{= label.JkskHeaderAttr7 }}</th><td></td></tr>
+    <tr><th>{{= label.JkskHeaderAttr7 }}</th><td>{{= _data.actor["act-1st"]["personName"] }}</td></tr>
   </table>
 
 </script>
@@ -561,9 +565,9 @@ textarea {
       <table>
         <tr>
           <th style="width:30%;">{{= label.JkskSkillProgQues01 }}<span style="color:red;"> ※</span></th>
-          <td colspan="7" class="required">{{= fill.jksk_skill_prog_ques_01 }}</td>
+          <td colspan="7" id="jksk_skill_prog_ques_01" class="required">{{= fill.jksk_skill_prog_ques_01 }}</td>
         </tr>
-        <tr>
+        <tr class="prgLvlAnsGrp">
           <th style="text-align: center;" rowspan="22">{{= label.JkskSkillProgLevelText }}</th>
           <th class="thick-line" colspan="2">{{= label.JkskSkillProgLang }}</th>
           <th style="text-align: center;">{{= label.JkskSkillProgLevel01 }}</th>
@@ -575,7 +579,7 @@ textarea {
         <!-- プログラミングスキル1- 20 -->
         {{ for ( var i = 1; i <= 20; i++ ) { }}
           {{ var idx = ( '0' + i ).slice( -2 ); }}
-        <tr>
+        <tr class="prgLvlAnsGrp">
           <td class="thick-line" colspan="2" style="width:30%;">{{= label['JkskSkillProgLang' + idx] }}</td>
           <td style="text-align:center;">{{= fill['jksk_skill_prog_type_' + idx + '_lv_noexp'] }}</td>
           <td style="text-align:center;">{{= fill['jksk_skill_prog_type_' + idx + '_lv_shoky'] }}</td>
@@ -586,7 +590,7 @@ textarea {
         {{ } }}
 
         <!-- プログラミングスキル その他 -->
-        <tr>
+        <tr class="prgLvlAnsGrp">
           <td >{{= label.JkskSkillProgLangOther }}</td>
           <td class="thick-line" style="width:15%;">{{= fill.jksk_skill_prog_type_other_nm }}</td>
           <td style="text-align:center;">{{= fill.jksk_skill_prog_type_other_lv_noexp }}</td>
@@ -599,7 +603,7 @@ textarea {
         <tr>
           <th>{{= label.JkskSkillProgQues02 }} {{= tooltip( label.JkskSkillProgQues02Tips ) }}<span style="color:red;"> ※</span></th>
           <td class="required" id="jksk_skill_prog_ques_02">{{= fill.jksk_skill_prog_ques_02 }}</td>
-          <td colspan="6" id="jksk_skill_prog_ques_03">{{= fill.jksk_skill_prog_ques_03 }}</td>
+          <td colspan="6" id="jksk_skill_prog_ques_03"><div>{{= fill.jksk_skill_prog_ques_03 }}</div></td>
         </tr>
         <tr>
           <th>{{= label.JkskSkillProgQues04 }}</th>
@@ -608,7 +612,7 @@ textarea {
         <tr>
           <th>{{= label.JkskSkillProgQues05 }} {{= tooltip( label.JkskSkillProgQues05Tips ) }}<span style="color:red;"> ※</span></th>
           <td id="jksk_skill_prog_ques_05" class="required">{{= fill.jksk_skill_prog_ques_05 }}</td>
-          <td colspan="6" id="jksk_skill_prog_ques_06">{{= fill.jksk_skill_prog_ques_06 }}</td>
+          <td colspan="6" id="jksk_skill_prog_ques_06"><div>{{= fill.jksk_skill_prog_ques_06 }}</div></td>
         </tr>
       </table>
     </div>
@@ -739,7 +743,7 @@ textarea {
       </div>
 
       <div style="float: right; margin: 10px;">
-        <button type="button" class="btn cspe"  style="margin-top: 6px;" data-cspe="jksk_own">{{= label.JkskBosEdit }}</button>
+        <button type="button" class="btn cspe"  style="margin-top: 6px;" data-cspe="jksk">{{= label.JkskBosEdit }}</button>
       </div>
 
       <div class="mod-table ami bosShoken">
@@ -909,7 +913,7 @@ textarea {
                   <th style="width:10%; text-align:center;">{{= label['JkskGloBusiExp' + idx + 'Shu'] }}</th>
                   <td style="width:23%;" id="jksk_glo_busi_exp_{{= idx }}_shu">{{= fill['jksk_glo_busi_exp_' + idx + '_shu'] }}</td>
                   <th style="width:10%; text-align:center;">{{= label['JkskGloBusiExp' + idx + 'Kikan'] }}</th>
-                  <td style="width:24%;" id="jksk_glo_busi_exp_{{= idx }}_jyu">{{= fill['jksk_glo_busi_exp_' + idx + '_kik']}}</td>
+                  <td style="width:24%;" id="jksk_glo_busi_exp_{{= idx }}_kik">{{= fill['jksk_glo_busi_exp_' + idx + '_kik']}}</td>
                 </tr>
               </table>
             </td>
@@ -924,7 +928,7 @@ textarea {
     <div class="mod-table ami">
       <table>
         <tr>
-          <th colspan="2" style="font-weight:bold;">{{= label.JkskGloRyuQues01 }}<span style="color:red;"> ※</span></th>
+          <th colspan="2" style="width:30%; font-weight:bold;">{{= label.JkskGloRyuQues01 }}<span style="color:red;"> ※</span></th>
           <td colspan="2" id="jksk_glo_ryu_ques_01" class="required">{{= fill.jksk_glo_ryu_ques_01 }}</td>
         </tr>
         {{ for ( var k = 1; k <= 3; k++ ) { }}

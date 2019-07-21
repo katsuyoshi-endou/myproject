@@ -63,17 +63,17 @@ function customForwardCheck() {
 	return true;
 }
 
-function customForwardCheck(actioncd) {
-/* 申請時必須チェック */
-  var result = true;
-  if ( _data["sheet"].layoutCd == 'lay-jksk-v1') {
-    if(actioncd == "FORWARD"){
-      if (needsCheck("Fill--chk_necessary_jksk")) {
-      }
-    }
-  }
-  return result;
-}
+// function customForwardCheck(actioncd) {
+// /* 申請時必須チェック */
+//   var result = true;
+//   if ( _data["sheet"].layoutCd == 'lay-jksk-v1') {
+//     if(actioncd == "FORWARD"){
+//       if (needsCheck("Fill--chk_necessary_jksk")) {
+//       }
+//     }
+//   }
+//   return result;
+// }
 
 function customPartialEditCheck(cspe, cspearg) {
 /* 保存時必須チェック */
@@ -93,3 +93,5 @@ function customPartialEditCheck(cspe, cspearg) {
   }
   return result;
 }
+
+
