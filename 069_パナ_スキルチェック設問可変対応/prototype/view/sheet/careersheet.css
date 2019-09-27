@@ -1,0 +1,319 @@
+ /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Headings
+*/
+h3.lightBg {
+	font-size: 22px;
+	color: #333;
+	margin: 50px -20px 30px !important;
+	padding: 10px 20px;
+	background-color: #eee;
+}
+h3.lightBg button {
+	float: right;
+}
+h4 {
+	margin: 1.5em 0 4px;
+	padding-left: 8px;
+	font-size: 18px;
+	color: #333;
+	border-left: 6px solid #026E95;
+}
+.hiddenSheetId {
+	background-color: #fff !important;
+	color: #fff !important;
+	padding: 0 !important;
+}
+
+ /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Table Layout
+*/
+div#content div.outputTable {
+	margin-bottom: 2em;
+}
+div#content div.outputTable table {
+	border:none;
+}
+div#content div.outputTable table th,
+div#content div.outputTable table td {
+	color: #333;
+}
+div#content div.outputTable table th {
+	padding: 4px 6px;
+	vertical-align: middle;
+}
+div#content div.outputTable table.cellCenter th,
+div#content div.outputTable table.cellCenter td {
+	text-align: center;
+}
+div#content div.outputTable table.cellCenter td {
+	font-size: 120%;
+}
+div#content div.outputTable.cellMiddle table th,
+div#content div.outputTable.cellMiddle table td {
+	vertical-align: middle;
+}
+div#content div.outputTable tbody.sub td {
+	font-size: 12px;
+}
+div#content div.outputTable.thCenter table th {
+	text-align: center;
+}
+div#content div.outputTable.tdCenter table td {
+	text-align: center;
+}
+div#content div.outputTable textArea {
+	width: 97%;
+	border: 1px solid #f9d6b8;
+	margin: 5px 3px;
+	padding: 3px 5px;
+	line-height: 1.3;
+	box-sizing: border-box;
+}
+div#content div.outputTable table th.smaller {
+	font-size: 12px;
+	padding: 4px 4px;
+}
+
+#us-template-rendering.readonly textarea {
+	color: blue !important;
+	border: 0 !important;
+	background-color: #fff;
+	overflow: auto;
+	resize: none;
+}
+
+ /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * UI Parts
+*/
+.dummyCell {
+	background-color: #fff !important;
+	border: 0 !important;
+}
+div#content div.outputTable textArea {
+	color: #333 !important;
+}
+div#content div.outputTable td.num {
+	text-align: right;
+	font-size: 14px;
+}
+.bignum {
+	padding: 8px !important;
+	font-size: 120% !important;
+}
+div#content div.outputTable input.textBox.bignum {
+	width: 50px;
+	font-size: 120%;
+	border: 1px solid #f9d6b8;
+	margin: 5px 0;
+	padding: 5px 5px;
+}
+div#content div.outputTable input.textBox.date {
+	width: 80px;
+	font-size: 14px;
+	border: 1px solid #f9d6b8;
+	margin: 3px 0;
+	padding: 3px 3px;
+}
+div#content div.outputTable table th.dummyCol,
+div#content div.outputTable table td.dummyCol {
+	width: 10px;
+	background: none;
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+div#content div.outputTable input.textBox.num,
+div#content div.outputTable input.textBox.int {
+	width: 30px;
+	font-size: 14px;
+	border: 1px solid #f9d6b8;
+	margin: 5px 0;
+	padding: 3px 5px;
+}
+div#content div.outputTable div.dummyElement {
+	width: auto;
+	height: 40px;
+}
+div#content div.outputTable .smaller {
+	font-size: 10px;
+}
+div#content div.outputTable strong {
+	display: block;
+	font-size: 16px;
+	padding: 3px 0;
+}
+div#content div.outputTable table td select {
+	font-size: 14px;
+	border: 1px solid #f9d6b8;
+	padding: 3px 5px;
+}
+input.chkNG,
+select.chkNG,
+textarea.chkNG,
+.checkbox.chkNG label i {
+	border: 2px solid #f00 !important;
+}
+div#content div.outputTable tr.grayout td,
+div#content div.outputTable td.grayout {
+	color: #888;
+	background: #ddd;
+}
+div#content div.outputTable .grayout input,
+div#content div.outputTable .grayout select {
+	color: inherit;
+	border: 1px solid #ddd !important;
+	background-color: #f3f3f3 !important;
+}
+.outputTable table td.error {
+	background-color: #F99 !important;
+}
+
+ /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * .hanrei
+*/
+div#content div.outputTable table.hanrei th,
+div#content div.outputTable table.hanrei td {
+	font-size: 11px;
+}
+div#content div.outputTable table.hanrei th {
+	background-color: #ddd;
+}
+
+ /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * .csmd-status-summary
+*/
+.csmd-status-summary {
+}
+.csmd-status-summary .sheet-status-col {
+	width: 98% !important;
+	border-spacing: 1px !important;
+}
+.csmd-status-summary .sheet-status-th {
+	background-color: #758d93 !important;
+	font-size: 14px !important;
+	color: #fff !important;
+	text-shadow: 0 1px 1px #444 !important;
+	padding: 6px !important;
+	border-bottom: 1px solid #5a6a6e !important;
+	white-space: nowrap !important;
+}
+.csmd-status-summary .active {
+	background-color: #36b1d2 !important;
+	color: #fff !important;
+	text-shadow: 0 1px 1px #444 !important;
+	border-bottom: 1px solid #2787a0 !important;
+}
+.csmd-status-summary td {
+	padding: 3px 6px !important;
+	font-size: 12px !important;
+	color: #555 !important;
+	text-align: left !important;
+	white-space: nowrap !important;
+}
+.csmd-status-summary td .fa {
+	margin-right: 2px !important;
+	width: 12px !important;
+}
+.csmd-status-summary td.isHold {
+	font-weight: bold !important;
+}
+.csmd-status-summary td.isActive {
+	font-weight: bold !important;
+}
+
+ /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * .cstab
+*/
+.cstab {
+	position: relative;
+	margin: 20px -20px;
+}
+.cstab .tabarea {
+	margin: 0;
+	list-style-type: none;
+}
+.cstab .tabarea li:first-child {
+	margin-left: 20px;
+}
+.cstab .tabarea li {
+	display: block;
+	background-color: #e7edef;
+	margin: 0 0 0 15px;
+	float: left;
+}
+.cstab .tabarea li a {
+	display: inline-block;
+	width: inherit;
+	height: inherit;
+	padding: 10px 15px;
+}
+.cstab .tabarea li a:hover {
+	background-color: #d3efff;
+}
+.cstab .tabarea li.active {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-bottom: 1px solid #fff;
+	margin-bottom: -2px;
+}
+.cstab .tabarea li.active a {
+	color: #666;
+	font-weight: bold;
+	text-decoration: none;
+}
+.cstab .tabarea li a .badge {
+	margin: 0 -6px 0 6px;
+	font-family: Arial;
+	background-color: #8fafd0;
+}
+.cstab .separater {
+	clear: both;
+	margin-top: -21px;
+	border-top: 1px solid #ccc;
+}
+
+.cstab .tabarea-right {
+    float: right;
+    width: 150px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    height: 38px;
+    margin: 0px 10px 0px;
+    text-align: center;
+}
+.cstab .tabarea-right>.btn-group {
+	top: 6px;
+}
+.cstab .tabarea-right.downside {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border-bottom: 0;
+}
+
+ /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * .cspe
+*/
+#lyca .mp_edit.btn60,
+#lyca .cspe.btn60 {
+	font-size: 14px;
+	text-shadow: 0 0 2px #ddd;
+	background: url('../../assets/img/btn_60px_edit_sprite.png') no-repeat top left;
+}
+#lyca .mp_edit.btn60:hover,
+#lyca .cspe.btn60:hover {
+	background-position: 0 -76px;
+}
+#lyca .mp_edit.btn60:active,
+#lyca .cspe.btn60:active {
+	background-position: 0 -152px;
+}
+
+ /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * .csActionBtns
+*/
+.csActionBtns {
+	margin: 20px 0 0;
+	padding: 0 0 20px;
+	text-align: center;
+}
