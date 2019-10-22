@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>P's Roll</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="Sat, 01 Jan 2000 00:00:00 GMT">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- jQuery -->
+    <script type="text/javascript" src="./assets/vendor/jquery-2.2.4.min.js"></script>
+    
+    <!-- Underscore -->
+    <script type="text/javascript" src="./assets/vendor/underscore-min.js"></script>
+    
+    <!-- Vue -->
+    <script type="text/javascript" src="./assets/vendor/vue/es6-promise.js"></script>
+    
+    <script type="text/javascript" src="./assets/vendor/vue/vue.js"></script>
+    
+    <script type="text/javascript" src="./assets/vendor/vue/vuex.js"></script>
+    
+    <!-- fhconvert.js -->
+    <script type="text/javascript" src="./assets/vendor/fhconvert.js"></script>
+    
+    <!-- Bootstrap -->
+    <script type="text/javascript" src="./assets/vendor/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./assets/vendor/bootstrap-3.3.7/css/bootstrap.min.css" media="screen">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="./assets/vendor/font-awesome-4.6.3/css/font-awesome.min.css">
+    
+    <!-- Chart.js -->
+    <script type="text/javascript" src="./assets/vendor/Chart.bundle.min.js"></script>
+    
+    <!-- jRange -->
+    <script type="text/javascript" src="./assets/vendor/jrange/jquery.range-min.js"></script>
+    <link rel="stylesheet" href="./assets/vendor/jrange/jquery.range.css">
+    
+    <!-- decimal.js -->
+    <script type="text/javascript" src="./assets/vendor/decimal.min.js"></script>
+    
+    <!-- fixed_midashi.js -->
+    <script type="text/javascript" src="./assets/vendor/fixed_midashi.js"></script>
+    
+    <!-- Lysithea -->
+    <link rel="stylesheet" href="./assets/vendor/lysithea/css/lysithea.css" media="screen, projection" />
+    
+    <!-- CSS -->
+    <link href="./assets/css/app.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    
+    <!-- JavaScript -->
+    <script type="text/javascript" src="./assets/vendor/lysithea/js/common.js"></script>
+    <script type="text/javascript" src="./assets/vendor/lysithea/js/jQ-common.js"></script>
+    <link rel="stylesheet" href="./view/sheet/careersheet.css" type="text/css" media="screen" />
+
+    <style>
+      .sklch-container {
+        padding: 10px;
+        display: flex;
+      }
+    
+      div.menu-content-area {
+        min-width: 300px;
+        flex: 3; 
+      }
+    
+      div.qa-content-area {
+        background-color: blueviolet;
+        flex: 7;
+      }
+    
+      p.setumon {
+        cursor: pointer;
+        text-indent: 1em;
+        padding-left: 1em;
+      }
+    
+      p.setumon.unanswered {
+        color:#FF8C00;
+      }
+    
+      p.setumon.gyomugai {
+        color:#C0C0C0;
+      }
+
+      p.setumon.answered {
+        color: #000000;
+      }
+
+      p.setumon.selected {
+        background-color:#4169E1;
+        color:#FFFFFF;
+      }
+
+      p.category {
+        font-size: 14px;
+        background-color: #DCDCDC;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sklch-container">
+      <div class="menu-content-area">
+        <div class="hanrei-area">
+          <p><span style="color:#FF8C00;">■</span>未回答　<span style="color:#000000;">■</span>回答済み　<span style="color:#C0C0C0;">■</span>上司評価対象外</p>
+        </div>
+        <div class="category-menu" style="height: 600px;overflow: auto;">
+          <div>
+            <p class="category">契約（半導体）</p>
+            <p class="setumon unanswered selected">原価構築</p>
+            <p class="setumon unanswered">新技術評価・提案</p>
+            <p class="setumon unanswered">量産立上げ支援</p>
+            <p class="setumon gyomugai">購入先評価</p>
+            <p class="setumon unanswered">契約手続実行</p>
+            <p class="setumon unanswered">合理化計画立案</p>
+            <p class="setumon answered">合理化計画推進</p>
+            <p class="setumon answered">先行手配（戦略調達）</p>
+            <p class="setumon answered">災害・EOL対応</p>
+            <p class="category">契約（電気部品）</p>
+            <p class="setumon unanswered">原価構築</p>
+            <p class="setumon unanswered">購入先評価</p>
+            <p class="setumon unanswered">契約手続実行</p>
+            <p class="setumon unanswered">合理化計画立案</p>
+            <p class="setumon unanswered">合理化計画推進</p>
+            <p class="setumon unanswered">災害・EOL対応</p>
+            <p class="category">契約（機構部品）</p>
+            <p class="setumon unanswered">原価構築</p>
+            <p class="setumon unanswered">部品価格決定</p>
+            <p class="setumon unanswered">量産立上げ支援</p>
+            <p class="setumon unanswered">購入先評価</p>
+            <p class="setumon unanswered">新規購入先開拓</p>
+            <p class="setumon unanswered">契約手続実行</p>
+            <p class="setumon unanswered">合理化計画立案</p>
+            <p class="setumon unanswered">合理化計画推進</p>
+            <p class="setumon unanswered">災害・倒産対応</p>
+            <p class="category">契約（原材料）</p>
+            <p class="setumon unanswered">原価構築</p>
+            <p class="setumon unanswered">購入先評価</p>
+            <p class="setumon unanswered">新規購入先開拓</p>
+            <p class="setumon unanswered">契約手続実行</p>
+            <p class="setumon unanswered">ガイドライン発信</p>
+            <p class="setumon unanswered">合理化計画立案</p>
+            <p class="setumon unanswered">合理化計画推進</p>
+            <p class="setumon unanswered">BCP対策</p>
+            <p class="category">契約（間接材　他）</p>
+            <p class="setumon unanswered">購入先評価</p>
+            <p class="setumon unanswered">新規購入先開拓</p>
+            <p class="setumon unanswered">契約手続実行</p>
+            <p class="category">事業場購買</p>
+            <p class="setumon unanswered">調達計画策定</p>
+            <p class="setumon unanswered">新規部材の量産発注準備</p>
+            <p class="setumon unanswered">材料発注</p>
+            <p class="setumon unanswered">ライフサイクル管理</p>
+            <p class="setumon unanswered">予防的対応</p>
+            <p class="setumon unanswered">納期遅延時の対応</p>
+            <p class="setumon unanswered">在庫適正化対応</p>
+            <p class="setumon unanswered">品質問題発生時の対応</p>
+            <p class="setumon unanswered">購買業務</p>
+            <p class="setumon unanswered">受入業務</p>
+            <p class="category">集中購買</p>
+            <p class="setumon unanswered">調達計画策定</p>
+            <p class="setumon unanswered">新規部材の量産発注準備</p>
+            <p class="setumon unanswered">材料発注</p>
+            <p class="setumon unanswered">予防的対応</p>
+            <p class="setumon unanswered">納期遅延時の対応</p>
+            <p class="setumon unanswered">在庫適正化対応</p>
+            <p class="setumon unanswered">品質問題発生時の対応</p>
+            <p class="setumon unanswered">取引条件の設定</p>
+            <p class="setumon unanswered">取引実務遂行</p>
+            <p class="setumon unanswered">物流問題発生時の対応</p>
+            <p class="category">調達企画・管理</p>
+            <p class="setumon unanswered">方針・戦略の立案・策定</p>
+            <p class="setumon unanswered">規定・基準等の制定・管理</p>
+            <p class="setumon unanswered">監査対応</p>
+            <p class="setumon unanswered">会議体運営</p>
+            <p class="setumon unanswered">グリーン調達</p>
+            <p class="setumon unanswered">取引基本契約書・覚書の運用</p>
+            <p class="setumon unanswered">関連法規対応</p>
+            <p class="setumon unanswered">情報システム維持・管理</p>
+            <p class="setumon unanswered">情報システム構築</p>
+            <p class="setumon unanswered">情報セキュリティ管理</p>
+            <p class="setumon unanswered">金型管理</p>
+            <p class="setumon unanswered">原価企画・原価管理</p>
+            <p class="setumon unanswered">調達KPI管理</p>
+            <p class="setumon unanswered">自然災害対応</p>
+            <p class="setumon unanswered">倒産対応</p>
+            <p class="setumon unanswered">購入先管理</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-content-area">
+        <p></p>
+      </div>
+    </div>
+  </body>
+</html>
