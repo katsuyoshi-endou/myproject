@@ -1,0 +1,2 @@
+Manifest-Version: 1.0
+Class-Path: library/career-util.jar library/commons-fileupload-1.1.jar library/commons-io-1.1.jar library/itext-1.3.jar library/iTextAsian.jar library/log4j-1.2.7.jar library/velocity-1.3.1.jar library/velocity-dep-1.3.1.jar library/ldapfilt.jar library/ldapjdk.jar library/ldapsp.jar library/jcommon-1.0.4.jar library/jfreechart-1.0.1.jar library/poi-3.10.1-20140818_fat.jar

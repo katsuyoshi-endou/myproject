@@ -1,0 +1,864 @@
+<?xml version="1.0" encoding="MS932"?>
+<!DOCTYPE ejb-jar PUBLIC "-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 2.0//EN" "http://java.sun.com/dtd/ejb-jar_2_0.dtd">
+
+<ejb-jar >
+   <display-name>learningEJB</display-name>
+
+   <enterprise-beans>
+
+      <!-- Session Beans -->
+      <session >
+         <description>PCY_EsNinsyoRirekiEJB</description>
+
+         <ejb-name>PCY_EsNinsyoRirekiEJB</ejb-name>
+
+         <home>jp.co.hisas.career.learning.base.ejb.PCY_EsNinsyoRirekiEJBHome</home>
+         <remote>jp.co.hisas.career.learning.base.ejb.PCY_EsNinsyoRirekiEJB</remote>
+         <ejb-class>jp.co.hisas.career.learning.base.ejb.PCY_EsNinsyoRirekiEJBBean</ejb-class>
+         <session-type>Stateless</session-type>
+         <transaction-type>Container</transaction-type>
+
+         <resource-ref >
+            <res-ref-name>jdbc/HCDB</res-ref-name>
+            <res-type>javax.sql.DataSource</res-type>
+            <res-auth>Container</res-auth>
+         </resource-ref>
+
+      </session>
+
+<session >
+   <ejb-name>PCY_OsiraseEJB</ejb-name>
+
+   <home>jp.co.hisas.career.learning.base.ejb.PCY_OsiraseEJBHome</home>
+   <remote>jp.co.hisas.career.learning.base.ejb.PCY_OsiraseEJB</remote>
+   <ejb-class>jp.co.hisas.career.learning.base.ejb.PCY_OsiraseEJBBean</ejb-class>
+   <session-type>Stateless</session-type>
+   <transaction-type>Container</transaction-type>
+
+   <resource-ref >
+	  <res-ref-name>jdbc/HCDB</res-ref-name>
+	  <res-type>javax.sql.DataSource</res-type>
+	  <res-auth>Container</res-auth>
+   </resource-ref>
+
+</session>
+
+		<session >
+		   <description>PCY_BumonIkuseiEJB</description>
+		
+		   <ejb-name>PCY_BumonIkuseiEJB</ejb-name>
+		
+		   <home>jp.co.hisas.career.learning.base.ejb.PCY_BumonIkuseiEJBHome</home>
+		   <remote>jp.co.hisas.career.learning.base.ejb.PCY_BumonIkuseiEJB</remote>
+		   <ejb-class>jp.co.hisas.career.learning.base.ejb.PCY_BumonIkuseiEJBBean</ejb-class>
+		   <session-type>Stateless</session-type>
+		   <transaction-type>Container</transaction-type>
+		
+		   <resource-ref >
+			  <res-ref-name>jdbc/HCDB</res-ref-name>
+			  <res-type>javax.sql.DataSource</res-type>
+			  <res-auth>Container</res-auth>
+		   </resource-ref>
+		
+		</session>
+
+      <session >
+         <description>PCY_JyukousyaKanriEJB</description>
+
+         <ejb-name>PCY_JyukousyaKanriEJB</ejb-name>
+
+         <home>jp.co.hisas.career.learning.base.ejb.PCY_JyukousyaKanriEJBHome</home>
+         <remote>jp.co.hisas.career.learning.base.ejb.PCY_JyukousyaKanriEJB</remote>
+         <ejb-class>jp.co.hisas.career.learning.base.ejb.PCY_JyukousyaKanriEJBBean</ejb-class>
+         <session-type>Stateless</session-type>
+         <transaction-type>Container</transaction-type>
+
+         <resource-ref >
+            <res-ref-name>jdbc/HCDB</res-ref-name>
+            <res-type>javax.sql.DataSource</res-type>
+            <res-auth>Container</res-auth>
+         </resource-ref>
+
+      </session>
+
+      <session >
+         <description>PCY_DaikoNyuryokuEJB</description>
+
+         <ejb-name>PCY_DaikoNyuryokuEJB</ejb-name>
+
+         <home>jp.co.hisas.career.learning.base.ejb.PCY_DaikoNyuryokuEJBHome</home>
+         <remote>jp.co.hisas.career.learning.base.ejb.PCY_DaikoNyuryokuEJB</remote>
+         <ejb-class>jp.co.hisas.career.learning.base.ejb.PCY_DaikoNyuryokuEJBBean</ejb-class>
+         <session-type>Stateless</session-type>
+         <transaction-type>Container</transaction-type>
+
+         <resource-ref >
+            <res-ref-name>jdbc/HCDB</res-ref-name>
+            <res-type>javax.sql.DataSource</res-type>
+            <res-auth>Container</res-auth>
+         </resource-ref>
+
+      </session>
+
+      <session >
+         <description>PCY_TaisyoEJB</description>
+
+         <ejb-name>PCY_TaisyoEJB</ejb-name>
+
+         <home>jp.co.hisas.career.learning.base.ejb.PCY_TaisyoEJBHome</home>
+         <remote>jp.co.hisas.career.learning.base.ejb.PCY_TaisyoEJB</remote>
+         <ejb-class>jp.co.hisas.career.learning.base.ejb.PCY_TaisyoEJBBean</ejb-class>
+         <session-type>Stateless</session-type>
+         <transaction-type>Container</transaction-type>
+
+         <resource-ref >
+            <res-ref-name>jdbc/HCDB</res-ref-name>
+            <res-type>javax.sql.DataSource</res-type>
+            <res-auth>Container</res-auth>
+         </resource-ref>
+
+      </session>
+
+      <session >
+         <description>PCY_PersonalEJB</description>
+
+         <ejb-name>PCY_PersonalEJB</ejb-name>
+
+         <home>jp.co.hisas.career.learning.base.ejb.PCY_PersonalEJBHome</home>
+         <remote>jp.co.hisas.career.learning.base.ejb.PCY_PersonalEJB</remote>
+         <ejb-class>jp.co.hisas.career.learning.base.ejb.PCY_PersonalEJBBean</ejb-class>
+         <session-type>Stateless</session-type>
+         <transaction-type>Container</transaction-type>
+
+         <resource-ref >
+            <res-ref-name>jdbc/HCDB</res-ref-name>
+            <res-type>javax.sql.DataSource</res-type>
+            <res-auth>Container</res-auth>
+         </resource-ref>
+
+      </session>
+
+<!-- ADD 2017/05/16 COMTURE VCY330_名簿(ver.02-00) START -->
+      <session >
+         <description>PCY_PzValueEJB</description>
+         <ejb-name>PCY_PzValueEJB</ejb-name>
+         <home>jp.co.hisas.career.learning.base.ejb.PCY_PzValueEJBHome</home>
+         <remote>jp.co.hisas.career.learning.base.ejb.PCY_PzValueEJB</remote>
+         <ejb-class>jp.co.hisas.career.learning.base.ejb.PCY_PzValueEJBBean</ejb-class>
+         <session-type>Stateless</session-type>
+         <transaction-type>Container</transaction-type>
+         <resource-ref >
+            <res-ref-name>jdbc/HCDB</res-ref-name>
+            <res-type>javax.sql.DataSource</res-type>
+            <res-auth>Container</res-auth>
+         </resource-ref>
+      </session>
+<!-- ADD 2017/05/16 COMTURE VCY330_名簿(ver.02-00) END -->
+
+      <session >
+         <description>PCY_KanrenKyoikuKamokuEJB</description>
+
+         <ejb-name>PCY_KanrenKyoikuKamokuEJB</ejb-name>
+
+         <home>jp.co.hisas.career.learning.base.ejb.PCY_KanrenKyoikuKamokuEJBHome</home>
+         <remote>jp.co.hisas.career.learning.base.ejb.PCY_KanrenKyoikuKamokuEJB</remote>
+         <ejb-class>jp.co.hisas.career.learning.base.ejb.PCY_KanrenKyoikuKamokuEJBBean</ejb-class>
+         <session-type>Stateless</session-type>
+         <transaction-type>Container</transaction-type>
+
+         <resource-ref >
+            <res-ref-name>jdbc/HCDB</res-ref-name>
+            <res-type>javax.sql.DataSource</res-type>
+            <res-auth>Container</res-auth>
+         </resource-ref>
+
+      </session>
+
+      <session >
+         <description>PCY_MousikomiJyokyoEJB</description>
+
+         <ejb-name>PCY_MousikomiJyokyoEJB</ejb-name>
+
+         <home>jp.co.hisas.career.learning.base.ejb.PCY_MousikomiJyokyoEJBHome</home>
+         <remote>jp.co.hisas.career.learning.base.ejb.PCY_MousikomiJyokyoEJB</remote>
+         <ejb-class>jp.co.hisas.career.learning.base.ejb.PCY_MousikomiJyokyoEJBBean</ejb-class>
+         <session-type>Stateless</session-type>
+         <transaction-type>Container</transaction-type>
+
+         <resource-ref >
+            <res-ref-name>jdbc/HCDB</res-ref-name>
+            <res-type>javax.sql.DataSource</res-type>
+            <res-auth>Container</res-auth>
+         </resource-ref>
+
+      </session>
+
+      <session >
+         <description>PCY_KensyuRirekiEJB</description>
+
+         <ejb-name>PCY_KensyuRirekiEJB</ejb-name>
+
+         <home>jp.co.hisas.career.learning.base.ejb.PCY_KensyuRirekiEJBHome</home>
+         <remote>jp.co.hisas.career.learning.base.ejb.PCY_KensyuRirekiEJB</remote>
+         <ejb-class>jp.co.hisas.career.learning.base.ejb.PCY_KensyuRirekiEJBBean</ejb-class>
+         <session-type>Stateless</session-type>
+         <transaction-type>Container</transaction-type>
+
+         <resource-ref >
+            <res-ref-name>jdbc/HCDB</res-ref-name>
+            <res-type>javax.sql.DataSource</res-type>
+            <res-auth>Container</res-auth>
+         </resource-ref>
+
+      </session>
+
+      <session >
+         <description>PCY_KamokuEJB</description>
+
+         <ejb-name>PCY_KamokuEJB</ejb-name>
+
+         <home>jp.co.hisas.career.learning.base.ejb.PCY_KamokuEJBHome</home>
+         <remote>jp.co.hisas.career.learning.base.ejb.PCY_KamokuEJB</remote>
+         <ejb-class>jp.co.hisas.career.learning.base.ejb.PCY_KamokuEJBBean</ejb-class>
+         <session-type>Stateless</session-type>
+         <transaction-type>Container</transaction-type>
+
+         <resource-ref >
+            <res-ref-name>jdbc/HCDB</res-ref-name>
+            <res-type>javax.sql.DataSource</res-type>
+            <res-auth>Container</res-auth>
+         </resource-ref>
+
+      </session>
+
+      <session >
+         <description>PCY_HonninKensyuJyohouEJB</description>
+
+         <ejb-name>PCY_HonninKensyuJyohouEJB</ejb-name>
+
+         <home>jp.co.hisas.career.learning.base.ejb.PCY_HonninKensyuJyohouEJBHome</home>
+         <remote>jp.co.hisas.career.learning.base.ejb.PCY_HonninKensyuJyohouEJB</remote>
+         <ejb-class>jp.co.hisas.career.learning.base.ejb.PCY_HonninKensyuJyohouEJBBean</ejb-class>
+         <session-type>Stateless</session-type>
+         <transaction-type>Container</transaction-type>
+
+         <resource-ref >
+            <res-ref-name>jdbc/HCDB</res-ref-name>
+            <res-type>javax.sql.DataSource</res-type>
+            <res-auth>Container</res-auth>
+         </resource-ref>
+
+      </session>
+
+      <session >
+         <description>PCY_SyoninsyaEJB</description>
+
+         <ejb-name>PCY_SyoninsyaEJB</ejb-name>
+
+         <home>jp.co.hisas.career.learning.base.ejb.PCY_SyoninsyaEJBHome</home>
+         <remote>jp.co.hisas.career.learning.base.ejb.PCY_SyoninsyaEJB</remote>
+         <ejb-class>jp.co.hisas.career.learning.base.ejb.PCY_SyoninsyaEJBBean</ejb-class>
+         <session-type>Stateless</session-type>
+         <transaction-type>Container</transaction-type>
+
+         <resource-ref >
+            <res-ref-name>jdbc/HCDB</res-ref-name>
+            <res-type>javax.sql.DataSource</res-type>
+            <res-auth>Container</res-auth>
+         </resource-ref>
+
+      </session>
+
+      <session >
+         <description>PCY_CounterEJB</description>
+
+         <ejb-name>PCY_CounterEJB</ejb-name>
+
+         <home>jp.co.hisas.career.learning.base.ejb.PCY_CounterEJBHome</home>
+         <remote>jp.co.hisas.career.learning.base.ejb.PCY_CounterEJB</remote>
+         <ejb-class>jp.co.hisas.career.learning.base.ejb.PCY_CounterEJBBean</ejb-class>
+         <session-type>Stateless</session-type>
+         <transaction-type>Container</transaction-type>
+
+         <resource-ref >
+            <res-ref-name>jdbc/HCDB</res-ref-name>
+            <res-type>javax.sql.DataSource</res-type>
+            <res-auth>Container</res-auth>
+         </resource-ref>
+
+      </session>
+
+      <session >
+         <description>PCY_CodeEJB</description>
+
+         <ejb-name>PCY_CodeEJB</ejb-name>
+
+         <home>jp.co.hisas.career.learning.base.ejb.PCY_CodeEJBHome</home>
+         <remote>jp.co.hisas.career.learning.base.ejb.PCY_CodeEJB</remote>
+         <ejb-class>jp.co.hisas.career.learning.base.ejb.PCY_CodeEJBBean</ejb-class>
+         <session-type>Stateless</session-type>
+         <transaction-type>Container</transaction-type>
+
+         <resource-ref >
+            <res-ref-name>jdbc/HCDB</res-ref-name>
+            <res-type>javax.sql.DataSource</res-type>
+            <res-auth>Container</res-auth>
+         </resource-ref>
+
+      </session>
+
+      <session >
+         <description>PCY_ClassEJB</description>
+
+         <ejb-name>PCY_ClassEJB</ejb-name>
+
+         <home>jp.co.hisas.career.learning.base.ejb.PCY_ClassEJBHome</home>
+         <remote>jp.co.hisas.career.learning.base.ejb.PCY_ClassEJB</remote>
+         <ejb-class>jp.co.hisas.career.learning.base.ejb.PCY_ClassEJBBean</ejb-class>
+         <session-type>Stateless</session-type>
+         <transaction-type>Container</transaction-type>
+
+         <resource-ref >
+            <res-ref-name>jdbc/HCDB</res-ref-name>
+            <res-type>javax.sql.DataSource</res-type>
+            <res-auth>Container</res-auth>
+         </resource-ref>
+
+      </session>
+
+      <session >
+         <description>PCY_ClassCyouseiEJB</description>
+
+         <ejb-name>PCY_ClassCyouseiEJB</ejb-name>
+
+         <home>jp.co.hisas.career.learning.base.ejb.PCY_ClassCyouseiEJBHome</home>
+         <remote>jp.co.hisas.career.learning.base.ejb.PCY_ClassCyouseiEJB</remote>
+         <ejb-class>jp.co.hisas.career.learning.base.ejb.PCY_ClassCyouseiEJBBean</ejb-class>
+         <session-type>Stateless</session-type>
+         <transaction-type>Container</transaction-type>
+
+         <resource-ref >
+            <res-ref-name>jdbc/HCDB</res-ref-name>
+            <res-type>javax.sql.DataSource</res-type>
+            <res-auth>Container</res-auth>
+         </resource-ref>
+
+      </session>
+
+      <session >
+         <description>PCY_MousikomiSakujoRirekiEJB</description>
+
+         <ejb-name>PCY_MousikomiSakujoRirekiEJB</ejb-name>
+
+         <home>jp.co.hisas.career.learning.base.ejb.PCY_MousikomiSakujoRirekiEJBHome</home>
+         <remote>jp.co.hisas.career.learning.base.ejb.PCY_MousikomiSakujoRirekiEJB</remote>
+         <ejb-class>jp.co.hisas.career.learning.base.ejb.PCY_MousikomiSakujoRirekiEJBBean</ejb-class>
+         <session-type>Stateless</session-type>
+         <transaction-type>Container</transaction-type>
+
+         <resource-ref >
+            <res-ref-name>jdbc/HCDB</res-ref-name>
+            <res-type>javax.sql.DataSource</res-type>
+            <res-auth>Container</res-auth>
+         </resource-ref>
+
+      </session>
+
+      <session >
+         <description>PCY_IkkatuDownLoadEJB</description>
+
+         <ejb-name>PCY_IkkatuDownLoadEJB</ejb-name>
+
+         <home>jp.co.hisas.career.learning.base.ejb.PCY_IkkatuDownLoadEJBHome</home>
+         <remote>jp.co.hisas.career.learning.base.ejb.PCY_IkkatuDownLoadEJB</remote>
+         <ejb-class>jp.co.hisas.career.learning.base.ejb.PCY_IkkatuDownLoadEJBBean</ejb-class>
+         <session-type>Stateless</session-type>
+         <transaction-type>Container</transaction-type>
+
+         <resource-ref >
+            <res-ref-name>jdbc/HCDB</res-ref-name>
+            <res-type>javax.sql.DataSource</res-type>
+            <res-auth>Container</res-auth>
+         </resource-ref>
+
+      </session>
+
+      <session >
+         <description>PCY_AccessLogEJB</description>
+
+         <ejb-name>PCY_AccessLogEJB</ejb-name>
+
+         <home>jp.co.hisas.career.learning.base.ejb.PCY_AccessLogEJBHome</home>
+         <remote>jp.co.hisas.career.learning.base.ejb.PCY_AccessLogEJB</remote>
+         <ejb-class>jp.co.hisas.career.learning.base.ejb.PCY_AccessLogEJBBean</ejb-class>
+         <session-type>Stateless</session-type>
+         <transaction-type>Container</transaction-type>
+
+         <resource-ref >
+            <res-ref-name>jdbc/HCDB</res-ref-name>
+            <res-type>javax.sql.DataSource</res-type>
+            <res-auth>Container</res-auth>
+         </resource-ref>
+
+      </session>
+
+      <session >
+         <description>PCY_KensyuLoadMapEJB</description>
+
+         <ejb-name>PCY_KensyuLoadMapEJB</ejb-name>
+
+         <home>jp.co.hisas.career.learning.base.ejb.PCY_KensyuLoadMapEJBHome</home>
+         <remote>jp.co.hisas.career.learning.base.ejb.PCY_KensyuLoadMapEJB</remote>
+         <ejb-class>jp.co.hisas.career.learning.base.ejb.PCY_KensyuLoadMapEJBBean</ejb-class>
+         <session-type>Stateless</session-type>
+         <transaction-type>Container</transaction-type>
+
+         <resource-ref >
+            <res-ref-name>jdbc/HCDB</res-ref-name>
+            <res-type>javax.sql.DataSource</res-type>
+            <res-auth>Container</res-auth>
+         </resource-ref>
+
+      </session>
+
+      <session >
+         <description>PCY_UserDefaultEJB</description>
+
+         <ejb-name>PCY_UserDefaultEJB</ejb-name>
+
+         <home>jp.co.hisas.career.learning.base.ejb.PCY_UserDefaultEJBHome</home>
+         <remote>jp.co.hisas.career.learning.base.ejb.PCY_UserDefaultEJB</remote>
+         <ejb-class>jp.co.hisas.career.learning.base.ejb.PCY_UserDefaultEJBBean</ejb-class>
+         <session-type>Stateless</session-type>
+         <transaction-type>Container</transaction-type>
+
+         <resource-ref >
+            <res-ref-name>jdbc/HCDB</res-ref-name>
+            <res-type>javax.sql.DataSource</res-type>
+            <res-auth>Container</res-auth>
+         </resource-ref>
+
+      </session>
+
+<!-- ADD 2016/12/22 SSO START -->
+      <session >
+         <description>SSOLogin_EJB</description>
+         <ejb-name>SSOLogin_EJB</ejb-name>
+
+         <home>jp.co.hisas.career.learning.base.ejb.SSOLogin_EJBHome</home>
+         <remote>jp.co.hisas.career.learning.base.ejb.SSOLogin_EJB</remote>
+         <ejb-class>jp.co.hisas.career.learning.base.ejb.SSOLogin_EJBBean</ejb-class>
+         <session-type>Stateless</session-type>
+         <transaction-type>Container</transaction-type>
+         <resource-ref >
+            <res-ref-name>jdbc/HCDB</res-ref-name>
+            <res-type>javax.sql.DataSource</res-type>
+            <res-auth>Container</res-auth>
+         </resource-ref>
+
+      </session>
+<!-- ADD 2016/12/22 SSO END -->
+
+<!-- ADD 2017/05/15 COMTURE VCA350_本人研修情報（ver.02-00） START -->
+      <session>
+         <description>PCY_JizenkadaiEJB</description>
+
+         <ejb-name>PCY_JizenkadaiEJB</ejb-name>
+
+         <home>jp.co.hisas.career.learning.base.ejb.PCY_JizenkadaiEJBHome</home>
+         <remote>jp.co.hisas.career.learning.base.ejb.PCY_JizenkadaiEJB</remote>
+         <ejb-class>jp.co.hisas.career.learning.base.ejb.PCY_JizenkadaiEJBBean</ejb-class>
+         <session-type>Stateless</session-type>
+         <transaction-type>Container</transaction-type>
+
+         <resource-ref>
+            <res-ref-name>jdbc/HCDB</res-ref-name>
+            <res-type>javax.sql.DataSource</res-type>
+            <res-auth>Container</res-auth>
+         </resource-ref>
+      </session>
+
+      <session>
+         <description>PCY_JizenkadaiJyokyoEJB</description>
+
+         <ejb-name>PCY_JizenkadaiJyokyoEJB</ejb-name>
+
+         <home>jp.co.hisas.career.learning.base.ejb.PCY_JizenkadaiJyokyoEJBHome</home>
+         <remote>jp.co.hisas.career.learning.base.ejb.PCY_JizenkadaiJyokyoEJB</remote>
+         <ejb-class>jp.co.hisas.career.learning.base.ejb.PCY_JizenkadaiJyokyoEJBBean</ejb-class>
+         <session-type>Stateless</session-type>
+         <transaction-type>Container</transaction-type>
+
+         <resource-ref>
+            <res-ref-name>jdbc/HCDB</res-ref-name>
+            <res-type>javax.sql.DataSource</res-type>
+            <res-auth>Container</res-auth>
+         </resource-ref>
+      </session>
+<!-- ADD 2017/05/15 COMTURE VCA350_本人研修情報（ver.02-00） END -->
+<!-- ADD 2017/10/20 HISOL 申込取消期間追加対応 START -->
+      <session>
+         <description>PCY_CancelKikanEJB</description>
+
+         <ejb-name>PCY_CancelKikanEJB</ejb-name>
+
+         <home>jp.co.hisas.career.learning.base.ejb.PCY_CancelKikanEJBHome</home>
+         <remote>jp.co.hisas.career.learning.base.ejb.PCY_CancelKikanEJB</remote>
+         <ejb-class>jp.co.hisas.career.learning.base.ejb.PCY_CancelKikanEJBBean</ejb-class>
+         <session-type>Stateless</session-type>
+         <transaction-type>Container</transaction-type>
+
+         <resource-ref>
+            <res-ref-name>jdbc/HCDB</res-ref-name>
+            <res-type>javax.sql.DataSource</res-type>
+            <res-auth>Container</res-auth>
+         </resource-ref>
+      </session>
+<!-- ADD 2017/10/20 HISOL 申込取消期間追加対応 END -->
+<!-- ADD 2018/12/03 COMTURE レポート提出期間追加対応 START -->
+      <session>
+         <description>PCY_ReportSubmitKikanEJB</description>
+
+         <ejb-name>PCY_ReportSubmitKikanEJB</ejb-name>
+
+         <home>jp.co.hisas.career.learning.base.ejb.PCY_ReportSubmitKikanEJBHome</home>
+         <remote>jp.co.hisas.career.learning.base.ejb.PCY_ReportSubmitKikanEJB</remote>
+         <ejb-class>jp.co.hisas.career.learning.base.ejb.PCY_ReportSubmitKikanEJBBean</ejb-class>
+         <session-type>Stateless</session-type>
+         <transaction-type>Container</transaction-type>
+
+         <resource-ref>
+            <res-ref-name>jdbc/HCDB</res-ref-name>
+            <res-type>javax.sql.DataSource</res-type>
+            <res-auth>Container</res-auth>
+         </resource-ref>
+      </session>
+<!-- ADD 2018/12/03 COMTURE レポート提出期間追加対応 END -->
+<!-- ADD 2017/12/27 COMTURE 月略称対応 START -->
+      <session>
+        <display-name>PCY_TsukiRyakushoEJB</display-name>
+        <ejb-name>PCY_TsukiRyakushoEJB</ejb-name>
+        <home>jp.co.hisas.career.learning.base.ejb.PCY_TsukiRyakushoEJBHome</home>
+        <remote>jp.co.hisas.career.learning.base.ejb.PCY_TsukiRyakushoEJB</remote>
+        <ejb-class>jp.co.hisas.career.learning.base.ejb.PCY_TsukiRyakushoEJBBean</ejb-class>
+        <session-type>Stateless</session-type>
+        <transaction-type>Container</transaction-type>
+        <resource-ref>
+          <res-ref-name>jdbc/HCDB</res-ref-name>
+          <res-type>javax.sql.DataSource</res-type>
+          <res-auth>Container</res-auth>
+        </resource-ref>
+      </session>
+<!-- ADD 2017/12/27 COMTURE 月略称対応 END -->
+<!-- ADD 2018/01/09 COMTURE 仮日付対応 START -->
+      <session>
+         <description>PCY_HizukeKubunEJB</description>
+         <ejb-name>PCY_HizukeKubunEJB</ejb-name>
+         <home>jp.co.hisas.career.learning.base.ejb.PCY_HizukeKubunEJBHome</home>
+         <remote>jp.co.hisas.career.learning.base.ejb.PCY_HizukeKubunEJB</remote>
+         <ejb-class>jp.co.hisas.career.learning.base.ejb.PCY_HizukeKubunEJBBean</ejb-class>
+         <session-type>Stateless</session-type>
+         <transaction-type>Container</transaction-type>
+         <resource-ref>
+            <res-ref-name>jdbc/HCDB</res-ref-name>
+            <res-type>javax.sql.DataSource</res-type>
+            <res-auth>Container</res-auth>
+         </resource-ref>
+      </session>
+<!-- ADD 2018/01/09 COMTURE 仮日付対応 END -->
+      <session>
+         <description>PCY_DeptChikuEJB</description>
+
+         <ejb-name>PCY_DeptChikuEJB</ejb-name>
+
+         <home>jp.co.hisas.career.learning.base.ejb.PCY_DeptChikuEJBHome</home>
+         <remote>jp.co.hisas.career.learning.base.ejb.PCY_DeptChikuEJB</remote>
+         <ejb-class>jp.co.hisas.career.learning.base.ejb.PCY_DeptChikuEJBBean</ejb-class>
+         <session-type>Stateless</session-type>
+         <transaction-type>Container</transaction-type>
+
+         <resource-ref>
+            <res-ref-name>jdbc/HCDB</res-ref-name>
+            <res-type>javax.sql.DataSource</res-type>
+            <res-auth>Container</res-auth>
+         </resource-ref>
+      </session>
+
+        <!--  learning AccessLog end -->
+     <!--
+       To add session beans that you have deployment descriptor info for, add
+       a file to your XDoclet merge directory called session-beans.xml that contains
+       the <session></session> markup for those beans.
+     -->
+
+      <!-- Entity Beans -->
+     <!--
+       To add entity beans that you have deployment descriptor info for, add
+       a file to your XDoclet merge directory called entity-beans.xml that contains
+       the <entity></entity> markup for those beans.
+     -->
+
+      <!-- Message Driven Beans -->
+     <!--
+       To add message driven beans that you have deployment descriptor info for, add
+       a file to your XDoclet merge directory called message-driven-beans.xml that contains
+       the <message-driven></message-driven> markup for those beans.
+     -->
+
+   </enterprise-beans>
+
+   <!-- Relationships -->
+
+   <!-- Assembly Descriptor -->
+   <assembly-descriptor >
+     <!--
+       To add additional assembly descriptor info here, add a file to your
+       XDoclet merge directory called assembly-descriptor.xml that contains
+       the <assembly-descriptor></assembly-descriptor> markup.
+     -->
+
+   <!-- finder permissions -->
+
+   <!-- finder permissions -->
+
+   <!-- finder permissions -->
+
+   <!-- finder permissions -->
+
+   <!-- finder permissions -->
+
+   <!-- finder permissions -->
+
+   <!-- finder permissions -->
+
+   <!-- finder permissions -->
+
+   <!-- finder permissions -->
+
+   <!-- finder permissions -->
+
+   <!-- finder permissions -->
+
+   <!-- finder permissions -->
+
+   <!-- finder permissions -->
+
+   <!-- finder permissions -->
+
+   <!-- finder permissions -->
+
+   <!-- finder permissions -->
+
+   <!-- transactions -->
+   <container-transaction >
+      <method >
+         <ejb-name>PCY_EsNinsyoRirekiEJB</ejb-name>
+         <method-name>*</method-name>
+      </method>
+      <trans-attribute>Required</trans-attribute>
+   </container-transaction>
+   <container-transaction >
+      <method >
+         <ejb-name>PCY_JyukousyaKanriEJB</ejb-name>
+         <method-name>*</method-name>
+      </method>
+      <trans-attribute>Required</trans-attribute>
+   </container-transaction>
+   <container-transaction >
+      <method >
+         <ejb-name>PCY_DaikoNyuryokuEJB</ejb-name>
+         <method-name>*</method-name>
+      </method>
+      <trans-attribute>Required</trans-attribute>
+   </container-transaction>
+   <container-transaction >
+      <method >
+         <ejb-name>PCY_TaisyoEJB</ejb-name>
+         <method-name>*</method-name>
+      </method>
+      <trans-attribute>Required</trans-attribute>
+   </container-transaction>
+   <container-transaction >
+      <method >
+         <ejb-name>PCY_PersonalEJB</ejb-name>
+         <method-name>*</method-name>
+      </method>
+      <trans-attribute>Required</trans-attribute>
+   </container-transaction>
+<!-- ADD 2017/05/16 COMTURE VCY330_名簿(ver.02-00) START -->
+   <container-transaction >
+      <method >
+         <ejb-name>PCY_PzValueEJB</ejb-name>
+         <method-name>*</method-name>
+      </method>
+      <trans-attribute>Required</trans-attribute>
+   </container-transaction>
+<!-- ADD 2017/05/16 COMTURE VCY330_名簿(ver.02-00) END -->
+   <container-transaction >
+      <method >
+         <ejb-name>PCY_KanrenKyoikuKamokuEJB</ejb-name>
+         <method-name>*</method-name>
+      </method>
+      <trans-attribute>Required</trans-attribute>
+   </container-transaction>
+   <container-transaction >
+      <method >
+         <ejb-name>PCY_MousikomiJyokyoEJB</ejb-name>
+         <method-name>*</method-name>
+      </method>
+      <trans-attribute>Required</trans-attribute>
+   </container-transaction>
+   <container-transaction >
+      <method >
+         <ejb-name>PCY_KensyuRirekiEJB</ejb-name>
+         <method-name>*</method-name>
+      </method>
+      <trans-attribute>Required</trans-attribute>
+   </container-transaction>
+   <container-transaction >
+      <method >
+         <ejb-name>PCY_KamokuEJB</ejb-name>
+         <method-name>*</method-name>
+      </method>
+      <trans-attribute>Required</trans-attribute>
+   </container-transaction>
+   <container-transaction >
+      <method >
+         <ejb-name>PCY_HonninKensyuJyohouEJB</ejb-name>
+         <method-name>*</method-name>
+      </method>
+      <trans-attribute>Required</trans-attribute>
+   </container-transaction>
+   <container-transaction >
+      <method >
+         <ejb-name>PCY_SyoninsyaEJB</ejb-name>
+         <method-name>*</method-name>
+      </method>
+      <trans-attribute>Required</trans-attribute>
+   </container-transaction>
+   <container-transaction >
+      <method >
+         <ejb-name>PCY_CounterEJB</ejb-name>
+         <method-name>*</method-name>
+      </method>
+      <trans-attribute>Required</trans-attribute>
+   </container-transaction>
+   <container-transaction >
+      <method >
+         <ejb-name>PCY_CodeEJB</ejb-name>
+         <method-name>*</method-name>
+      </method>
+      <trans-attribute>Required</trans-attribute>
+   </container-transaction>
+   <container-transaction >
+      <method >
+         <ejb-name>PCY_ClassEJB</ejb-name>
+         <method-name>*</method-name>
+      </method>
+      <trans-attribute>Required</trans-attribute>
+   </container-transaction>
+   <container-transaction >
+      <method >
+         <ejb-name>PCY_ClassCyouseiEJB</ejb-name>
+         <method-name>*</method-name>
+      </method>
+      <trans-attribute>Required</trans-attribute>
+   </container-transaction>
+   <container-transaction >
+      <method >
+         <ejb-name>PCY_MousikomiSakujoRirekiEJB</ejb-name>
+         <method-name>*</method-name>
+      </method>
+      <trans-attribute>Required</trans-attribute>
+   </container-transaction>
+   <container-transaction >
+      <method >
+         <ejb-name>PCY_IkkatuDownLoadEJB</ejb-name>
+         <method-name>*</method-name>
+      </method>
+      <trans-attribute>Required</trans-attribute>
+   </container-transaction>
+   <container-transaction >
+      <method >
+         <ejb-name>PCY_AccessLogEJB</ejb-name>
+         <method-name>*</method-name>
+      </method>
+      <trans-attribute>Required</trans-attribute>
+   </container-transaction>
+   <container-transaction >
+      <method >
+         <ejb-name>PCY_BumonIkuseiEJB</ejb-name>
+         <method-name>*</method-name>
+      </method>
+      <trans-attribute>Required</trans-attribute>
+   </container-transaction>
+   <container-transaction >
+      <method >
+         <ejb-name>PCY_KensyuLoadMapEJB</ejb-name>
+         <method-name>*</method-name>
+      </method>
+      <trans-attribute>Required</trans-attribute>
+   </container-transaction>
+   <container-transaction >
+      <method >
+         <ejb-name>PCY_UserDefaultEJB</ejb-name>
+         <method-name>*</method-name>
+      </method>
+      <trans-attribute>Required</trans-attribute>
+   </container-transaction>
+   <container-transaction >
+      <method >
+         <ejb-name>SSOLogin_EJB</ejb-name>
+         <method-name>*</method-name>
+      </method>
+      <trans-attribute>Required</trans-attribute>
+   </container-transaction>
+
+<!-- ADD 2017/05/15 COMTURE VCA350_本人研修情報（ver.02-00） START -->
+   <container-transaction>
+      <method>
+         <ejb-name>PCY_JizenkadaiEJB</ejb-name>
+         <method-name>*</method-name>
+      </method>
+      <trans-attribute>Required</trans-attribute>
+   </container-transaction>
+
+   <container-transaction>
+      <method>
+         <ejb-name>PCY_JizenkadaiJyokyoEJB</ejb-name>
+         <method-name>*</method-name>
+      </method>
+      <trans-attribute>Required</trans-attribute>
+   </container-transaction>
+<!-- ADD 2017/05/15 COMTURE VCA350_本人研修情報（ver.02-00） END -->
+<!-- ADD 2018/01/09 COMTURE 仮日付対応 START -->
+   <container-transaction>
+      <method>
+         <ejb-name>PCY_HizukeKubunEJB</ejb-name>
+         <method-name>*</method-name>
+      </method>
+      <trans-attribute>Required</trans-attribute>
+   </container-transaction>
+
+   <container-transaction>
+      <method>
+         <ejb-name>PCY_HizukeKubunEJB</ejb-name>
+         <method-name>*</method-name>
+      </method>
+      <trans-attribute>Required</trans-attribute>
+   </container-transaction>
+<!-- ADD 2018/01/09 COMTURE 仮日付対応 END -->
+<!-- ADD 2019/01/24 COMTURE PCY_ReportSubmitKikanEJB START -->
+   <container-transaction>
+      <method>
+         <ejb-name>PCY_ReportSubmitKikanEJB</ejb-name>
+         <method-name>*</method-name>
+      </method>
+      <trans-attribute>Required</trans-attribute>
+   </container-transaction>
+<!-- ADD 2019/01/24 COMTURE PCY_ReportSubmitKikanEJB END -->
+
+   <!-- finder transactions -->
+   </assembly-descriptor>
+
+</ejb-jar>
