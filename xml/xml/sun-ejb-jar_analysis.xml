@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="MS932"?>
+<!DOCTYPE ejb-jar PUBLIC "-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 2.0//EN" "http://java.sun.com/dtd/ejb-jar_2_0.dtd">
+<sun-ejb-jar>
+    <enterprise-beans>
+        <ejb>
+            <ejb-name>PEF_MoralSurveyReportEJB</ejb-name>
+            <jndi-name>PEF_MoralSurveyReportEJB</jndi-name>
+            <resource-ref>
+                <res-ref-name>jdbc/HCDB</res-ref-name>
+                <jndi-name>jdbc/HCDB</jndi-name>
+            </resource-ref>
+        </ejb>
+        <ejb>
+            <ejb-name>PEF_JinzaiPortfolioEJB</ejb-name>
+            <jndi-name>PEF_JinzaiPortfolioEJB</jndi-name>
+            <resource-ref>
+                <res-ref-name>jdbc/HCDB</res-ref-name>
+                <jndi-name>jdbc/HCDB</jndi-name>
+            </resource-ref>
+        </ejb>
+    </enterprise-beans>
+</sun-ejb-jar>

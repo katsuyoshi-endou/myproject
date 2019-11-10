@@ -2,751 +2,550 @@
 <!DOCTYPE ejb-jar PUBLIC "-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 2.0//EN" "http://java.sun.com/dtd/ejb-jar_2_0.dtd">
 
 <ejb-jar >
-
-   <description><![CDATA[No Description.]]></description>
-   <display-name>departmentEJB</display-name>
-
-   <enterprise-beans>
-
-      <!-- Session Beans -->
-      <session >
-         <description><![CDATA[<PRE> クラス名： PEB_KouboAnkenEJBBeanクラス 機能説明： 指定された公募案件IDより社内公募案件データを抽出する。 </PRE>]]></description>
-
-         <ejb-name>PEB_KouboAnkenEJB</ejb-name>
-
-         <home>jp.co.hisas.career.department.offer.ejb.PEB_KouboAnkenEJBHome</home>
-         <remote>jp.co.hisas.career.department.offer.ejb.PEB_KouboAnkenEJB</remote>
-         <ejb-class>jp.co.hisas.career.department.offer.ejb.PEB_KouboAnkenEJBBean</ejb-class>
-         <session-type>Stateless</session-type>
-         <transaction-type>Container</transaction-type>
-
-         <resource-ref >
-            <res-ref-name>jdbc/HCDB</res-ref-name>
-            <res-type>javax.sql.DataSource</res-type>
-            <res-auth>Container</res-auth>
-         </resource-ref>
-
-      </session>
-
-      <session >
-         <description><![CDATA[<PRE> 概要: DBアクセスを行い、各コードの検索、更新、削除を行う、ステートレスSessionBean。 使用方法: リモートインタフェースを介して、クライアントBeanから呼び出す。 </PRE>]]></description>
-
-         <ejb-name>PEB_SuccessOrFailureEJB</ejb-name>
-
-         <home>jp.co.hisas.career.department.offer.ejb.PEB_SuccessOrFailureEJBHome</home>
-         <remote>jp.co.hisas.career.department.offer.ejb.PEB_SuccessOrFailureEJB</remote>
-         <ejb-class>jp.co.hisas.career.department.offer.ejb.PEB_SuccessOrFailureEJBBean</ejb-class>
-         <session-type>Stateless</session-type>
-         <transaction-type>Container</transaction-type>
-
-         <resource-ref >
-            <res-ref-name>jdbc/HCDB</res-ref-name>
-            <res-type>javax.sql.DataSource</res-type>
-            <res-auth>Container</res-auth>
-         </resource-ref>
-
-      </session>
-
-      <session >
-         <description><![CDATA[<PRE> クラス名： PEY_CodeEJBBeanクラス 機能説明： 各種マスタから一覧を取得します。 </PRE>]]></description>
-
-         <ejb-name>PEY_CodeEJB</ejb-name>
-
-         <home>jp.co.hisas.career.department.base.ejb.PEY_CodeEJBHome</home>
-         <remote>jp.co.hisas.career.department.base.ejb.PEY_CodeEJB</remote>
-         <ejb-class>jp.co.hisas.career.department.base.ejb.PEY_CodeEJBBean</ejb-class>
-         <session-type>Stateless</session-type>
-         <transaction-type>Container</transaction-type>
-
-         <resource-ref >
-            <res-ref-name>jdbc/HCDB</res-ref-name>
-            <res-type>javax.sql.DataSource</res-type>
-            <res-auth>Container</res-auth>
-         </resource-ref>
-
-      </session>
-
-      <session >
-         <description><![CDATA[<PRE> クラス名： PEY_PersonalEJBBeanクラス 機能説明： パーソナルプロファイルからユーザの属性を取得します。 </PRE>]]></description>
-
-         <ejb-name>PEY_PersonalEJB</ejb-name>
-
-         <home>jp.co.hisas.career.department.base.ejb.PEY_PersonalEJBHome</home>
-         <remote>jp.co.hisas.career.department.base.ejb.PEY_PersonalEJB</remote>
-         <ejb-class>jp.co.hisas.career.department.base.ejb.PEY_PersonalEJBBean</ejb-class>
-         <session-type>Stateless</session-type>
-         <transaction-type>Container</transaction-type>
-
-         <resource-ref >
-            <res-ref-name>jdbc/HCDB</res-ref-name>
-            <res-type>javax.sql.DataSource</res-type>
-            <res-auth>Container</res-auth>
-         </resource-ref>
-
-      </session>
-
-      <session >
-         <description><![CDATA[<PRE> クラス名： PEB_KouboAnkenOuboEJBBeanクラス 機能説明： 公募案件応募で使用するEJB。 (1)公募案件応募画面出力用データの取得 (2)公募案件応募情報の新規登録及び更新 </PRE>]]></description>
-
-         <ejb-name>PEB_KouboAnkenOuboEJB</ejb-name>
-
-         <home>jp.co.hisas.career.department.offer.ejb.PEB_KouboAnkenOuboEJBHome</home>
-         <remote>jp.co.hisas.career.department.offer.ejb.PEB_KouboAnkenOuboEJB</remote>
-         <ejb-class>jp.co.hisas.career.department.offer.ejb.PEB_KouboAnkenOuboEJBBean</ejb-class>
-         <session-type>Stateless</session-type>
-         <transaction-type>Container</transaction-type>
-
-         <resource-ref >
-            <res-ref-name>jdbc/HCDB</res-ref-name>
-            <res-type>javax.sql.DataSource</res-type>
-            <res-auth>Container</res-auth>
-         </resource-ref>
-
-      </session>
-
-      <session >
-         <description><![CDATA[<PRE> クラス名： PEB_KouboAnkenAssessumentRirekiEJB クラス 機能説明： 公募テーブルへの操作を行います。 </PRE>]]></description>
-
-         <ejb-name>PEB_KouboAnkenAssessumentRirekiEJB</ejb-name>
-
-         <home>jp.co.hisas.career.department.offer.ejb.PEB_KouboAnkenAssessumentRirekiEJBHome</home>
-         <remote>jp.co.hisas.career.department.offer.ejb.PEB_KouboAnkenAssessumentRirekiEJB</remote>
-         <ejb-class>jp.co.hisas.career.department.offer.ejb.PEB_KouboAnkenAssessumentRirekiEJBBean</ejb-class>
-         <session-type>Stateless</session-type>
-         <transaction-type>Container</transaction-type>
-
-         <resource-ref >
-            <res-ref-name>jdbc/HCDB</res-ref-name>
-            <res-type>javax.sql.DataSource</res-type>
-            <res-auth>Container</res-auth>
-         </resource-ref>
-
-      </session>
-
-      <session >
-         <description><![CDATA[<PRE> クラス名： PEB_ShinsaKekkaSetteiEJBBeanクラス 機能説明： (人総)審査結果をＤＢに格納する機能です。 格納するデータは審査結果、連絡事項 </PRE>]]></description>
-
-         <ejb-name>PEB_ShinsaKekkaSetteiEJB</ejb-name>
-
-         <home>jp.co.hisas.career.department.offer.ejb.PEB_ShinsaKekkaSetteiEJBHome</home>
-         <remote>jp.co.hisas.career.department.offer.ejb.PEB_ShinsaKekkaSetteiEJB</remote>
-         <ejb-class>jp.co.hisas.career.department.offer.ejb.PEB_ShinsaKekkaSetteiEJBBean</ejb-class>
-         <session-type>Stateless</session-type>
-         <transaction-type>Container</transaction-type>
-
-         <resource-ref >
-            <res-ref-name>jdbc/HCDB</res-ref-name>
-            <res-type>javax.sql.DataSource</res-type>
-            <res-auth>Container</res-auth>
-         </resource-ref>
-
-      </session>
-
-      <session >
-         <description><![CDATA[<PRE> クラス名： PEB_HonninTuuchiEJBBeanクラス 機能説明： (人総)本人通知をＤＢに格納する機能です。 格納するデータは合否ステータス </PRE>]]></description>
-
-         <ejb-name>PEB_HonninTuuchiEJB</ejb-name>
-
-         <home>jp.co.hisas.career.department.offer.ejb.PEB_HonninTuuchiEJBHome</home>
-         <remote>jp.co.hisas.career.department.offer.ejb.PEB_HonninTuuchiEJB</remote>
-         <ejb-class>jp.co.hisas.career.department.offer.ejb.PEB_HonninTuuchiEJBBean</ejb-class>
-         <session-type>Stateless</session-type>
-         <transaction-type>Container</transaction-type>
-
-         <resource-ref >
-            <res-ref-name>jdbc/HCDB</res-ref-name>
-            <res-type>javax.sql.DataSource</res-type>
-            <res-auth>Container</res-auth>
-         </resource-ref>
-
-      </session>
-
-      <session >
-         <description><![CDATA[<PRE> クラス名： PEB_ShinsaKekkaTsuuchiEJBBeanクラス 機能説明： (人総)審査結果をＤＢに格納する機能です。 格納するデータは審査結果 </PRE>]]></description>
-
-         <ejb-name>PEB_ShinsaKekkaTsuuchiEJB</ejb-name>
-
-         <home>jp.co.hisas.career.department.offer.ejb.PEB_ShinsaKekkaTsuuchiEJBHome</home>
-         <remote>jp.co.hisas.career.department.offer.ejb.PEB_ShinsaKekkaTsuuchiEJB</remote>
-         <ejb-class>jp.co.hisas.career.department.offer.ejb.PEB_ShinsaKekkaTsuuchiEJBBean</ejb-class>
-         <session-type>Stateless</session-type>
-         <transaction-type>Container</transaction-type>
-
-         <resource-ref >
-            <res-ref-name>jdbc/HCDB</res-ref-name>
-            <res-type>javax.sql.DataSource</res-type>
-            <res-auth>Container</res-auth>
-         </resource-ref>
-
-      </session>
-
-      <session >
-         <description><![CDATA[<PRE> クラス名： PEY_KouboOubosyaEJBBean クラス 機能説明： 公募情報テーブルへの操作を行います。 </PRE>]]></description>
-
-         <ejb-name>PEY_KouboOubosyaEJB</ejb-name>
-
-         <home>jp.co.hisas.career.department.base.ejb.PEY_KouboOubosyaEJBHome</home>
-         <remote>jp.co.hisas.career.department.base.ejb.PEY_KouboOubosyaEJB</remote>
-         <ejb-class>jp.co.hisas.career.department.base.ejb.PEY_KouboOubosyaEJBBean</ejb-class>
-         <session-type>Stateless</session-type>
-         <transaction-type>Container</transaction-type>
-
-         <resource-ref >
-            <res-ref-name>jdbc/HCDB</res-ref-name>
-            <res-type>javax.sql.DataSource</res-type>
-            <res-auth>Container</res-auth>
-         </resource-ref>
-
-      </session>
-
-      <session >
-         <description><![CDATA[<PRE> クラス名： PEB_KouboAnkenSakuseiEJBBeanクラス 機能説明： (人総)審査結果をＤＢに格納する機能です。 格納するデータは審査結果、連絡事項 </PRE>]]></description>
-
-         <ejb-name>PEB_KouboAnkenSakuseiEJB</ejb-name>
-
-         <home>jp.co.hisas.career.department.offer.ejb.PEB_KouboAnkenSakuseiEJBHome</home>
-         <remote>jp.co.hisas.career.department.offer.ejb.PEB_KouboAnkenSakuseiEJB</remote>
-         <ejb-class>jp.co.hisas.career.department.offer.ejb.PEB_KouboAnkenSakuseiEJBBean</ejb-class>
-         <session-type>Stateless</session-type>
-         <transaction-type>Container</transaction-type>
-
-         <resource-ref >
-            <res-ref-name>jdbc/HCDB</res-ref-name>
-            <res-type>javax.sql.DataSource</res-type>
-            <res-auth>Container</res-auth>
-         </resource-ref>
-
-      </session>
-
-      <session >
-         <description><![CDATA[<PRE> クラス名： PEB_NijiShinsaGouhiSetteiEJBBeanクラス 機能説明： 二次審査合否をＤＢに格納する機能です。 格納するデータは合否ステータス 問合せ窓口情報、連絡事項 </PRE>]]></description>
-
-         <ejb-name>PEB_NijiShinsaGouhiSetteiEJB</ejb-name>
-
-         <home>jp.co.hisas.career.department.offer.ejb.PEB_NijiShinsaGouhiSetteiEJBHome</home>
-         <remote>jp.co.hisas.career.department.offer.ejb.PEB_NijiShinsaGouhiSetteiEJB</remote>
-         <ejb-class>jp.co.hisas.career.department.offer.ejb.PEB_NijiShinsaGouhiSetteiEJBBean</ejb-class>
-         <session-type>Stateless</session-type>
-         <transaction-type>Container</transaction-type>
-
-         <resource-ref >
-            <res-ref-name>jdbc/HCDB</res-ref-name>
-            <res-type>javax.sql.DataSource</res-type>
-            <res-auth>Container</res-auth>
-         </resource-ref>
-
-      </session>
-
-      <session >
-         <description><![CDATA[<PRE> 概要: DBアクセスを行い、各コードの検索を行う、ステートレスSessionBean。 使用方法: リモートインタフェースを介して、クライアントBeanから呼び出す。 </PRE>]]></description>
-
-         <ejb-name>PEB_OubosyaJyohoEJB</ejb-name>
-
-         <home>jp.co.hisas.career.department.offer.ejb.PEB_OubosyaJyohoEJBHome</home>
-         <remote>jp.co.hisas.career.department.offer.ejb.PEB_OubosyaJyohoEJB</remote>
-         <ejb-class>jp.co.hisas.career.department.offer.ejb.PEB_OubosyaJyohoEJBBean</ejb-class>
-         <session-type>Stateless</session-type>
-         <transaction-type>Container</transaction-type>
-
-         <resource-ref >
-            <res-ref-name>jdbc/HCDB</res-ref-name>
-            <res-type>javax.sql.DataSource</res-type>
-            <res-auth>Container</res-auth>
-         </resource-ref>
-
-      </session>
-
-      <session >
-         <description><![CDATA[<PRE> クラス名： PEY_KanrisyaEJBBean クラス 機能説明： 公募テーブル、公募_応募テーブルへの操作を行います。 </PRE>]]></description>
-
-         <ejb-name>PEB_KanrisyaEJB</ejb-name>
-
-         <home>jp.co.hisas.career.department.offer.ejb.PEB_KanrisyaEJBHome</home>
-         <remote>jp.co.hisas.career.department.offer.ejb.PEB_KanrisyaEJB</remote>
-         <ejb-class>jp.co.hisas.career.department.offer.ejb.PEB_KanrisyaEJBBean</ejb-class>
-         <session-type>Stateless</session-type>
-         <transaction-type>Container</transaction-type>
-
-         <resource-ref >
-            <res-ref-name>jdbc/HCDB</res-ref-name>
-            <res-type>javax.sql.DataSource</res-type>
-            <res-auth>Container</res-auth>
-         </resource-ref>
-
-      </session>
-
-      <session >
-         <description><![CDATA[<PRE> クラス名： PEB_KouboMenuEJB クラス 機能説明： 公募テーブルへの操作を行います。 </PRE>]]></description>
-
-         <ejb-name>PEB_KouboMenuEJB</ejb-name>
-
-         <home>jp.co.hisas.career.department.offer.ejb.PEB_KouboMenuEJBHome</home>
-         <remote>jp.co.hisas.career.department.offer.ejb.PEB_KouboMenuEJB</remote>
-         <ejb-class>jp.co.hisas.career.department.offer.ejb.PEB_KouboMenuEJBBean</ejb-class>
-         <session-type>Stateless</session-type>
-         <transaction-type>Container</transaction-type>
-
-         <resource-ref >
-            <res-ref-name>jdbc/HCDB</res-ref-name>
-            <res-type>javax.sql.DataSource</res-type>
-            <res-auth>Container</res-auth>
-         </resource-ref>
-
-      </session>
-
-      <session >
-         <description><![CDATA[<PRE> クラス名： PEB_IchijiShinsaGouhiSetteiEJBBeanクラス 機能説明： 一次審査合否をＤＢに格納する機能です。 格納するデータは合否ステータス 問合せ窓口情報、連絡事項 </PRE>]]></description>
-
-         <ejb-name>PEB_IchijiShinsaGouhiSetteiEJB</ejb-name>
-
-         <home>jp.co.hisas.career.department.offer.ejb.PEB_IchijiShinsaGouhiSetteiEJBHome</home>
-         <remote>jp.co.hisas.career.department.offer.ejb.PEB_IchijiShinsaGouhiSetteiEJB</remote>
-         <ejb-class>jp.co.hisas.career.department.offer.ejb.PEB_IchijiShinsaGouhiSetteiEJBBean</ejb-class>
-         <session-type>Stateless</session-type>
-         <transaction-type>Container</transaction-type>
-
-         <resource-ref >
-            <res-ref-name>jdbc/HCDB</res-ref-name>
-            <res-type>javax.sql.DataSource</res-type>
-            <res-auth>Container</res-auth>
-         </resource-ref>
-
-      </session>
-
-      <session >
-         <description><![CDATA[<PRE> クラス名： PEB_OuboKanriEJBBean クラス 機能説明： 応募管理画面へ表示する情報の取得・更新・削除を行います。 </PRE>]]></description>
-
-         <ejb-name>PEB_OuboKanriEJB</ejb-name>
-
-         <home>jp.co.hisas.career.department.offer.ejb.PEB_OuboKanriEJBHome</home>
-         <remote>jp.co.hisas.career.department.offer.ejb.PEB_OuboKanriEJB</remote>
-         <ejb-class>jp.co.hisas.career.department.offer.ejb.PEB_OuboKanriEJBBean</ejb-class>
-         <session-type>Stateless</session-type>
-         <transaction-type>Container</transaction-type>
-
-         <resource-ref >
-            <res-ref-name>jdbc/HCDB</res-ref-name>
-            <res-type>javax.sql.DataSource</res-type>
-            <res-auth>Container</res-auth>
-         </resource-ref>
-
-      </session>
-
-      <session >
-         <description><![CDATA[<PRE> クラス名： PEY_KouboEJBBean クラス 機能説明： 公募情報テーブルへの操作を行います。 </PRE>]]></description>
-
-         <ejb-name>PEY_KouboEJB</ejb-name>
-
-         <home>jp.co.hisas.career.department.base.ejb.PEY_KouboEJBHome</home>
-         <remote>jp.co.hisas.career.department.base.ejb.PEY_KouboEJB</remote>
-         <ejb-class>jp.co.hisas.career.department.base.ejb.PEY_KouboEJBBean</ejb-class>
-         <session-type>Stateless</session-type>
-         <transaction-type>Container</transaction-type>
-
-         <resource-ref >
-            <res-ref-name>jdbc/HCDB</res-ref-name>
-            <res-type>javax.sql.DataSource</res-type>
-            <res-auth>Container</res-auth>
-         </resource-ref>
-
-      </session>
-
-      <session >
-         <description><![CDATA[<PRE> クラス名： PEB_SaiyousyaKetteiEJBBeanクラス 機能説明： (人総)本人通知をＤＢに格納する機能です。 格納するデータは合否ステータス </PRE>]]></description>
-
-         <ejb-name>PEB_SaiyousyaKetteiEJB</ejb-name>
-
-         <home>jp.co.hisas.career.department.offer.ejb.PEB_SaiyousyaKetteiEJBHome</home>
-         <remote>jp.co.hisas.career.department.offer.ejb.PEB_SaiyousyaKetteiEJB</remote>
-         <ejb-class>jp.co.hisas.career.department.offer.ejb.PEB_SaiyousyaKetteiEJBBean</ejb-class>
-         <session-type>Stateless</session-type>
-         <transaction-type>Container</transaction-type>
-
-         <resource-ref >
-            <res-ref-name>jdbc/HCDB</res-ref-name>
-            <res-type>javax.sql.DataSource</res-type>
-            <res-auth>Container</res-auth>
-         </resource-ref>
-
-      </session>
-      
-            <session >
-         <description>PEA_ForumEJB</description>
-
-         <ejb-name>PEA_ForumEJB</ejb-name>
-
-         <home>jp.co.hisas.career.department.forum.ejb.PEA_ForumEJBHome</home>
-         <remote>jp.co.hisas.career.department.forum.ejb.PEA_ForumEJB</remote>
-         <ejb-class>jp.co.hisas.career.department.forum.ejb.PEA_ForumEJBBean</ejb-class>
-         <session-type>Stateless</session-type>
-         <transaction-type>Container</transaction-type>
-
-         <resource-ref >
-            <res-ref-name>jdbc/HCDB</res-ref-name>
-            <res-type>javax.sql.DataSource</res-type>
-            <res-auth>Container</res-auth>
-         </resource-ref>
-
-      </session>
-
-      <session >
-         <description>PEA_ToukouEJB</description>
-
-         <ejb-name>PEA_ToukouEJB</ejb-name>
-
-         <home>jp.co.hisas.career.department.forum.ejb.PEA_ToukouEJBHome</home>
-         <remote>jp.co.hisas.career.department.forum.ejb.PEA_ToukouEJB</remote>
-         <ejb-class>jp.co.hisas.career.department.forum.ejb.PEA_ToukouEJBBean</ejb-class>
-         <session-type>Stateless</session-type>
-         <transaction-type>Container</transaction-type>
-
-         <resource-ref >
-            <res-ref-name>jdbc/HCDB</res-ref-name>
-            <res-type>javax.sql.DataSource</res-type>
-            <res-auth>Container</res-auth>
-         </resource-ref>
-
-      </session>
-      
-      <session >
-         <description>PEA010_ForumEJB</description>
-
-         <ejb-name>PEA010_ForumEJB</ejb-name>
-
-         <home>jp.co.hisas.career.department.forum.ejb.PEA010_ForumEJBHome</home>
-         <remote>jp.co.hisas.career.department.forum.ejb.PEA010_ForumEJB</remote>
-         <ejb-class>jp.co.hisas.career.department.forum.ejb.PEA010_ForumEJBBean</ejb-class>
-         <session-type>Stateless</session-type>
-         <transaction-type>Container</transaction-type>
-         
-        <resource-ref >
-            <res-ref-name>jdbc/HCDB</res-ref-name>
-            <res-type>javax.sql.DataSource</res-type>
-            <res-auth>Container</res-auth>
-         </resource-ref>
-
-      </session>
-
-      <session >
-         <description>PEA_SankaHanteiEJB</description>
-
-         <ejb-name>PEA_SankaHanteiEJB</ejb-name>
-
-         <home>jp.co.hisas.career.department.forum.ejb.PEA_SankaHanteiEJBHome</home>
-         <remote>jp.co.hisas.career.department.forum.ejb.PEA_SankaHanteiEJB</remote>
-         <ejb-class>jp.co.hisas.career.department.forum.ejb.PEA_SankaHanteiEJBBean</ejb-class>
-         <session-type>Stateless</session-type>
-         <transaction-type>Container</transaction-type>
-
-         <resource-ref >
-            <res-ref-name>jdbc/HCDB</res-ref-name>
-            <res-type>javax.sql.DataSource</res-type>
-            <res-auth>Container</res-auth>
-         </resource-ref>
-
-      </session>
-
-       <session >
-         <description>PEY_CounterEJB</description>
-
-         <ejb-name>PEY_CounterEJB</ejb-name>
-
-         <home>jp.co.hisas.career.department.base.ejb.PEY_CounterEJBHome</home>
-         <remote>jp.co.hisas.career.department.base.ejb.PEY_CounterEJB</remote>
-         <ejb-class>jp.co.hisas.career.department.base.ejb.PEY_CounterEJBBean</ejb-class>
-         <session-type>Stateless</session-type>
-         <transaction-type>Container</transaction-type>
-
-         <resource-ref >
-            <res-ref-name>jdbc/HCDB</res-ref-name>
-            <res-type>javax.sql.DataSource</res-type>
-            <res-auth>Container</res-auth>
-         </resource-ref>
-
-      </session>
-      
-      <session >
-         <description><![CDATA[<PRE> クラス名： PEC_DownloadEJBBeanクラス 機能説明： パーソナルプロファイルからユーザの属性を取得します。 </PRE>]]></description>
-
-         <ejb-name>PEC_DownloadEJB</ejb-name>
-
-         <home>jp.co.hisas.career.department.download.ejb.PEC_DownloadEJBHome</home>
-         <remote>jp.co.hisas.career.department.download.ejb.PEC_DownloadEJB</remote>
-         <ejb-class>jp.co.hisas.career.department.download.ejb.PEC_DownloadEJBBean</ejb-class>
-         <session-type>Stateless</session-type>
-         <transaction-type>Container</transaction-type>
-
-         <resource-ref >
-            <res-ref-name>jdbc/HCDB</res-ref-name>
-            <res-type>javax.sql.DataSource</res-type>
-            <res-auth>Container</res-auth>
-         </resource-ref>
-
-      </session>
-
-      <session >
-         <description>TrainingInformationEJB</description>
-         <ejb-name>TrainingInformationEJB</ejb-name>
-        <home>jp.co.hisas.career.department.download.ejb.TrainingInformationEJBHome</home>
-         <remote>jp.co.hisas.career.department.download.ejb.TrainingInformationEJB</remote>
-      <ejb-class>jp.co.hisas.career.department.download.ejb.TrainingInformationEJBBean</ejb-class>
-         <session-type>Stateless</session-type>
-         <transaction-type>Container</transaction-type>
-         <resource-ref >
-            <res-ref-name>jdbc/HCDB</res-ref-name>
-            <res-type>javax.sql.DataSource</res-type>
-            <res-auth>Container</res-auth>
-         </resource-ref>
-      </session>
-     <!--
-       To add session beans that you have deployment descriptor info for, add
-       a file to your XDoclet merge directory called session-beans.xml that contains
-       the <session></session> markup for those beans.
-     -->
-
-      <!-- Entity Beans -->
-     <!--
-       To add entity beans that you have deployment descriptor info for, add
-       a file to your XDoclet merge directory called entity-beans.xml that contains
-       the <entity></entity> markup for those beans.
-     -->
-
-      <!-- Message Driven Beans -->
-     <!--
-       To add message driven beans that you have deployment descriptor info for, add
-       a file to your XDoclet merge directory called message-driven-beans.xml that contains
-       the <message-driven></message-driven> markup for those beans.
-     -->
-
-   </enterprise-beans>
-
-   <!-- Relationships -->
-
-   <!-- Assembly Descriptor -->
-   <assembly-descriptor >
-     <!--
-       To add additional assembly descriptor info here, add a file to your
-       XDoclet merge directory called assembly-descriptor.xml that contains
-       the <assembly-descriptor></assembly-descriptor> markup.
-     -->
-
-   <!-- finder permissions -->
-
-   <!-- finder permissions -->
-
-   <!-- finder permissions -->
-
-   <!-- finder permissions -->
-
-   <!-- finder permissions -->
-
-   <!-- finder permissions -->
-
-   <!-- finder permissions -->
-
-   <!-- finder permissions -->
-
-   <!-- finder permissions -->
-
-   <!-- finder permissions -->
-
-   <!-- finder permissions -->
-
-   <!-- finder permissions -->
-
-   <!-- finder permissions -->
-
-   <!-- finder permissions -->
-
-   <!-- finder permissions -->
-
-   <!-- finder permissions -->
-
-   <!-- finder permissions -->
-
-   <!-- finder permissions -->
-
-   <!-- finder permissions -->
-
-   <!-- transactions -->
-   <container-transaction >
-      <method >
-         <ejb-name>PEB_KouboAnkenEJB</ejb-name>
-         <method-name>*</method-name>
-      </method>
-      <trans-attribute>Required</trans-attribute>
-   </container-transaction>
-   <container-transaction >
-      <method >
-         <ejb-name>PEB_SuccessOrFailureEJB</ejb-name>
-         <method-name>*</method-name>
-      </method>
-      <trans-attribute>Required</trans-attribute>
-   </container-transaction>
-   <container-transaction >
-      <method >
-         <ejb-name>PEY_CodeEJB</ejb-name>
-         <method-name>*</method-name>
-      </method>
-      <trans-attribute>Required</trans-attribute>
-   </container-transaction>
-   <container-transaction >
-      <method >
-         <ejb-name>PEY_PersonalEJB</ejb-name>
-         <method-name>*</method-name>
-      </method>
-      <trans-attribute>Required</trans-attribute>
-   </container-transaction>
-   <container-transaction >
-      <method >
-         <ejb-name>PEB_KouboAnkenOuboEJB</ejb-name>
-         <method-name>*</method-name>
-      </method>
-      <trans-attribute>Required</trans-attribute>
-   </container-transaction>
-   <container-transaction >
-      <method >
-         <ejb-name>PEB_KouboAnkenAssessumentRirekiEJB</ejb-name>
-         <method-name>*</method-name>
-      </method>
-      <trans-attribute>Required</trans-attribute>
-   </container-transaction>
-   <container-transaction >
-      <method >
-         <ejb-name>PEB_ShinsaKekkaSetteiEJB</ejb-name>
-         <method-name>*</method-name>
-      </method>
-      <trans-attribute>Required</trans-attribute>
-   </container-transaction>
-   <container-transaction >
-      <method >
-         <ejb-name>PEB_HonninTuuchiEJB</ejb-name>
-         <method-name>*</method-name>
-      </method>
-      <trans-attribute>Required</trans-attribute>
-   </container-transaction>
-   <container-transaction >
-      <method >
-         <ejb-name>PEB_ShinsaKekkaTsuuchiEJB</ejb-name>
-         <method-name>*</method-name>
-      </method>
-      <trans-attribute>Required</trans-attribute>
-   </container-transaction>
-   <container-transaction >
-      <method >
-         <ejb-name>PEY_KouboOubosyaEJB</ejb-name>
-         <method-name>*</method-name>
-      </method>
-      <trans-attribute>Required</trans-attribute>
-   </container-transaction>
-   <container-transaction >
-      <method >
-         <ejb-name>PEB_KouboAnkenSakuseiEJB</ejb-name>
-         <method-intf>Remote</method-intf>
-         <method-name>*</method-name>
-      </method>
-      <trans-attribute>Required</trans-attribute>
-   </container-transaction>
-   <container-transaction >
-      <method >
-         <ejb-name>PEB_NijiShinsaGouhiSetteiEJB</ejb-name>
-         <method-name>*</method-name>
-      </method>
-      <trans-attribute>Required</trans-attribute>
-   </container-transaction>
-   <container-transaction >
-      <method >
-         <ejb-name>PEB_OubosyaJyohoEJB</ejb-name>
-         <method-name>*</method-name>
-      </method>
-      <trans-attribute>Required</trans-attribute>
-   </container-transaction>
-   <container-transaction >
-      <method >
-         <ejb-name>PEB_KanrisyaEJB</ejb-name>
-         <method-name>*</method-name>
-      </method>
-      <trans-attribute>Required</trans-attribute>
-   </container-transaction>
-   <container-transaction >
-      <method >
-         <ejb-name>PEB_KouboMenuEJB</ejb-name>
-         <method-name>*</method-name>
-      </method>
-      <trans-attribute>Required</trans-attribute>
-   </container-transaction>
-   <container-transaction >
-      <method >
-         <ejb-name>PEB_IchijiShinsaGouhiSetteiEJB</ejb-name>
-         <method-name>*</method-name>
-      </method>
-      <trans-attribute>Required</trans-attribute>
-   </container-transaction>
-   <container-transaction >
-      <method >
-         <ejb-name>PEB_OuboKanriEJB</ejb-name>
-         <method-name>*</method-name>
-      </method>
-      <trans-attribute>Required</trans-attribute>
-   </container-transaction>
-   <container-transaction >
-      <method >
-         <ejb-name>PEY_KouboEJB</ejb-name>
-         <method-name>*</method-name>
-      </method>
-      <trans-attribute>Required</trans-attribute>
-   </container-transaction>
-   <container-transaction >
-      <method >
-         <ejb-name>PEB_SaiyousyaKetteiEJB</ejb-name>
-         <method-name>*</method-name>
-      </method>
-      <trans-attribute>Required</trans-attribute>
-   </container-transaction>
-   <container-transaction >
-      <method >
-         <ejb-name>PEA010_ForumEJB</ejb-name>
-         <method-name>*</method-name>
-      </method>
-      <trans-attribute>Required</trans-attribute>
-   </container-transaction>
-   <container-transaction >
-      <method >
-         <ejb-name>PEA_SankaHanteiEJB</ejb-name>
-         <method-name>*</method-name>
-      </method>
-      <trans-attribute>Required</trans-attribute>
-   </container-transaction>
-   <container-transaction >
-      <method >
-         <ejb-name>PEA_ForumEJB</ejb-name>
-         <method-name>*</method-name>
-      </method>
-      <trans-attribute>Required</trans-attribute>
-   </container-transaction>
-   <container-transaction >
-      <method >
-         <ejb-name>PEA_ToukouEJB</ejb-name>
-         <method-name>*</method-name>
-      </method>
-      <trans-attribute>Required</trans-attribute>
-   </container-transaction>
-   <container-transaction >
-      <method >
-         <ejb-name>PEY_CounterEJB</ejb-name>
-         <method-name>*</method-name>
-      </method>
-      <trans-attribute>Required</trans-attribute>
-   </container-transaction>
-   <container-transaction >
-      <method >
-         <ejb-name>PEC_DownloadEJB</ejb-name>
-         <method-name>*</method-name>
-      </method>
-      <trans-attribute>Required</trans-attribute>
-   </container-transaction>
-
-   <!-- finder transactions -->
-   </assembly-descriptor>
-
+    <description><![CDATA[No Description.]]></description>
+    <display-name>departmentEJB</display-name>
+    <enterprise-beans>
+        <session >
+            <description><![CDATA[<PRE> クラス名： PEB_KouboAnkenEJBBeanクラス 機能説明： 指定された公募案件IDより社内公募案件データを抽出する。 </PRE>]]></description>
+            <ejb-name>PEB_KouboAnkenEJB</ejb-name>
+            <home>jp.co.hisas.career.department.offer.ejb.PEB_KouboAnkenEJBHome</home>
+            <remote>jp.co.hisas.career.department.offer.ejb.PEB_KouboAnkenEJB</remote>
+            <ejb-class>jp.co.hisas.career.department.offer.ejb.PEB_KouboAnkenEJBBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+            <resource-ref >
+                <res-ref-name>jdbc/HCDB</res-ref-name>
+                <res-type>javax.sql.DataSource</res-type>
+                <res-auth>Container</res-auth>
+            </resource-ref>
+        </session>
+        <session >
+            <description><![CDATA[<PRE> 概要: DBアクセスを行い、各コードの検索、更新、削除を行う、ステートレスSessionBean。 使用方法: リモートインタフェースを介して、クライアントBeanから呼び出す。 </PRE>]]></description>
+            <ejb-name>PEB_SuccessOrFailureEJB</ejb-name>
+            <home>jp.co.hisas.career.department.offer.ejb.PEB_SuccessOrFailureEJBHome</home>
+            <remote>jp.co.hisas.career.department.offer.ejb.PEB_SuccessOrFailureEJB</remote>
+            <ejb-class>jp.co.hisas.career.department.offer.ejb.PEB_SuccessOrFailureEJBBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+            <resource-ref >
+                <res-ref-name>jdbc/HCDB</res-ref-name>
+                <res-type>javax.sql.DataSource</res-type>
+                <res-auth>Container</res-auth>
+            </resource-ref>
+        </session>
+        <session >
+            <description><![CDATA[<PRE> クラス名： PEY_CodeEJBBeanクラス 機能説明： 各種マスタから一覧を取得します。 </PRE>]]></description>
+            <ejb-name>PEY_CodeEJB</ejb-name>
+            <home>jp.co.hisas.career.department.base.ejb.PEY_CodeEJBHome</home>
+            <remote>jp.co.hisas.career.department.base.ejb.PEY_CodeEJB</remote>
+            <ejb-class>jp.co.hisas.career.department.base.ejb.PEY_CodeEJBBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+            <resource-ref >
+                <res-ref-name>jdbc/HCDB</res-ref-name>
+                <res-type>javax.sql.DataSource</res-type>
+                <res-auth>Container</res-auth>
+            </resource-ref>
+        </session>
+        <session >
+            <description><![CDATA[<PRE> クラス名： PEY_PersonalEJBBeanクラス 機能説明： パーソナルプロファイルからユーザの属性を取得します。 </PRE>]]></description>
+            <ejb-name>PEY_PersonalEJB</ejb-name>
+            <home>jp.co.hisas.career.department.base.ejb.PEY_PersonalEJBHome</home>
+            <remote>jp.co.hisas.career.department.base.ejb.PEY_PersonalEJB</remote>
+            <ejb-class>jp.co.hisas.career.department.base.ejb.PEY_PersonalEJBBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+            <resource-ref >
+                <res-ref-name>jdbc/HCDB</res-ref-name>
+                <res-type>javax.sql.DataSource</res-type>
+                <res-auth>Container</res-auth>
+            </resource-ref>
+        </session>
+        <session >
+            <description><![CDATA[<PRE> クラス名： PEB_KouboAnkenOuboEJBBeanクラス 機能説明： 公募案件応募で使用するEJB。 (1)公募案件応募画面出力用データの取得 (2)公募案件応募情報の新規登録及び更新 </PRE>]]></description>
+            <ejb-name>PEB_KouboAnkenOuboEJB</ejb-name>
+            <home>jp.co.hisas.career.department.offer.ejb.PEB_KouboAnkenOuboEJBHome</home>
+            <remote>jp.co.hisas.career.department.offer.ejb.PEB_KouboAnkenOuboEJB</remote>
+            <ejb-class>jp.co.hisas.career.department.offer.ejb.PEB_KouboAnkenOuboEJBBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+            <resource-ref >
+                <res-ref-name>jdbc/HCDB</res-ref-name>
+                <res-type>javax.sql.DataSource</res-type>
+                <res-auth>Container</res-auth>
+            </resource-ref>
+        </session>
+        <session >
+            <description><![CDATA[<PRE> クラス名： PEB_KouboAnkenAssessumentRirekiEJB クラス 機能説明： 公募テーブルへの操作を行います。 </PRE>]]></description>
+            <ejb-name>PEB_KouboAnkenAssessumentRirekiEJB</ejb-name>
+            <home>jp.co.hisas.career.department.offer.ejb.PEB_KouboAnkenAssessumentRirekiEJBHome</home>
+            <remote>jp.co.hisas.career.department.offer.ejb.PEB_KouboAnkenAssessumentRirekiEJB</remote>
+            <ejb-class>jp.co.hisas.career.department.offer.ejb.PEB_KouboAnkenAssessumentRirekiEJBBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+            <resource-ref >
+                <res-ref-name>jdbc/HCDB</res-ref-name>
+                <res-type>javax.sql.DataSource</res-type>
+                <res-auth>Container</res-auth>
+            </resource-ref>
+        </session>
+        <session >
+            <description><![CDATA[<PRE> クラス名： PEB_ShinsaKekkaSetteiEJBBeanクラス 機能説明： (人総)審査結果をＤＢに格納する機能です。 格納するデータは審査結果、連絡事項 </PRE>]]></description>
+            <ejb-name>PEB_ShinsaKekkaSetteiEJB</ejb-name>
+            <home>jp.co.hisas.career.department.offer.ejb.PEB_ShinsaKekkaSetteiEJBHome</home>
+            <remote>jp.co.hisas.career.department.offer.ejb.PEB_ShinsaKekkaSetteiEJB</remote>
+            <ejb-class>jp.co.hisas.career.department.offer.ejb.PEB_ShinsaKekkaSetteiEJBBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+            <resource-ref >
+                <res-ref-name>jdbc/HCDB</res-ref-name>
+                <res-type>javax.sql.DataSource</res-type>
+                <res-auth>Container</res-auth>
+            </resource-ref>
+        </session>
+        <session >
+            <description><![CDATA[<PRE> クラス名： PEB_HonninTuuchiEJBBeanクラス 機能説明： (人総)本人通知をＤＢに格納する機能です。 格納するデータは合否ステータス </PRE>]]></description>
+            <ejb-name>PEB_HonninTuuchiEJB</ejb-name>
+            <home>jp.co.hisas.career.department.offer.ejb.PEB_HonninTuuchiEJBHome</home>
+            <remote>jp.co.hisas.career.department.offer.ejb.PEB_HonninTuuchiEJB</remote>
+            <ejb-class>jp.co.hisas.career.department.offer.ejb.PEB_HonninTuuchiEJBBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+            <resource-ref >
+                <res-ref-name>jdbc/HCDB</res-ref-name>
+                <res-type>javax.sql.DataSource</res-type>
+                <res-auth>Container</res-auth>
+            </resource-ref>
+        </session>
+        <session >
+            <description><![CDATA[<PRE> クラス名： PEB_ShinsaKekkaTsuuchiEJBBeanクラス 機能説明： (人総)審査結果をＤＢに格納する機能です。 格納するデータは審査結果 </PRE>]]></description>
+            <ejb-name>PEB_ShinsaKekkaTsuuchiEJB</ejb-name>
+            <home>jp.co.hisas.career.department.offer.ejb.PEB_ShinsaKekkaTsuuchiEJBHome</home>
+            <remote>jp.co.hisas.career.department.offer.ejb.PEB_ShinsaKekkaTsuuchiEJB</remote>
+            <ejb-class>jp.co.hisas.career.department.offer.ejb.PEB_ShinsaKekkaTsuuchiEJBBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+            <resource-ref >
+                <res-ref-name>jdbc/HCDB</res-ref-name>
+                <res-type>javax.sql.DataSource</res-type>
+                <res-auth>Container</res-auth>
+            </resource-ref>
+        </session>
+        <session >
+            <description><![CDATA[<PRE> クラス名： PEY_KouboOubosyaEJBBean クラス 機能説明： 公募情報テーブルへの操作を行います。 </PRE>]]></description>
+            <ejb-name>PEY_KouboOubosyaEJB</ejb-name>
+            <home>jp.co.hisas.career.department.base.ejb.PEY_KouboOubosyaEJBHome</home>
+            <remote>jp.co.hisas.career.department.base.ejb.PEY_KouboOubosyaEJB</remote>
+            <ejb-class>jp.co.hisas.career.department.base.ejb.PEY_KouboOubosyaEJBBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+            <resource-ref >
+                <res-ref-name>jdbc/HCDB</res-ref-name>
+                <res-type>javax.sql.DataSource</res-type>
+                <res-auth>Container</res-auth>
+            </resource-ref>
+        </session>
+        <session >
+            <description><![CDATA[<PRE> クラス名： PEB_KouboAnkenSakuseiEJBBeanクラス 機能説明： (人総)審査結果をＤＢに格納する機能です。 格納するデータは審査結果、連絡事項 </PRE>]]></description>
+            <ejb-name>PEB_KouboAnkenSakuseiEJB</ejb-name>
+            <home>jp.co.hisas.career.department.offer.ejb.PEB_KouboAnkenSakuseiEJBHome</home>
+            <remote>jp.co.hisas.career.department.offer.ejb.PEB_KouboAnkenSakuseiEJB</remote>
+            <ejb-class>jp.co.hisas.career.department.offer.ejb.PEB_KouboAnkenSakuseiEJBBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+            <resource-ref >
+                <res-ref-name>jdbc/HCDB</res-ref-name>
+                <res-type>javax.sql.DataSource</res-type>
+                <res-auth>Container</res-auth>
+            </resource-ref>
+        </session>
+        <session >
+            <description><![CDATA[<PRE> クラス名： PEB_NijiShinsaGouhiSetteiEJBBeanクラス 機能説明： 二次審査合否をＤＢに格納する機能です。 格納するデータは合否ステータス 問合せ窓口情報、連絡事項 </PRE>]]></description>
+            <ejb-name>PEB_NijiShinsaGouhiSetteiEJB</ejb-name>
+            <home>jp.co.hisas.career.department.offer.ejb.PEB_NijiShinsaGouhiSetteiEJBHome</home>
+            <remote>jp.co.hisas.career.department.offer.ejb.PEB_NijiShinsaGouhiSetteiEJB</remote>
+            <ejb-class>jp.co.hisas.career.department.offer.ejb.PEB_NijiShinsaGouhiSetteiEJBBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+            <resource-ref >
+                <res-ref-name>jdbc/HCDB</res-ref-name>
+                <res-type>javax.sql.DataSource</res-type>
+                <res-auth>Container</res-auth>
+            </resource-ref>
+        </session>
+        <session >
+            <description><![CDATA[<PRE> 概要: DBアクセスを行い、各コードの検索を行う、ステートレスSessionBean。 使用方法: リモートインタフェースを介して、クライアントBeanから呼び出す。 </PRE>]]></description>
+            <ejb-name>PEB_OubosyaJyohoEJB</ejb-name>
+            <home>jp.co.hisas.career.department.offer.ejb.PEB_OubosyaJyohoEJBHome</home>
+            <remote>jp.co.hisas.career.department.offer.ejb.PEB_OubosyaJyohoEJB</remote>
+            <ejb-class>jp.co.hisas.career.department.offer.ejb.PEB_OubosyaJyohoEJBBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+            <resource-ref >
+                <res-ref-name>jdbc/HCDB</res-ref-name>
+                <res-type>javax.sql.DataSource</res-type>
+                <res-auth>Container</res-auth>
+            </resource-ref>
+        </session>
+        <session >
+            <description><![CDATA[<PRE> クラス名： PEY_KanrisyaEJBBean クラス 機能説明： 公募テーブル、公募_応募テーブルへの操作を行います。 </PRE>]]></description>
+            <ejb-name>PEB_KanrisyaEJB</ejb-name>
+            <home>jp.co.hisas.career.department.offer.ejb.PEB_KanrisyaEJBHome</home>
+            <remote>jp.co.hisas.career.department.offer.ejb.PEB_KanrisyaEJB</remote>
+            <ejb-class>jp.co.hisas.career.department.offer.ejb.PEB_KanrisyaEJBBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+            <resource-ref >
+                <res-ref-name>jdbc/HCDB</res-ref-name>
+                <res-type>javax.sql.DataSource</res-type>
+                <res-auth>Container</res-auth>
+            </resource-ref>
+        </session>
+        <session >
+            <description><![CDATA[<PRE> クラス名： PEB_KouboMenuEJB クラス 機能説明： 公募テーブルへの操作を行います。 </PRE>]]></description>
+            <ejb-name>PEB_KouboMenuEJB</ejb-name>
+            <home>jp.co.hisas.career.department.offer.ejb.PEB_KouboMenuEJBHome</home>
+            <remote>jp.co.hisas.career.department.offer.ejb.PEB_KouboMenuEJB</remote>
+            <ejb-class>jp.co.hisas.career.department.offer.ejb.PEB_KouboMenuEJBBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+            <resource-ref >
+                <res-ref-name>jdbc/HCDB</res-ref-name>
+                <res-type>javax.sql.DataSource</res-type>
+                <res-auth>Container</res-auth>
+            </resource-ref>
+        </session>
+        <session >
+            <description><![CDATA[<PRE> クラス名： PEB_IchijiShinsaGouhiSetteiEJBBeanクラス 機能説明： 一次審査合否をＤＢに格納する機能です。 格納するデータは合否ステータス 問合せ窓口情報、連絡事項 </PRE>]]></description>
+            <ejb-name>PEB_IchijiShinsaGouhiSetteiEJB</ejb-name>
+            <home>jp.co.hisas.career.department.offer.ejb.PEB_IchijiShinsaGouhiSetteiEJBHome</home>
+            <remote>jp.co.hisas.career.department.offer.ejb.PEB_IchijiShinsaGouhiSetteiEJB</remote>
+            <ejb-class>jp.co.hisas.career.department.offer.ejb.PEB_IchijiShinsaGouhiSetteiEJBBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+            <resource-ref >
+                <res-ref-name>jdbc/HCDB</res-ref-name>
+                <res-type>javax.sql.DataSource</res-type>
+                <res-auth>Container</res-auth>
+            </resource-ref>
+        </session>
+        <session >
+            <description><![CDATA[<PRE> クラス名： PEB_OuboKanriEJBBean クラス 機能説明： 応募管理画面へ表示する情報の取得・更新・削除を行います。 </PRE>]]></description>
+            <ejb-name>PEB_OuboKanriEJB</ejb-name>
+            <home>jp.co.hisas.career.department.offer.ejb.PEB_OuboKanriEJBHome</home>
+            <remote>jp.co.hisas.career.department.offer.ejb.PEB_OuboKanriEJB</remote>
+            <ejb-class>jp.co.hisas.career.department.offer.ejb.PEB_OuboKanriEJBBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+            <resource-ref >
+                <res-ref-name>jdbc/HCDB</res-ref-name>
+                <res-type>javax.sql.DataSource</res-type>
+                <res-auth>Container</res-auth>
+            </resource-ref>
+        </session>
+        <session >
+            <description><![CDATA[<PRE> クラス名： PEY_KouboEJBBean クラス 機能説明： 公募情報テーブルへの操作を行います。 </PRE>]]></description>
+            <ejb-name>PEY_KouboEJB</ejb-name>
+            <home>jp.co.hisas.career.department.base.ejb.PEY_KouboEJBHome</home>
+            <remote>jp.co.hisas.career.department.base.ejb.PEY_KouboEJB</remote>
+            <ejb-class>jp.co.hisas.career.department.base.ejb.PEY_KouboEJBBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+            <resource-ref >
+                <res-ref-name>jdbc/HCDB</res-ref-name>
+                <res-type>javax.sql.DataSource</res-type>
+                <res-auth>Container</res-auth>
+            </resource-ref>
+        </session>
+        <session >
+            <description><![CDATA[<PRE> クラス名： PEB_SaiyousyaKetteiEJBBeanクラス 機能説明： (人総)本人通知をＤＢに格納する機能です。 格納するデータは合否ステータス </PRE>]]></description>
+            <ejb-name>PEB_SaiyousyaKetteiEJB</ejb-name>
+            <home>jp.co.hisas.career.department.offer.ejb.PEB_SaiyousyaKetteiEJBHome</home>
+            <remote>jp.co.hisas.career.department.offer.ejb.PEB_SaiyousyaKetteiEJB</remote>
+            <ejb-class>jp.co.hisas.career.department.offer.ejb.PEB_SaiyousyaKetteiEJBBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+            <resource-ref >
+                <res-ref-name>jdbc/HCDB</res-ref-name>
+                <res-type>javax.sql.DataSource</res-type>
+                <res-auth>Container</res-auth>
+            </resource-ref>
+        </session>
+        <session >
+            <description>PEA_ForumEJB</description>
+            <ejb-name>PEA_ForumEJB</ejb-name>
+            <home>jp.co.hisas.career.department.forum.ejb.PEA_ForumEJBHome</home>
+            <remote>jp.co.hisas.career.department.forum.ejb.PEA_ForumEJB</remote>
+            <ejb-class>jp.co.hisas.career.department.forum.ejb.PEA_ForumEJBBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+            <resource-ref >
+                <res-ref-name>jdbc/HCDB</res-ref-name>
+                <res-type>javax.sql.DataSource</res-type>
+                <res-auth>Container</res-auth>
+            </resource-ref>
+        </session>
+        <session >
+            <description>PEA_ToukouEJB</description>
+            <ejb-name>PEA_ToukouEJB</ejb-name>
+            <home>jp.co.hisas.career.department.forum.ejb.PEA_ToukouEJBHome</home>
+            <remote>jp.co.hisas.career.department.forum.ejb.PEA_ToukouEJB</remote>
+            <ejb-class>jp.co.hisas.career.department.forum.ejb.PEA_ToukouEJBBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+            <resource-ref >
+                <res-ref-name>jdbc/HCDB</res-ref-name>
+                <res-type>javax.sql.DataSource</res-type>
+                <res-auth>Container</res-auth>
+            </resource-ref>
+        </session>
+        <session >
+            <description>PEA010_ForumEJB</description>
+            <ejb-name>PEA010_ForumEJB</ejb-name>
+            <home>jp.co.hisas.career.department.forum.ejb.PEA010_ForumEJBHome</home>
+            <remote>jp.co.hisas.career.department.forum.ejb.PEA010_ForumEJB</remote>
+            <ejb-class>jp.co.hisas.career.department.forum.ejb.PEA010_ForumEJBBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+            <resource-ref >
+                <res-ref-name>jdbc/HCDB</res-ref-name>
+                <res-type>javax.sql.DataSource</res-type>
+                <res-auth>Container</res-auth>
+            </resource-ref>
+        </session>
+        <session >
+            <description>PEA_SankaHanteiEJB</description>
+            <ejb-name>PEA_SankaHanteiEJB</ejb-name>
+            <home>jp.co.hisas.career.department.forum.ejb.PEA_SankaHanteiEJBHome</home>
+            <remote>jp.co.hisas.career.department.forum.ejb.PEA_SankaHanteiEJB</remote>
+            <ejb-class>jp.co.hisas.career.department.forum.ejb.PEA_SankaHanteiEJBBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+            <resource-ref >
+                <res-ref-name>jdbc/HCDB</res-ref-name>
+                <res-type>javax.sql.DataSource</res-type>
+                <res-auth>Container</res-auth>
+            </resource-ref>
+        </session>
+        <session >
+            <description>PEY_CounterEJB</description>
+            <ejb-name>PEY_CounterEJB</ejb-name>
+            <home>jp.co.hisas.career.department.base.ejb.PEY_CounterEJBHome</home>
+            <remote>jp.co.hisas.career.department.base.ejb.PEY_CounterEJB</remote>
+            <ejb-class>jp.co.hisas.career.department.base.ejb.PEY_CounterEJBBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+            <resource-ref >
+                <res-ref-name>jdbc/HCDB</res-ref-name>
+                <res-type>javax.sql.DataSource</res-type>
+                <res-auth>Container</res-auth>
+            </resource-ref>
+        </session>
+        <session >
+            <description><![CDATA[<PRE> クラス名： PEC_DownloadEJBBeanクラス 機能説明： パーソナルプロファイルからユーザの属性を取得します。 </PRE>]]></description>
+            <ejb-name>PEC_DownloadEJB</ejb-name>
+            <home>jp.co.hisas.career.department.download.ejb.PEC_DownloadEJBHome</home>
+            <remote>jp.co.hisas.career.department.download.ejb.PEC_DownloadEJB</remote>
+            <ejb-class>jp.co.hisas.career.department.download.ejb.PEC_DownloadEJBBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+            <resource-ref >
+                <res-ref-name>jdbc/HCDB</res-ref-name>
+                <res-type>javax.sql.DataSource</res-type>
+                <res-auth>Container</res-auth>
+            </resource-ref>
+        </session>
+        <session >
+            <description>TrainingInformationEJB</description>
+            <ejb-name>TrainingInformationEJB</ejb-name>
+            <home>jp.co.hisas.career.department.download.ejb.TrainingInformationEJBHome</home>
+            <remote>jp.co.hisas.career.department.download.ejb.TrainingInformationEJB</remote>
+            <ejb-class>jp.co.hisas.career.department.download.ejb.TrainingInformationEJBBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+            <resource-ref >
+                <res-ref-name>jdbc/HCDB</res-ref-name>
+                <res-type>javax.sql.DataSource</res-type>
+                <res-auth>Container</res-auth>
+            </resource-ref>
+        </session>
+    </enterprise-beans>
+    <assembly-descriptor >
+        <container-transaction >
+            <method >
+                <ejb-name>PEB_KouboAnkenEJB</ejb-name>
+                <method-name>*</method-name>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction >
+            <method >
+                <ejb-name>PEB_SuccessOrFailureEJB</ejb-name>
+                <method-name>*</method-name>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction >
+            <method >
+                <ejb-name>PEY_CodeEJB</ejb-name>
+                <method-name>*</method-name>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction >
+            <method >
+                <ejb-name>PEY_PersonalEJB</ejb-name>
+                <method-name>*</method-name>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction >
+            <method >
+                <ejb-name>PEB_KouboAnkenOuboEJB</ejb-name>
+                <method-name>*</method-name>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction >
+            <method >
+                <ejb-name>PEB_KouboAnkenAssessumentRirekiEJB</ejb-name>
+                <method-name>*</method-name>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction >
+            <method >
+                <ejb-name>PEB_ShinsaKekkaSetteiEJB</ejb-name>
+                <method-name>*</method-name>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction >
+            <method >
+                <ejb-name>PEB_HonninTuuchiEJB</ejb-name>
+                <method-name>*</method-name>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction >
+            <method >
+                <ejb-name>PEB_ShinsaKekkaTsuuchiEJB</ejb-name>
+                <method-name>*</method-name>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction >
+            <method >
+                <ejb-name>PEY_KouboOubosyaEJB</ejb-name>
+                <method-name>*</method-name>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction >
+            <method >
+                <ejb-name>PEB_KouboAnkenSakuseiEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>*</method-name>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction >
+            <method >
+                <ejb-name>PEB_NijiShinsaGouhiSetteiEJB</ejb-name>
+                <method-name>*</method-name>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction >
+            <method >
+                <ejb-name>PEB_OubosyaJyohoEJB</ejb-name>
+                <method-name>*</method-name>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction >
+            <method >
+                <ejb-name>PEB_KanrisyaEJB</ejb-name>
+                <method-name>*</method-name>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction >
+            <method >
+                <ejb-name>PEB_KouboMenuEJB</ejb-name>
+                <method-name>*</method-name>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction >
+            <method >
+                <ejb-name>PEB_IchijiShinsaGouhiSetteiEJB</ejb-name>
+                <method-name>*</method-name>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction >
+            <method >
+                <ejb-name>PEB_OuboKanriEJB</ejb-name>
+                <method-name>*</method-name>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction >
+            <method >
+                <ejb-name>PEY_KouboEJB</ejb-name>
+                <method-name>*</method-name>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction >
+            <method >
+                <ejb-name>PEB_SaiyousyaKetteiEJB</ejb-name>
+                <method-name>*</method-name>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction >
+            <method >
+                <ejb-name>PEA010_ForumEJB</ejb-name>
+                <method-name>*</method-name>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction >
+            <method >
+                <ejb-name>PEA_SankaHanteiEJB</ejb-name>
+                <method-name>*</method-name>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction >
+            <method >
+                <ejb-name>PEA_ForumEJB</ejb-name>
+                <method-name>*</method-name>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction >
+            <method >
+                <ejb-name>PEA_ToukouEJB</ejb-name>
+                <method-name>*</method-name>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction >
+            <method >
+                <ejb-name>PEY_CounterEJB</ejb-name>
+                <method-name>*</method-name>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction >
+            <method >
+                <ejb-name>PEC_DownloadEJB</ejb-name>
+                <method-name>*</method-name>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+    </assembly-descriptor>
 </ejb-jar>

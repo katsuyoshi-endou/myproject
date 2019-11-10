@@ -4,7 +4,6 @@
 <ejb-jar>
     <display-name>commonEJB</display-name>
     <enterprise-beans>
-        
         <session>
             <display-name>EventEJB</display-name>
             <ejb-name>EventEJB</ejb-name>
@@ -22,7 +21,6 @@
         
     </enterprise-beans>
     <assembly-descriptor>
-
         <container-transaction>
             <method>
                 <ejb-name>EventEJB</ejb-name>
@@ -30,6 +28,5 @@
             </method>
             <trans-attribute>Required</trans-attribute>
         </container-transaction>
-
     </assembly-descriptor>
 </ejb-jar>
